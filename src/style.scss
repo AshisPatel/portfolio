@@ -1,0 +1,34 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$black: #080707; 
+$white: #FFFFFF;
+$white-accent: #DDE4E4;
+$red:  #D93838;
+
+.dropdown{
+    position: relative; 
+    &:hover > .dropdown-content {
+        display: block; 
+    }
+}
+
+.dropdown-content{
+    left: -.07rem; 
+    position: absolute;
+    display: none; 
+    border: 0.5px solid $white-accent; 
+    text-align: left; 
+    z-index: 1; 
+    width: 102%; 
+}
+
+nav {
+    & ul {
+        list-style:none; 
+        
+        & li {
+            border: 0.5px solid $white-accent; 
+            border-radius: 0.2rem; 
+        }
+    }
+}
