@@ -11966,6 +11966,7 @@ fieldset:disabled .btn {
 }
 
 .dropdown-content {
+  background-color: #FFFFFF;
   left: -.07rem;
   position: absolute;
   display: none;
@@ -11994,28 +11995,27 @@ nav ul li {
   stroke-width: 5;
 }
 
+.filling {
+  fill: #D93838;
+}
+
 .steam {
   stroke: #FFFFFF;
   stroke-width: 10;
   stroke-dasharray: 150;
   stroke-dashoffset: 300;
-  animation: fill 3s linear reverse infinite;
+  animation: steam 3s linear reverse infinite;
 }
 
-@-webkit-keyframes fill {
+@-webkit-keyframes steam {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-@keyframes fill {
+@keyframes steam {
   to {
     stroke-dashoffset: 0;
   }
-}
-
-.st1 {
-  fill: #D93838;
-  stroke-width: 5;
 }
 /*# sourceMappingURL=style.css.map */

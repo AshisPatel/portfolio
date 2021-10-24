@@ -13,6 +13,7 @@ $red:  #D93838;
 }
 
 .dropdown-content{
+    background-color: $white; 
     left: -.07rem; 
     position: absolute;
     display: none; 
@@ -45,21 +46,20 @@ nav {
     stroke-width: 5; 
 }
 
+.filling {
+    fill: $red; 
+}
+
 .steam {
     stroke: $white;
     stroke-width: 10;
     stroke-dasharray: 150;
     stroke-dashoffset: 300;
-    animation: fill 3s linear reverse infinite;
+    animation: steam 3s linear reverse infinite;
 }
 
-@keyframes fill {
+@keyframes steam {
     to {
         stroke-dashoffset: 0; 
     }
-}
-
-.st1 {
-    fill: $red; 
-    stroke-width: 5; 
 }
