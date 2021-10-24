@@ -32,3 +32,34 @@ nav {
         }
     }
 }
+
+#hero-wrapper {
+    background-color: $black;
+    color: $white; 
+}
+
+// coffe-cup css
+
+.st0 {
+    stroke: $white;
+    stroke-width: 5; 
+}
+
+.steam {
+    stroke: $white;
+    stroke-width: 10;
+    stroke-dasharray: 150;
+    stroke-dashoffset: 300;
+    animation: fill 3s linear reverse infinite;
+}
+
+@keyframes fill {
+    to {
+        stroke-dashoffset: 0; 
+    }
+}
+
+.st1 {
+    fill: $red; 
+    stroke-width: 5; 
+}

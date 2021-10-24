@@ -11983,4 +11983,39 @@ nav ul li {
   border: 0.5px solid #DDE4E4;
   border-radius: 0.2rem;
 }
+
+#hero-wrapper {
+  background-color: #080707;
+  color: #FFFFFF;
+}
+
+.st0 {
+  stroke: #FFFFFF;
+  stroke-width: 5;
+}
+
+.steam {
+  stroke: #FFFFFF;
+  stroke-width: 10;
+  stroke-dasharray: 150;
+  stroke-dashoffset: 300;
+  animation: fill 3s linear reverse infinite;
+}
+
+@-webkit-keyframes fill {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.st1 {
+  fill: #D93838;
+  stroke-width: 5;
+}
 /*# sourceMappingURL=style.css.map */
