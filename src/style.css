@@ -11990,6 +11990,11 @@ nav ul li {
   color: #FFFFFF;
 }
 
+#footer {
+  background-color: #080707;
+  color: white;
+}
+
 .st0 {
   stroke: #FFFFFF;
   stroke-width: 5;
@@ -12000,6 +12005,7 @@ nav ul li {
 }
 
 .steam {
+  fill: none;
   stroke: #FFFFFF;
   stroke-width: 10;
   stroke-dasharray: 150;

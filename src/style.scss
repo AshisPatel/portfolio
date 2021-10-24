@@ -39,6 +39,11 @@ nav {
     color: $white; 
 }
 
+#footer {
+    background-color: $black;
+    color: white; 
+}
+
 // coffe-cup css
 
 .st0 {
@@ -51,6 +56,7 @@ nav {
 }
 
 .steam {
+    fill: none; 
     stroke: $white;
     stroke-width: 10;
     stroke-dasharray: 150;
