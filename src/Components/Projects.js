@@ -44,12 +44,18 @@ function Projects(props) {
         }
     ];
 
-    const [viewCompleted, setViewCompleted] = useState(true); 
+    const [viewCompleted, setViewCompleted] = useState(false); 
 
+    const projects = viewCompleted ? completed : developing; 
 
     return (
         <section className="container">
-            <ProjectCard project={{name: "name", description: "description", image: ""}} index={1}/>
+            {
+                projects.map((project, index )=> {
+                   return <ProjectCard project={project} index={index} key={project.name}/>    
+                })
+            }
+            
         </section>
     );
 }
