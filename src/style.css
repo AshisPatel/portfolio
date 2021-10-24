@@ -12032,6 +12032,10 @@ header {
   min-height: calc(100vh-130px);
 }
 
+.projectCard {
+  height: 300px;
+}
+
 .st0 {
   stroke: #FFFFFF;
   stroke-width: 5;
