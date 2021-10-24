@@ -7,7 +7,7 @@ import Footer from "./Components/Footer";
 
 function App() {
   return (
-  <main>
+  <main>  
     <Header />
     <section id="content">
       <Hero />

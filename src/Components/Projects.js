@@ -44,18 +44,25 @@ function Projects(props) {
         }
     ];
 
-    const [viewCompleted, setViewCompleted] = useState(false); 
+    const [viewCompleted, setViewCompleted] = useState(false);
 
-    const projects = viewCompleted ? completed : developing; 
+    const projects = viewCompleted ? completed : developing;
 
     return (
+
         <section className="container">
+        <svg viewBox="0 0 100 100" className="star-wrapper" width = "20%" height = "20%">
+
+
+        <polygon class="star" points="50.67,75.92 21.49,90.13 27.96,58.33 5.43,34.97 37.68,31.3 52.93,2.65 66.39,32.19 98.35,37.84 
+		74.42,59.76 78.92,91.91 	"/>
+        </svg>
             {
-                projects.map((project, index )=> {
-                   return <ProjectCard project={project} index={index} key={project.name}/>    
+                projects.map((project, index) => {
+                    return <ProjectCard project={project} index={index} key={project.name} />
                 })
             }
-            
+
         </section>
     );
 }
