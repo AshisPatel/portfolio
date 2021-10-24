@@ -9,9 +9,11 @@ function App() {
   return (
   <main>
     <Header />
-    <Hero />
-    <Projects />
-    <About />
+    <section id="content">
+      <Hero />
+      <Projects />
+      <About />
+    </section>
     <Footer />
   </main>
   );

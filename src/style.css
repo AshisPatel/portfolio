@@ -11957,6 +11957,11 @@ fieldset:disabled .btn {
   }
 }
 
+.light {
+  background-color: #FFFFFF;
+  color: #080707;
+}
+
 .dropdown {
   position: relative;
 }
@@ -11976,6 +11981,29 @@ fieldset:disabled .btn {
   width: 102%;
 }
 
+.button {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #D93838;
+  color: #FFFFFF;
+}
+
+.button:focus {
+  background-color: #D93838;
+  color: #FFFFFF;
+}
+
 nav ul {
   list-style: none;
 }
@@ -11990,9 +12018,18 @@ nav ul li {
   color: #FFFFFF;
 }
 
-#footer {
+footer {
   background-color: #080707;
   color: white;
+  height: 80px;
+}
+
+header {
+  height: 50px;
+}
+
+#content {
+  min-height: calc(100vh-130px);
 }
 
 .st0 {

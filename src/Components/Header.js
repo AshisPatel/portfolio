@@ -2,7 +2,7 @@ import React from "react";
 
 function Header(props) {
     return (
-        <section className="d-flex justify-content-between pt-2">
+        <header className="d-flex justify-content-between pt-2">
             
             <h2 id="home" className="ps-3">
                 Ashis Patel 
@@ -20,7 +20,7 @@ function Header(props) {
                     <li className="px-4 py-2">Contact</li>
                 </ul>
             </nav>
-        </section>
+        </header>
     );
 }
 

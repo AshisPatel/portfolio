@@ -4,7 +4,7 @@ function Footer(props) {
     const emoji = `(>^~^)>`
 
     return (
-        <section id="footer">
+        <footer>
             <p> <span className="ms-4 me-1">Hey, you scrolled to the bottom! Hope you enjoyed your time here, have a cup of coffee on your way out. {emoji} </span>
                 
             <svg version="1.1" id="Layer_1" x="0px" y="0px" width="7%" height="7%"
@@ -26,9 +26,7 @@ function Footer(props) {
 	                    c-0.11,9.8-4.37,23.72-23.97,40.41"/>
             </svg>
             </p>
-            
-
-        </section>
+        </footer>
     );
 }
 

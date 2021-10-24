@@ -5,6 +5,13 @@ $white: #FFFFFF;
 $white-accent: #DDE4E4;
 $red:  #D93838;
 
+// utility classes
+
+.light {
+    background-color: $white; 
+    color: $black; 
+}
+
 .dropdown{
     position: relative; 
     &:hover > .dropdown-content {
@@ -23,6 +30,29 @@ $red:  #D93838;
     width: 102%; 
 }
 
+.button {
+    text-decoration: none; 
+    outline: none;
+    border: none; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    text-align: center; 
+    padding: 0.5rem; 
+    border-radius: 0.2rem; 
+    transition: 0.2s ease-in-out; 
+    &:hover {
+        background-color: $red; 
+        color: $white; 
+    }
+
+    &:focus {
+        background-color: $red; 
+        color: $white; 
+    }
+}
+
+// styling
+
 nav {
     & ul {
         list-style:none; 
@@ -39,9 +69,18 @@ nav {
     color: $white; 
 }
 
-#footer {
+footer {
     background-color: $black;
     color: white; 
+    height: 80px; 
+}
+
+header {
+    height: 50px; 
+}
+
+#content {
+    min-height: calc(100vh-130px); 
 }
 
 // coffe-cup css
