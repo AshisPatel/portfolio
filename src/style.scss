@@ -90,8 +90,20 @@ header {
 
 .star-wrapper {
     z-index: -1; 
-    position: absolute; 
+    position: absolute;
+    width: 100px;
+    height: 100px; 
     animation: rotating 120s linear infinite; 
+}
+
+#sw-1 {
+    top: 5%;
+    left: 5%; 
+}
+
+#sw-2 {
+    top: 20%;
+    left: 30%; 
 }
 
 @keyframes rotating {
@@ -104,6 +116,9 @@ header {
 }
 
 // project card styling
+#project-container {
+ position: relative; 
+}
 
 .projectCard {
     height: 100px; 
