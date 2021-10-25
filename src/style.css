@@ -12040,20 +12040,25 @@ header {
 .star-wrapper {
   z-index: -1;
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
   -webkit-animation: rotating 120s linear infinite;
           animation: rotating 120s linear infinite;
 }
 
 #sw-1 {
-  top: 5%;
-  left: 5%;
+  top: 0%;
+  left: 0%;
 }
 
 #sw-2 {
   top: 20%;
-  left: 30%;
+  left: 20%;
+}
+
+#sw-3 {
+  top: 50%;
+  left: 50%;
 }
 
 @-webkit-keyframes rotating {
@@ -12080,6 +12085,7 @@ header {
 
 #project-container {
   position: relative;
+  overflow: hidden;
 }
 
 .projectCard {
