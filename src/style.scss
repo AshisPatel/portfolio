@@ -93,7 +93,11 @@ header {
     position: absolute;
     width: 300px;
     height: 300px; 
-    animation: rotating 120s linear infinite; 
+    animation: rotating 10s linear infinite; 
+}
+
+.outter-sbox {
+    animation: shift 10s linear infinite; 
 }
 
 #sw-1 {
@@ -111,13 +115,21 @@ header {
     left: 50%; 
 }
 
+@keyframes shift {
+    from {
+        transform: translateX(-20%);
+    }
+    to {
+        transform: translateX(120%);
+    }
+}
 
 @keyframes rotating {
     from {
-        transform: rotate(0deg); 
+        transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg); 
+        transform: rotate(360deg);
     }
 }
 
@@ -128,7 +140,7 @@ header {
 }
 
 .projectCard {
-    height: 100px; 
+    height: 200px; 
 }
 
 // coffe-cup css
@@ -160,5 +172,5 @@ header {
 #coffee-wrapper {
     display: inline-block; 
     width: 50px;
-    height: 100px; 
+    height: 50px; 
 }

@@ -19,6 +19,21 @@ function Projects(props) {
             description: "LET'S GET THIS BREAD BABY, TRACK THOSE CALORIES, TRACK THOSE HANDSSSSSS",
             image: ""
         },
+        {
+            name: "Gripe Support",
+            description: "SUPPORT BY GRIPING, GRIPE BY SUPPORTING - THAT'S NOT RIGHT Dx",
+            image: ""
+        },
+        {
+            name: "Destressing Homepage",
+            description: "Ayyo homie, just chill :3",
+            image: ""
+        },
+        {
+            name: "Calorie",
+            description: "LET'S GET THIS BREAD BABY, TRACK THOSE CALORIES, TRACK THOSE HANDSSSSSS",
+            image: ""
+        },
     ];
 
     const developing = [
@@ -44,42 +59,45 @@ function Projects(props) {
         }
     ];
 
-    const [viewCompleted, setViewCompleted] = useState(false);
+    const [viewCompleted, setViewCompleted] = useState(true);
 
     const projects = viewCompleted ? completed : developing;
 
     return (
-
-        <section className="container" id="project-container">
-            <div className="star-wrapper" id="sw-1">
-                <svg viewBox="0 0 100 100" >
-                    <polygon class="star" points="50.67,75.92 21.49,90.13 27.96,58.33 5.43,34.97 37.68,31.3 52.93,2.65 66.39,32.19 98.35,37.84 
-                        74.42,59.76 78.92,91.91 	"/>
-                </svg>
+        <div id="project-container">
+            <div className="outter-sbox">
+                <div className="star-wrapper" id="sw-1">
+                    <svg viewBox="0 0 100 100" >
+                        <polygon class="star" points="50.67,75.92 21.49,90.13 27.96,58.33 5.43,34.97 37.68,31.3 52.93,2.65 66.39,32.19 98.35,37.84 
+                                74.42,59.76 78.92,91.91 	"/>
+                    </svg>
+                </div>
             </div>
+         
 
             <div className="star-wrapper " id="sw-2">
                 <svg viewBox="0 0 100 100">
                     <polygon class="star" points="50.67,75.92 21.49,90.13 27.96,58.33 5.43,34.97 37.68,31.3 52.93,2.65 66.39,32.19 98.35,37.84 
-                        74.42,59.76 78.92,91.91 	"/>
+                            74.42,59.76 78.92,91.91 	"/>
                 </svg>
             </div>
 
             <div className="star-wrapper " id="sw-3">
                 <svg viewBox="0 0 100 100">
                     <polygon class="star" points="50.67,75.92 21.49,90.13 27.96,58.33 5.43,34.97 37.68,31.3 52.93,2.65 66.39,32.19 98.35,37.84 
-                        74.42,59.76 78.92,91.91 	"/>
+                            74.42,59.76 78.92,91.91 	"/>
                 </svg>
             </div>
-         
+            <section className="container" >
 
-            {
-                projects.map((project, index) => {
-                    return <ProjectCard project={project} index={index} key={project.name} />
-                })
-            }
+                {
+                    projects.map((project, index) => {
+                        return <ProjectCard project={project} index={index} key={project.name} />
+                    })
+                }
 
-        </section>
+            </section>
+        </div>
     );
 }
 

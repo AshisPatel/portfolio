@@ -4,9 +4,10 @@ function Footer(props) {
     const emoji = `(>^~^)>`
 
     return (
-        <footer>
-            <p> <span className="ms-4 me-1">Hey, you scrolled to the bottom! Hope you enjoyed your time here, have a cup of coffee on your way out. {emoji} </span>
-            <div id="coffee-wrapper">
+        <footer className="pt-2">
+            <p className="d-flex justify-content-center"> 
+            <span className="pt-3 me-1">Hey, you scrolled to the bottom! Hope you enjoyed your time here, have a cup of coffee on your way out. {emoji} </span>
+            <span id="coffee-wrapper">
                 <svg version="1.1" id="Layer_1" x="0px" y="0px" width="100%" height="100%"
                     viewBox="0 0 500 500">
                     <path class="st0" d="M275.51,191.41v-19.38H2.22v167.81c-0.05,5.12,0.11,57.53,35.62,77.4c4.76,2.66,11.03,5.23,19.04,6.51h163.97
@@ -25,7 +26,7 @@ function Footer(props) {
                     <path class="steam" d="M236.07,3.54c-9.59,6.22-21.11,16.02-22.71,29.45c-3.35,28.14,40.1,44.71,39.73,76.71
                             c-0.11,9.8-4.37,23.72-23.97,40.41"/>
                 </svg>
-            </div>
+            </span>
             
             </p>
         </footer>
