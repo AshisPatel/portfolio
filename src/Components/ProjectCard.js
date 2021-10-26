@@ -6,11 +6,11 @@ function ProjectCard({ project, index }) {
 
     const { name, technology, description, image, website, github } = project;
 
-    const position = index % 2 === 0 ? "row justify-content-start" : "row justify-content-end"
+    const position = index % 2 === 0 ? "" : "offset-md-4"
 
     return (
-        <article className={`${position}`}>
-            <div className="col-12 col-md-6 projectCard mb-5" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+        <article className="row">
+            <div className={`col-12 col-md-8 ${position} projectCard mb-5 mt-4`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 
                 {
                     isHovered ?
