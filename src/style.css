@@ -12016,6 +12016,8 @@ nav ul li {
 #hero-wrapper {
   background-color: #080707;
   color: #FFFFFF;
+  -webkit-box-shadow: 0 0.2rem 20px #080707;
+          box-shadow: 0 0.2rem 20px #080707;
 }
 
 footer {
@@ -12116,7 +12118,109 @@ header {
 }
 
 .projectCard {
-  height: 200px;
+  padding: 0 0 !important;
+  height: 300px;
+  background-color: transparent;
+  color: #FFFFFF;
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 0.045rem 0.045rem 1.8px rgba(8, 7, 7, 0.15), 0.234rem 0.234rem 5px rgba(8, 7, 7, 0.25), 0.56rem 0.56rem 12.1px rgba(8, 7, 7, 0.4), 1.875rem 1.875rem 40px rgba(8, 7, 7, 0.3);
+          box-shadow: 0.045rem 0.045rem 1.8px rgba(8, 7, 7, 0.15), 0.234rem 0.234rem 5px rgba(8, 7, 7, 0.25), 0.56rem 0.56rem 12.1px rgba(8, 7, 7, 0.4), 1.875rem 1.875rem 40px rgba(8, 7, 7, 0.3);
+  position: relative;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in;
+  transition: -webkit-box-shadow 0.5s ease-in;
+  transition: box-shadow 0.5s ease-in;
+  transition: box-shadow 0.5s ease-in, -webkit-box-shadow 0.5s ease-in;
+}
+
+.projectCard:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.project-info {
+  height: 100%;
+  -webkit-box-shadow: 0.045rem 0.045rem 1.8px rgba(217, 56, 56, 0.15), 0.234rem 0.234rem 5px rgba(217, 56, 56, 0.25), 0.56rem 0.56rem 12.1px rgba(217, 56, 56, 0.4), 1.875rem 1.875rem 40px rgba(217, 56, 56, 0.3);
+          box-shadow: 0.045rem 0.045rem 1.8px rgba(217, 56, 56, 0.15), 0.234rem 0.234rem 5px rgba(217, 56, 56, 0.25), 0.56rem 0.56rem 12.1px rgba(217, 56, 56, 0.4), 1.875rem 1.875rem 40px rgba(217, 56, 56, 0.3);
+  -webkit-animation: loadin 0.5s linear forwards;
+          animation: loadin 0.5s linear forwards;
+}
+
+.font-load {
+  visibility: hidden;
+  -webkit-animation: fontLoad 0.5s 0.5s linear forwards;
+          animation: fontLoad 0.5s 0.5s linear forwards;
+}
+
+@-webkit-keyframes loadin {
+  from {
+    width: 0%;
+    background-color: transparent;
+  }
+  to {
+    width: 100%;
+    background-color: #D93838;
+  }
+}
+
+@keyframes loadin {
+  from {
+    width: 0%;
+    background-color: transparent;
+  }
+  to {
+    width: 100%;
+    background-color: #D93838;
+  }
+}
+
+@-webkit-keyframes fontLoad {
+  from {
+    visibility: visible;
+    color: #D93838;
+  }
+  to {
+    visibility: visible;
+    color: #FFFFFF;
+  }
+}
+
+@keyframes fontLoad {
+  from {
+    visibility: visible;
+    color: #D93838;
+  }
+  to {
+    visibility: visible;
+    color: #FFFFFF;
+  }
+}
+
+.project-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  -webkit-animation: fadeIn 0.5s linear forwards;
+          animation: fadeIn 0.5s linear forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .st0 {

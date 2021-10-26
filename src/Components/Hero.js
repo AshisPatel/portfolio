@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero(props) {
     return (
-        <section id="hero-wrapper" className="my-3">
+        <section id="hero-wrapper" className="mt-3 mb-5">
             <div class="d-flex flex-column w-75 mx-auto py-5 text-center">
                 <h1>Hello friend! My name is Ashis Patel.</h1>
                 <p>
