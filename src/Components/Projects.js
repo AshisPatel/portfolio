@@ -1,81 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
+import completedProjects from "../assets/data/completedProjects";
+import developingProjects from "../assets/data/developingProjects";
 
 function Projects(props) {
 
-    const completed = [
-        {
-            name: "Gripe Support",
-            technology: "Sequelize, Handlebars, Express, Node",
-            description: "Gripe support was designed as a space where one could gripe or support other user's anonymously. Visitors can create an account that will allow them to make posts (categorized as a gripe or an encouragement). Additionally, user's can 'hug' and comment on posts.",
-            image: "gs",
-            website: "https://infinite-bayou-42393.herokuapp.com/",
-            github: "https://github.com/wsbousman/Gripe-Support"
-        },
-        {
-            name: "Gripe Support",
-            technology: "Sequelize, Handlebars, Express, Node",
-            description: "Gripe support was designed as a space where one could gripe or support other user's anonymously. Visitors can create an account that will allow them to make posts (categorized as a gripe or an encouragement). Additionally, user's can 'hug' and comment on posts.",
-            image: "gs",
-            website: "https://infinite-bayou-42393.herokuapp.com/",
-            github: "https://github.com/wsbousman/Gripe-Support"
-        },
-        {
-            name: "Gripe Support",
-            technology: "Sequelize, Handlebars, Express, Node",
-            description: "Gripe support was designed as a space where one could gripe or support other user's anonymously. Visitors can create an account that will allow them to make posts (categorized as a gripe or an encouragement). Additionally, user's can 'hug' and comment on posts.",
-            image: "gs",
-            website: "https://infinite-bayou-42393.herokuapp.com/",
-            github: "https://github.com/wsbousman/Gripe-Support"
-        },
-        {
-            name: "Gripe Support",
-            technology: "Sequelize, Handlebars, Express, Node",
-            description: "Gripe support was designed as a space where one could gripe or support other user's anonymously. Visitors can create an account that will allow them to make posts (categorized as a gripe or an encouragement). Additionally, user's can 'hug' and comment on posts.",
-            image: "gs",
-            website: "https://infinite-bayou-42393.herokuapp.com/",
-            github: "https://github.com/wsbousman/Gripe-Support"
-        },
-        {
-            name: "Gripe Support",
-            technology: "Sequelize, Handlebars, Express, Node",
-            description: "Gripe support was designed as a space where one could gripe or support other user's anonymously. Visitors can create an account that will allow them to make posts (categorized as a gripe or an encouragement). Additionally, user's can 'hug' and comment on posts.",
-            image: "gs",
-            website: "https://infinite-bayou-42393.herokuapp.com/",
-            github: "https://github.com/wsbousman/Gripe-Support"
-        },
-        {
-            name: "Gripe Support",
-            technology: "Sequelize, Handlebars, Express, Node",
-            description: "Gripe support was designed as a space where one could gripe or support other user's anonymously. Visitors can create an account that will allow them to make posts (categorized as a gripe or an encouragement). Additionally, user's can 'hug' and comment on posts.",
-            image: "gs",
-            website: "https://infinite-bayou-42393.herokuapp.com/",
-            github: "https://github.com/wsbousman/Gripe-Support"
-        }
-    ];
+    const completed = completedProjects;
 
-    const developing = [
-        {
-            name: "Cozy",
-            description: "IT'S LIKE THE DESTRESSING HOME PAGE BUT MORE BALLER? MERN STACKED",
-            image: ""
-        },
-        {
-            name: "Some type of way",
-            description: "CAN YOU FEEL IT BB?",
-            image: ""
-        },
-        {
-            name: "incremental game",
-            description: "I am my own problems",
-            image: ""
-        },
-        {
-            name: "MONEY MOVES",
-            description: "We can make that cash money, lets get this sheet",
-            image: ""
-        }
-    ];
+    const developing = developingProjects;
 
     const [viewCompleted, setViewCompleted] = useState(true);
 
