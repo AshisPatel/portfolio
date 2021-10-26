@@ -162,7 +162,7 @@ header {
           animation: loadin 0.5s linear forwards;
 }
 
-.font-load {
+.load-in {
   visibility: hidden;
   -webkit-animation: fontLoad 0.5s 0.5s linear forwards;
           animation: fontLoad 0.5s 0.5s linear forwards;
@@ -239,6 +239,8 @@ header {
 
 .github-icon, .website-icon {
   fill: currentColor;
+  width: 32px;
+  height: 32px;
 }
 .github-icon:hover, .website-icon:hover {
   fill: #080707;
