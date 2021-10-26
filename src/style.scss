@@ -1,5 +1,3 @@
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
-
 $black: #080707; 
 $white: #FFFFFF;
 $white-accent: #DDE4E4;
@@ -147,7 +145,7 @@ header {
 // project card styling
 #project-container {
  position: relative;
- overflow: hidden;  
+ overflow: hidden; 
 }
 
 .projectCard {
@@ -155,9 +153,7 @@ header {
     height: 300px; 
     background-color: transparent; 
     color: $white; 
-    border-radius: 0.2rem; 
     box-shadow: $floating-box-shadow;
-    position: relative;  
     transition: box-shadow 0.5s ease-in; 
     
     &:hover {
@@ -169,6 +165,7 @@ header {
 .project-info {
     height:100%; 
     box-shadow: $floating-box-shadow-red; 
+    border-radius: 0.2rem; 
     animation: loadin 0.5s linear forwards; 
 }
 
@@ -201,10 +198,8 @@ header {
 
 .project-image {
     height: 100%;
-    width: 100%; 
-    position: absolute; 
-    top: 0%;
-    left: 0%; 
+    width: 100%;  
+ 
     animation: fadeIn 0.5s linear forwards; 
 }
 
@@ -214,6 +209,17 @@ header {
     }
     to {
         opacity: 1
+    }
+}
+
+.icon-link {
+    color: inherit; 
+}
+
+.github-icon, .website-icon {
+    fill: currentColor; 
+    &:hover{
+        fill: $black; 
     }
 }
 
