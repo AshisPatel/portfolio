@@ -33,11 +33,7 @@ function ProjectCard({ project, index }) {
                                 </a>
                             </div>
                         </div> :
-                        <img
-                            src={require(`../assets/images/${image}.png`).default}
-                            alt=""
-                            className="project-image"
-                        />
+                        <div>{image}</div>
 
                 }
 
