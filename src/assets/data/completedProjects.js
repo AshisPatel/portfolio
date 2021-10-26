@@ -9,7 +9,7 @@ const completedProjects = [
     },
     {
         name: "Destressing Homepage",
-        technology: "Javascript, HTML5, CSS",
+        technology: "Javascript, HTML5, CSS, Tailwind CSS",
         description: "The Destressing Home Page is a responsive webpage that is intended to be visited by a user who needs to take a small break and unwind. Upon arrival to the webpage, the user is greeted with a dynamic time-based welcome message and color theme. The website allows you to view gifs, artwork, quotes, and jokes. The content for the gifs, artwork, and quotes is normally delivered at random but the user can choose to search for specific tags if they would like. Additionally, the user can create ambient sound mixes (and save presets to localStorage) to listen to while they have the page open",
         image: "gs",
         website: "https://ashispatel.github.io/Project-1-DS-Homepage/",
@@ -17,7 +17,7 @@ const completedProjects = [
     },
     {
         name: "Tech Blog",
-        technology: "Sequelize, Handlebars, Express, Node, SCSS",
+        technology: "Sequelize, Handlebars, Express, Node, SCSS, Bootstrap",
         description: "Tech Blog is a simple website that users can visit and create an account that will allow them to make posts, edit their posts, view other user's posts, and comment on both their own and other user's posts. This is all made possible using the Model-View-Controller scheme. ",
         image: "tb",
         website: "https://sheltered-ridge-15649.herokuapp.com/",
