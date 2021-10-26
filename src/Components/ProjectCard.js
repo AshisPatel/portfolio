@@ -10,7 +10,7 @@ function ProjectCard({ project, index }) {
 
     return (
         <article className={`${position}`}>
-            <div className="col-6 projectCard mb-5" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+            <div className="col-12 col-md-6 projectCard mb-5" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 
                 {
                     isHovered ? 
@@ -19,7 +19,7 @@ function ProjectCard({ project, index }) {
                         <p className="font-load">{description}</p>
                     </div> :
                     <img
-                        src={require(`../assets/images/gs.jpg`).default}
+                        src={require(`../assets/images/gs.png`).default}
                         alt=""
                         className = "project-image"
                     />

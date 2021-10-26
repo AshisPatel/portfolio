@@ -107,6 +107,7 @@ header {
 }
 
 .outter-sbox {
+    z-index: -2; 
     animation: shift 10s linear infinite; 
 }
 
