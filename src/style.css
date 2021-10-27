@@ -10,8 +10,8 @@ body {
 .button {
   text-decoration: none;
   outline: 1px solid #2C3940;
-  background-color: #212121;
-  color: #DDE4E4;
+  background-color: #DDE4E4;
+  color: #2C3940;
   border: none;
   font-size: 1rem;
   cursor: pointer;
@@ -19,6 +19,9 @@ body {
   padding: 0.5rem;
   border-radius: 0.2rem;
   transition: 0.2s ease-in-out;
+}
+a .button {
+  width: 100%;
 }
 .button:hover {
   background-color: #2C3940;
@@ -44,12 +47,6 @@ nav ul {
   font-size: 1rem;
   border: none;
   background: #DDE4E4;
-}
-
-#hero-wrapper {
-  background-color: #212121;
-  color: #DDE4E4;
-  box-shadow: 0 0.2rem 20px #212121;
 }
 
 footer {
@@ -243,6 +240,28 @@ footer {
 }
 .github-icon:hover, .website-icon:hover {
   fill: #212121;
+}
+
+#about {
+  background-color: #DDE4E4;
+  color: #212121;
+}
+
+.about-info-box {
+  background-color: #212121;
+  color: #DDE4E4;
+  border-radius: 0.2rem;
+  transition: background-color 0.25s ease-in-out;
+}
+.about-info-box:hover {
+  background: #2C3940;
+}
+
+.about-link-box {
+  background-color: #212121;
+  color: #DDE4E4;
+  border-radius: 0.2rem;
+  height: 40vh;
 }
 
 .st0 {

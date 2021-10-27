@@ -1,21 +1,35 @@
 import React from "react";
 
-function Hero(props) {
-    return (
-        <section id="hero-wrapper" className="mt-3 mb-5">
-            <div class="d-flex flex-column w-75 mx-auto py-5 text-center">
-                <h1>Hello friend! My name is Ashis Patel.</h1>
-                <p>
-                    I am a Full Stack Developer that is passionate about creating web applications that improve the lives of users! I have a background in consulting and teaching, where I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. I've made many happy clients in my career and I look forward to making many more in the field of web development! 
+function About(props) {
 
-                </p>
-                <div>
-                    <button className="button light me-3">About Me</button>
-                    <button className="button light">Projects</button>
+    const { rendered, setRendered } = props; 
+
+    return (
+        <section id="about" className="container mt-3 mb-5">
+            <div className="row">
+                <img src="https://via.placeholder.com/150x300.png" alt="Ashis striking a pose that embodies his grace and magnificence" className="col-3 ps-0 pe-2" height="300" />
+                <div className="col-9 about-info-box d-flex flex-column justify-content-around">
+                    <h1>Hello friend! My name is Ashis Patel.</h1>
+                    <p>
+                        I am a Full Stack Developer that is passionate about creating web applications that improve the lives of users! I have a background in consulting and teaching, where I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. I've made many happy clients in my career and I look forward to making many more in the field of web development!
+
+                    </p>
+                </div>
+            </div>
+            <div className="row mt-2">
+                <div className="col-4 about-link-box d-flex flex-column justify-content-around">
+                    <button className="button" onClick={() => setRendered('projects')}>Projects</button>
+                    <a href="https://github.com/AshisPatel" target="_blank">
+                        <button className="button">Github</button>
+                    </a>
+                    <a href={require("../assets/files/apr.pdf").default} target="_blank">
+                        <button className="button">Resume</button>
+                    </a>
+                    <button className="button" onClick={() => setRendered('contact')}>Contact</button>
                 </div>
             </div>
         </section>
     );
 }
 
-export default Hero;
+export default About;

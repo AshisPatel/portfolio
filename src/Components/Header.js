@@ -6,7 +6,7 @@ function Header(props) {
     return (
         <header className="d-flex justify-content-between pt-2">
             
-            <h2 id="home" className="ps-3">
+            <h2 id="home" className="ps-3" onClick={() => setRendered('about')}>
                 Ashis Patel 
             </h2>
 

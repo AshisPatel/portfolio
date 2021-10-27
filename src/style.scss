@@ -1,5 +1,6 @@
 $primary: #212121; 
 $secondary: #DDE4E4;
+$secondary-accent: #C6D2D2; 
 $white-accent: #DDE4E4;
 $accent:  #2C3940;
 $floating-box-shadow:
@@ -28,8 +29,8 @@ body {
 .button {
     text-decoration: none; 
     outline: 1px solid $accent; 
-    background-color: $primary;
-    color: $secondary; 
+    background-color: $secondary;
+    color: $accent; 
     border: none; 
     font-size: 1rem; 
     cursor: pointer; 
@@ -37,6 +38,10 @@ body {
     padding: 0.5rem; 
     border-radius: 0.2rem; 
     transition: 0.2s ease-in-out; 
+    a &{
+        width: 100%; 
+    }
+
     &:hover {
         background-color: $accent; 
         color: $secondary; 
@@ -71,12 +76,6 @@ nav {
 
 
 
-
-#hero-wrapper {
-    background-color: $primary;
-    color: $secondary; 
-    box-shadow: 0 0.2rem 20px $primary; 
-}
 
 footer {
     background-color: $primary;
@@ -230,6 +229,31 @@ footer {
 }
 
 // About me section CSS
+
+#about {
+    background-color: $secondary;
+    color: $primary; 
+  
+}
+
+.about-info-box {
+    background-color: $primary; 
+    color: $secondary;
+    border-radius: 0.2rem;
+    transition: background-color 0.25s ease-in-out; 
+
+    &:hover {
+        background: $accent; 
+    }
+}
+
+.about-link-box {
+    background-color: $primary; 
+    color: $secondary;
+    border-radius: 0.2rem;
+    height: 40vh; 
+}
+
 
 
 // coffe-cup css
