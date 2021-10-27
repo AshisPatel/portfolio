@@ -10,14 +10,12 @@ function App() {
   const [rendered, setRendered] = useState('about');
 
   return (
-  <main>  
-    <Header rendered={ rendered } setRendered = {setRendered}/>
-    <section id="content">
+  <main className="d-flex flex-column">  
+      <Header rendered={ rendered } setRendered = {setRendered}/>
       {rendered === 'about' && <About rendered={ rendered } setRendered = {setRendered}/>}
       {rendered === 'projects' && <Projects />}
       {rendered === 'contact' && <Contact />}
-    </section>
-    <Footer />
+      <Footer />
   </main>
   );
 }

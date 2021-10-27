@@ -80,14 +80,10 @@ nav {
 
 footer {
     background-color: $primary;
-    color: white; 
-    height: 80px; 
+    color: $secondary; 
+    height: 10vh; 
 }
 
-
-#content {
-    min-height: calc(100vh-130px); 
-}
 
 .star {
     fill: $primary;

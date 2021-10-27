@@ -54,12 +54,8 @@ nav ul {
 
 footer {
   background-color: #212121;
-  color: white;
-  height: 80px;
-}
-
-#content {
-  min-height: calc(100vh-130px);
+  color: #DDE4E4;
+  height: 10vh;
 }
 
 .star {
