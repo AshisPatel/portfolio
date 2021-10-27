@@ -1,51 +1,35 @@
-$black: #212121; 
-$white: #DDE4E4;
+$primary: #212121; 
+$secondary: #DDE4E4;
 $white-accent: #DDE4E4;
-$red:  #2C3940;
+$accent:  #2C3940;
 $floating-box-shadow:
-//   0.045rem 0.045rem 1.8px rgba($black, 0.15),
-//   0.234rem .234rem 5px rgba($black, 0.25),
-//   0.56rem 0.56rem 10px rgba($black, 0.4);
+//   0.045rem 0.045rem 1.8px rgba($primary, 0.15),
+//   0.234rem .234rem 5px rgba($primary, 0.25),
+//   0.56rem 0.56rem 10px rgba($primary, 0.4);
 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 $floating-box-shadow-red:
-0.045rem 0.045rem 1.8px rgba($red, 0.15),
-0.234rem .234rem 5px rgba($red, 0.25),
-0.56rem 0.56rem 12.1px rgba($red, 0.4),
-1.875rem 1.875rem 40px rgba($red, 0.3);
+0.045rem 0.045rem 1.8px rgba($accent, 0.15),
+0.234rem .234rem 5px rgba($accent, 0.25),
+0.56rem 0.56rem 12.1px rgba($accent, 0.4),
+1.875rem 1.875rem 40px rgba($accent, 0.3);
 // utility classes
 
 body {
-    background: $white !important; 
+    background: $secondary !important; 
 }
 
 .light {
-    background-color: $white; 
-    color: $black; 
-}
-
-.dropdown{
-    position: relative; 
-    &:hover > .dropdown-content {
-        display: block; 
-    }
-}
-
-.dropdown-content{
-    background-color: $white; 
-    left: -.07rem; 
-    position: absolute;
-    display: none; 
-    border: 0.5px solid $white-accent; 
-    text-align: left; 
-    z-index: 1; 
-    width: 102%; 
+    background-color: $secondary; 
+    color: $primary; 
 }
 
 .button {
     text-decoration: none; 
-    outline: none;
+    outline: 1px solid $accent; 
+    background-color: $primary;
+    color: $secondary; 
     border: none; 
     font-size: 1rem; 
     cursor: pointer; 
@@ -54,52 +38,60 @@ body {
     border-radius: 0.2rem; 
     transition: 0.2s ease-in-out; 
     &:hover {
-        background-color: $red; 
-        color: $white; 
+        background-color: $accent; 
+        color: $secondary; 
     }
 
     &:focus {
-        background-color: $red; 
-        color: $white; 
+        background-color: $accent; 
+        color: $secondary; 
     }
 }
 
 // styling
+// Header CSS
+header {
+    height: 10vh; 
+    background: $primary; 
+    color: $secondary;
+}
 
 nav {
     & ul {
         list-style:none; 
-        
-        & li {
-            border: 0.5px solid $white-accent; 
-            border-radius: 0.2rem; 
-        }
     }
 }
 
+.navBtn {
+    text-decoration: none; 
+    font-size: 1rem; 
+    border: none;
+    background: $secondary; 
+}
+
+
+
+
 #hero-wrapper {
-    background-color: $black;
-    color: $white; 
-    box-shadow: 0 0.2rem 20px $black; 
+    background-color: $primary;
+    color: $secondary; 
+    box-shadow: 0 0.2rem 20px $primary; 
 }
 
 footer {
-    background-color: $black;
+    background-color: $primary;
     color: white; 
     height: 80px; 
 }
 
-header {
-    height: 50px; 
-}
 
 #content {
     min-height: calc(100vh-130px); 
 }
 
 .star {
-    fill: $black;
-    stroke: $white;
+    fill: $primary;
+    stroke: $secondary;
 }
 
 .star-wrapper {
@@ -149,8 +141,8 @@ header {
 }
 
 #project-section-title {
-    background-color: $black;
-    color: $white; 
+    background-color: $primary;
+    color: $secondary; 
     border-radius: 0.2rem; 
     width: 25%; 
     font-size: 4rem; 
@@ -167,9 +159,9 @@ header {
     padding: 0 0 !important; 
     // height: 400px; 
     min-height: 50vh; 
-    background-color: $black; 
+    background-color: $primary; 
     border-radius: 0.2rem; 
-    color: $white; 
+    color: $secondary; 
     box-shadow: $floating-box-shadow;
     transition: box-shadow 0.5s ease-in; 
     
@@ -198,18 +190,18 @@ header {
     }
     to {
         height: 100%;
-        background-color: $red;
+        background-color: $accent;
     }
 }
 
 @keyframes fontLoad {
     from {
         visibility: visible;
-        color: $red; 
+        color: $accent; 
     }
     to {
         visibility: visible;
-        color: $white; 
+        color: $secondary; 
     }
 }
 
@@ -237,58 +229,27 @@ header {
     width: 32px;
     height: 32px; 
     &:hover{
-        fill: $black; 
+        fill: $primary; 
     }
 }
 
 // About me section CSS
 
-#about-me-box {
-    background: $black; 
-    color: $white; 
-    border-radius: 0.2rem; 
-    position: relative; 
-    overflow: hidden; 
-    &::before {
-        content: '';
-        position: absolute; 
-        top: -60%;
-        left: 0%;
-        width: 100px; 
-        height: 200%; 
-        background: linear-gradient($red, $black, $red);
-        animation: spin 4s linear infinite; 
-    }
-    & p {
-        position: relative; 
-        z-index: 10; 
-    }
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg); 
-    }
-
-    to {
-        transform: rotate(360deg); 
-    }
-}
 
 // coffe-cup css
 
 .st0 {
-    stroke: $white;
+    stroke: $secondary;
     stroke-width: 5; 
 }
 
 .filling {
-    fill: $red; 
+    fill: $accent; 
 }
 
 .steam {
     fill: none; 
-    stroke: $white;
+    stroke: $secondary;
     stroke-width: 10;
     stroke-dasharray: 150;
     stroke-dashoffset: 300;

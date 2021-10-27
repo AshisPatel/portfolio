@@ -7,45 +7,31 @@ body {
   color: #212121;
 }
 
-.dropdown {
-  position: relative;
-}
-
-.dropdown:hover > .dropdown-content {
-  display: block;
-}
-
-.dropdown-content {
-  background-color: #DDE4E4;
-  left: -.07rem;
-  position: absolute;
-  display: none;
-  border: 0.5px solid #DDE4E4;
-  text-align: left;
-  z-index: 1;
-  width: 102%;
-}
-
 .button {
   text-decoration: none;
-  outline: none;
+  outline: 1px solid #2C3940;
+  background-color: #212121;
+  color: #DDE4E4;
   border: none;
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
-
 .button:hover {
   background-color: #2C3940;
   color: #DDE4E4;
 }
-
 .button:focus {
   background-color: #2C3940;
+  color: #DDE4E4;
+}
+
+header {
+  height: 10vh;
+  background: #212121;
   color: #DDE4E4;
 }
 
@@ -53,26 +39,23 @@ nav ul {
   list-style: none;
 }
 
-nav ul li {
-  border: 0.5px solid #DDE4E4;
-  border-radius: 0.2rem;
+.navBtn {
+  text-decoration: none;
+  font-size: 1rem;
+  border: none;
+  background: #DDE4E4;
 }
 
 #hero-wrapper {
   background-color: #212121;
   color: #DDE4E4;
-  -webkit-box-shadow: 0 0.2rem 20px #212121;
-          box-shadow: 0 0.2rem 20px #212121;
+  box-shadow: 0 0.2rem 20px #212121;
 }
 
 footer {
   background-color: #212121;
   color: white;
   height: 80px;
-}
-
-header {
-  height: 50px;
 }
 
 #content {
@@ -116,56 +99,44 @@ header {
 
 @-webkit-keyframes shift {
   from {
-    -webkit-transform: translateX(-20%);
-            transform: translateX(-20%);
+    transform: translateX(-20%);
   }
   to {
-    -webkit-transform: translateX(120%);
-            transform: translateX(120%);
+    transform: translateX(120%);
   }
 }
 
 @keyframes shift {
   from {
-    -webkit-transform: translateX(-20%);
-            transform: translateX(-20%);
+    transform: translateX(-20%);
   }
   to {
-    -webkit-transform: translateX(120%);
-            transform: translateX(120%);
+    transform: translateX(120%);
   }
 }
-
 @-webkit-keyframes rotating {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @keyframes rotating {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 #project-section-title {
   background-color: #212121;
   color: #DDE4E4;
   border-radius: 0.2rem;
   width: 25%;
   font-size: 4rem;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 #project-container {
@@ -179,23 +150,16 @@ header {
   background-color: #212121;
   border-radius: 0.2rem;
   color: #DDE4E4;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  -webkit-transition: -webkit-box-shadow 0.5s ease-in;
-  transition: -webkit-box-shadow 0.5s ease-in;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   transition: box-shadow 0.5s ease-in;
-  transition: box-shadow 0.5s ease-in, -webkit-box-shadow 0.5s ease-in;
 }
-
 .projectCard:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .project-info {
   width: 100%;
-  -webkit-box-shadow: 0.045rem 0.045rem 1.8px rgba(44, 57, 64, 0.15), 0.234rem 0.234rem 5px rgba(44, 57, 64, 0.25), 0.56rem 0.56rem 12.1px rgba(44, 57, 64, 0.4), 1.875rem 1.875rem 40px rgba(44, 57, 64, 0.3);
-          box-shadow: 0.045rem 0.045rem 1.8px rgba(44, 57, 64, 0.15), 0.234rem 0.234rem 5px rgba(44, 57, 64, 0.25), 0.56rem 0.56rem 12.1px rgba(44, 57, 64, 0.4), 1.875rem 1.875rem 40px rgba(44, 57, 64, 0.3);
+  box-shadow: 0.045rem 0.045rem 1.8px rgba(44, 57, 64, 0.15), 0.234rem 0.234rem 5px rgba(44, 57, 64, 0.25), 0.56rem 0.56rem 12.1px rgba(44, 57, 64, 0.4), 1.875rem 1.875rem 40px rgba(44, 57, 64, 0.3);
   border-radius: 0.2rem;
   -webkit-animation: loadin 0.5s linear forwards;
           animation: loadin 0.5s linear forwards;
@@ -228,7 +192,6 @@ header {
     background-color: #2C3940;
   }
 }
-
 @-webkit-keyframes fontLoad {
   from {
     visibility: visible;
@@ -239,7 +202,6 @@ header {
     color: #DDE4E4;
   }
 }
-
 @keyframes fontLoad {
   from {
     visibility: visible;
@@ -250,7 +212,6 @@ header {
     color: #DDE4E4;
   }
 }
-
 .project-icon {
   height: 100%;
   width: 100%;
@@ -275,7 +236,6 @@ header {
     opacity: 1;
   }
 }
-
 .icon-link {
   color: inherit;
 }
@@ -285,57 +245,8 @@ header {
   width: 32px;
   height: 32px;
 }
-
 .github-icon:hover, .website-icon:hover {
   fill: #212121;
-}
-
-#about-me-box {
-  background: #212121;
-  color: #DDE4E4;
-  border-radius: 0.2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-#about-me-box::before {
-  content: '';
-  position: absolute;
-  top: -60%;
-  left: 0%;
-  width: 100px;
-  height: 200%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#2C3940), color-stop(#212121), to(#2C3940));
-  background: linear-gradient(#2C3940, #212121, #2C3940);
-  -webkit-animation: spin 4s linear infinite;
-          animation: spin 4s linear infinite;
-}
-
-#about-me-box p {
-  position: relative;
-  z-index: 10;
-}
-
-@-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
 
 .st0 {
@@ -367,10 +278,8 @@ header {
     stroke-dashoffset: 0;
   }
 }
-
 #coffee-wrapper {
   display: inline-block;
   width: 50px;
   height: 50px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

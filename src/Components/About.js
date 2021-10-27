@@ -1,19 +1,21 @@
 import React from "react";
 
-function About(props) {
+function Hero(props) {
     return (
-        <section className="d-flex flex-column flex-md-row justify-content-center mt-5">
-            <img src="https://via.placeholder.com/200" width="200" height="200" />
-            <div className="w-50 ms-5 p-3" id="about-me-box">
+        <section id="hero-wrapper" className="mt-3 mb-5">
+            <div class="d-flex flex-column w-75 mx-auto py-5 text-center">
+                <h1>Hello friend! My name is Ashis Patel.</h1>
                 <p>
-                    I'm a Full Stack Developer with an aspiration to make impactful web apps! I got my bachelor's degree in chemical engineering from Texas A&M University in 2018. For the past 3-years I have been working as a consulting engineer for Bryan Research & Engineering. During my time as a consulting engineer, I realized my passion for helping and teaching others. However, I did not find fulfillment in my field and seeked a new area of expertise. I decided to pursue a Full Stack Certificate from the University of Texas by attending the Full Stack Coding Bootcamp. Since then, I have been working hard to develop my coding skills!
+                    I am a Full Stack Developer that is passionate about creating web applications that improve the lives of users! I have a background in consulting and teaching, where I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. I've made many happy clients in my career and I look forward to making many more in the field of web development! 
 
-                    In my spare time, I enjoy playing with Cappu & Ccino (my cat and dog), brewing coffee, reading fiction (go fantasy!), and of course coding. If you have any inquiries, please feel free to contact me with the email link below! You can also access my resume, or browse my projects here on this page, or at my github.
                 </p>
+                <div>
+                    <button className="button light me-3">About Me</button>
+                    <button className="button light">Projects</button>
+                </div>
             </div>
-
         </section>
     );
 }
 
-export default About;
+export default Hero;
