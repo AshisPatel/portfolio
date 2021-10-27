@@ -1,6 +1,10 @@
+body {
+  background: #DDE4E4 !important;
+}
+
 .light {
-  background-color: #FFFFFF;
-  color: #080707;
+  background-color: #DDE4E4;
+  color: #212121;
 }
 
 .dropdown {
@@ -12,7 +16,7 @@
 }
 
 .dropdown-content {
-  background-color: #FFFFFF;
+  background-color: #DDE4E4;
   left: -.07rem;
   position: absolute;
   display: none;
@@ -36,13 +40,13 @@
 }
 
 .button:hover {
-  background-color: #D93838;
-  color: #FFFFFF;
+  background-color: #2C3940;
+  color: #DDE4E4;
 }
 
 .button:focus {
-  background-color: #D93838;
-  color: #FFFFFF;
+  background-color: #2C3940;
+  color: #DDE4E4;
 }
 
 nav ul {
@@ -55,14 +59,14 @@ nav ul li {
 }
 
 #hero-wrapper {
-  background-color: #080707;
-  color: #FFFFFF;
-  -webkit-box-shadow: 0 0.2rem 20px #080707;
-          box-shadow: 0 0.2rem 20px #080707;
+  background-color: #212121;
+  color: #DDE4E4;
+  -webkit-box-shadow: 0 0.2rem 20px #212121;
+          box-shadow: 0 0.2rem 20px #212121;
 }
 
 footer {
-  background-color: #080707;
+  background-color: #212121;
   color: white;
   height: 80px;
 }
@@ -76,8 +80,8 @@ header {
 }
 
 .star {
-  fill: #080707;
-  stroke: #FFFFFF;
+  fill: #212121;
+  stroke: #DDE4E4;
 }
 
 .star-wrapper {
@@ -155,13 +159,13 @@ header {
 }
 
 #project-section-title {
-  background-color: #080707;
-  color: #FFFFFF;
+  background-color: #212121;
+  color: #DDE4E4;
   border-radius: 0.2rem;
   width: 25%;
   font-size: 4rem;
-  -webkit-box-shadow: 0.045rem 0.045rem 1.8px rgba(8, 7, 7, 0.15), 0.234rem 0.234rem 5px rgba(8, 7, 7, 0.25), 0.56rem 0.56rem 12.1px rgba(8, 7, 7, 0.4), 1.875rem 1.875rem 40px rgba(8, 7, 7, 0.3);
-          box-shadow: 0.045rem 0.045rem 1.8px rgba(8, 7, 7, 0.15), 0.234rem 0.234rem 5px rgba(8, 7, 7, 0.25), 0.56rem 0.56rem 12.1px rgba(8, 7, 7, 0.4), 1.875rem 1.875rem 40px rgba(8, 7, 7, 0.3);
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 #project-container {
@@ -171,12 +175,12 @@ header {
 
 .projectCard {
   padding: 0 0 !important;
-  height: 400px;
-  background-color: #080707;
+  min-height: 50vh;
+  background-color: #212121;
   border-radius: 0.2rem;
-  color: #FFFFFF;
-  -webkit-box-shadow: 0.045rem 0.045rem 1.8px rgba(8, 7, 7, 0.15), 0.234rem 0.234rem 5px rgba(8, 7, 7, 0.25), 0.56rem 0.56rem 12.1px rgba(8, 7, 7, 0.4), 1.875rem 1.875rem 40px rgba(8, 7, 7, 0.3);
-          box-shadow: 0.045rem 0.045rem 1.8px rgba(8, 7, 7, 0.15), 0.234rem 0.234rem 5px rgba(8, 7, 7, 0.25), 0.56rem 0.56rem 12.1px rgba(8, 7, 7, 0.4), 1.875rem 1.875rem 40px rgba(8, 7, 7, 0.3);
+  color: #DDE4E4;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   -webkit-transition: -webkit-box-shadow 0.5s ease-in;
   transition: -webkit-box-shadow 0.5s ease-in;
   transition: box-shadow 0.5s ease-in;
@@ -190,8 +194,8 @@ header {
 
 .project-info {
   width: 100%;
-  -webkit-box-shadow: 0.045rem 0.045rem 1.8px rgba(217, 56, 56, 0.15), 0.234rem 0.234rem 5px rgba(217, 56, 56, 0.25), 0.56rem 0.56rem 12.1px rgba(217, 56, 56, 0.4), 1.875rem 1.875rem 40px rgba(217, 56, 56, 0.3);
-          box-shadow: 0.045rem 0.045rem 1.8px rgba(217, 56, 56, 0.15), 0.234rem 0.234rem 5px rgba(217, 56, 56, 0.25), 0.56rem 0.56rem 12.1px rgba(217, 56, 56, 0.4), 1.875rem 1.875rem 40px rgba(217, 56, 56, 0.3);
+  -webkit-box-shadow: 0.045rem 0.045rem 1.8px rgba(44, 57, 64, 0.15), 0.234rem 0.234rem 5px rgba(44, 57, 64, 0.25), 0.56rem 0.56rem 12.1px rgba(44, 57, 64, 0.4), 1.875rem 1.875rem 40px rgba(44, 57, 64, 0.3);
+          box-shadow: 0.045rem 0.045rem 1.8px rgba(44, 57, 64, 0.15), 0.234rem 0.234rem 5px rgba(44, 57, 64, 0.25), 0.56rem 0.56rem 12.1px rgba(44, 57, 64, 0.4), 1.875rem 1.875rem 40px rgba(44, 57, 64, 0.3);
   border-radius: 0.2rem;
   -webkit-animation: loadin 0.5s linear forwards;
           animation: loadin 0.5s linear forwards;
@@ -210,7 +214,7 @@ header {
   }
   to {
     height: 100%;
-    background-color: #D93838;
+    background-color: #2C3940;
   }
 }
 
@@ -221,29 +225,29 @@ header {
   }
   to {
     height: 100%;
-    background-color: #D93838;
+    background-color: #2C3940;
   }
 }
 
 @-webkit-keyframes fontLoad {
   from {
     visibility: visible;
-    color: #D93838;
+    color: #2C3940;
   }
   to {
     visibility: visible;
-    color: #FFFFFF;
+    color: #DDE4E4;
   }
 }
 
 @keyframes fontLoad {
   from {
     visibility: visible;
-    color: #D93838;
+    color: #2C3940;
   }
   to {
     visibility: visible;
-    color: #FFFFFF;
+    color: #DDE4E4;
   }
 }
 
@@ -283,21 +287,69 @@ header {
 }
 
 .github-icon:hover, .website-icon:hover {
-  fill: #080707;
+  fill: #212121;
+}
+
+#about-me-box {
+  background: #212121;
+  color: #DDE4E4;
+  border-radius: 0.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#about-me-box::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: 0%;
+  width: 100px;
+  height: 200%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2C3940), color-stop(#212121), to(#2C3940));
+  background: linear-gradient(#2C3940, #212121, #2C3940);
+  -webkit-animation: spin 4s linear infinite;
+          animation: spin 4s linear infinite;
+}
+
+#about-me-box p {
+  position: relative;
+  z-index: 10;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .st0 {
-  stroke: #FFFFFF;
+  stroke: #DDE4E4;
   stroke-width: 5;
 }
 
 .filling {
-  fill: #D93838;
+  fill: #2C3940;
 }
 
 .steam {
   fill: none;
-  stroke: #FFFFFF;
+  stroke: #DDE4E4;
   stroke-width: 10;
   stroke-dasharray: 150;
   stroke-dashoffset: 300;
