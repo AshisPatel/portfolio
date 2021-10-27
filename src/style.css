@@ -152,7 +152,6 @@ footer {
 
 .project-info {
   width: 100%;
-  box-shadow: 0.045rem 0.045rem 1.8px rgba(44, 57, 64, 0.15), 0.234rem 0.234rem 5px rgba(44, 57, 64, 0.25), 0.56rem 0.56rem 12.1px rgba(44, 57, 64, 0.4), 1.875rem 1.875rem 40px rgba(44, 57, 64, 0.3);
   border-radius: 0.2rem;
   -webkit-animation: loadin 0.5s linear forwards;
           animation: loadin 0.5s linear forwards;
@@ -167,7 +166,8 @@ footer {
 @-webkit-keyframes loadin {
   from {
     height: 0%;
-    background-color: transparent;
+    background-color: #6C8C9D;
+    box-shadow: 0 0.045rem 1.8px rgba(108, 140, 157, 0.15), 0 0.234rem 5px rgba(108, 140, 157, 0.25), 0 0.56rem 12.1px rgba(108, 140, 157, 0.4), 0 1.875rem 40px rgba(108, 140, 157, 0.3);
   }
   to {
     height: 100%;
@@ -178,7 +178,8 @@ footer {
 @keyframes loadin {
   from {
     height: 0%;
-    background-color: transparent;
+    background-color: #6C8C9D;
+    box-shadow: 0 0.045rem 1.8px rgba(108, 140, 157, 0.15), 0 0.234rem 5px rgba(108, 140, 157, 0.25), 0 0.56rem 12.1px rgba(108, 140, 157, 0.4), 0 1.875rem 40px rgba(108, 140, 157, 0.3);
   }
   to {
     height: 100%;
