@@ -265,6 +265,19 @@ footer {
   height: 40vh;
 }
 
+.about-extra-info {
+  background-color: #212121;
+  color: #DDE4E4;
+  border-radius: 0.2rem;
+  height: 10vh;
+  width: 66%;
+  transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.about-extra-info:hover {
+  height: 40vh;
+  background-color: #2C3940;
+}
+
 .st0 {
   stroke: #DDE4E4;
   stroke-width: 5;

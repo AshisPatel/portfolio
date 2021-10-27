@@ -16,7 +16,7 @@ function Projects(props) {
     return (
         <div id="project-container">
             <div class="row mb-5">
-                <div className="offset-7 col-4 text-center px-3 pb-2" id="project-section-title">My Projects</div>
+                <div className="offset-7 col-4 text-center px-3 pb-2 mt-2" id="project-section-title">My Projects</div>
             </div>
             
             {/* <div className="outter-sbox">

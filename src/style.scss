@@ -255,6 +255,18 @@ footer {
     height: 40vh; 
 }
 
+.about-extra-info {
+    background-color: $primary;
+    color: $secondary;
+    border-radius: 0.2rem;
+    height: 10vh; 
+    width: 66%;
+    transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out; 
+    &:hover {
+        height: 40vh; 
+        background-color: $accent;
+    }
+}
 
 
 // coffe-cup css

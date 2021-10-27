@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 function About(props) {
 
     const { rendered, setRendered } = props; 
+    const [ isHovered, setIsHovered ] = useState(false); 
 
     return (
         <section id="about" className="container mt-3 mb-5">
@@ -16,16 +17,20 @@ function About(props) {
                     </p>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-2 justify-content-between">
                 <div className="col-4 about-link-box d-flex flex-column justify-content-around">
-                    <button className="button" onClick={() => setRendered('projects')}>Projects</button>
-                    <a href="https://github.com/AshisPatel" target="_blank">
+                    <button className="button w-75 mx-auto" onClick={() => setRendered('projects')}>Projects</button>
+                    <a href="https://github.com/AshisPatel" target="_blank" className="w-75 mx-auto">
                         <button className="button">Github</button>
                     </a>
-                    <a href={require("../assets/files/apr.pdf").default} target="_blank">
+                    <a href={require("../assets/files/apr.pdf").default} target="_blank" className="w-75 mx-auto">
                         <button className="button">Resume</button>
                     </a>
-                    <button className="button" onClick={() => setRendered('contact')}>Contact</button>
+                    <button className="button w-75 mx-auto" onClick={() => setRendered('contact')}>Contact</button>
+                </div>
+
+                <div className="about-extra-info" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                    
                 </div>
             </div>
         </section>
