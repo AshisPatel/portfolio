@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import About from "./Components/About";
@@ -8,27 +8,24 @@ import Footer from "./Components/Footer";
 
 function App() {
 
-  const [rendered, setRendered] = useState('about');
-
   return (
   <main className="d-flex flex-column">  
-      <Header rendered={ rendered } setRendered = {setRendered}/>
-      <Switch>
-        <Route exact path="/">
-          <About rendered={ rendered} setRendered = {setRendered} />
-        </Route>
+      <Header />
+      <section id="content">
+        <Switch>
+          <Route exact path="/">
+            <About />
+          </Route>
 
-        <Route path="/projects">
-          <Projects />
-        </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
 
-        <Route path="/contact">
-          <Contact />
-        </Route>
-      </Switch>
-      {/* {rendered === 'about' && <About rendered={ rendered } setRendered = {setRendered}/>} */}
-      {/* {rendered === 'projects' && <Projects />}
-      {rendered === 'contact' && <Contact />} */}
+          <Route path="/contact">
+            <Contact />
+          </Route>
+        </Switch>
+      </section>
       <Footer />
   </main>
   );

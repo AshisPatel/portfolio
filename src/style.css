@@ -47,10 +47,14 @@ nav ul {
   background: #DDE4E4;
 }
 
+#content {
+  min-height: 80vh;
+}
+
 footer {
   background-color: #212121;
   color: #DDE4E4;
-  height: 10vh;
+  min-height: 10vh;
 }
 
 .star {

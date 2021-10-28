@@ -4,7 +4,7 @@ function Footer(props) {
     const emoji = `(>^~^)>`
 
     return (
-        <footer className="mt-auto">
+        <footer className="">
             <p className="d-flex justify-content-center"> 
                 <span className="pt-3 me-1">Hey, you scrolled to the bottom! Hope you enjoyed your time here, have a cup of coffee on your way out. {emoji} </span>
                 <span id="coffee-wrapper">
