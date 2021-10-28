@@ -322,6 +322,10 @@ footer {
   background-color: #2C3940;
 }
 
+.fun-fact-list {
+  list-style-type: none;
+}
+
 .st0 {
   stroke: #DDE4E4;
   stroke-width: 5;

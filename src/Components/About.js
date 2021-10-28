@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import funFactList from "../assets/data/factList";
+import ListItem from "../Components/ListItem";
 
 function About(props) {
 
@@ -36,7 +38,17 @@ function About(props) {
                 <div className="about-extra-info" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                     <h3 class="text-center">Hover over this box to see some fun facts about me!</h3>
 
-                    {isHovered && <div>Howdy</div>}
+                    {
+                        isHovered && 
+
+                        <div>
+                            <ul className="fun-fact-list">
+                                {
+                                    funFactList.map(fact => <ListItem fact={fact} />)
+                                }
+                            </ul>
+                        </div>
+                    }
                 </div>
             </div>
         </section>
