@@ -38,9 +38,9 @@ body {
     padding: 0.5rem; 
     border-radius: 0.2rem; 
     transition: 0.2s ease-in-out; 
-    a &{
-        width: 100%; 
-    }
+    // a &{
+    //     width: 100%; 
+    // }
 
     &:hover {
         background-color: $accent; 

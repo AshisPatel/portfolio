@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import funFactList from "../assets/data/factList";
 import ListItem from "../Components/ListItem";
 
 function About(props) {
 
-    const { rendered, setRendered } = props; 
     const [ isHovered, setIsHovered ] = useState(false); 
 
     return (
@@ -22,14 +22,14 @@ function About(props) {
                         Feel free to check out my projects, github, resume, or reach out to me using the buttons below! 
                     </p>
                     <div className="about-link-box d-flex justify-content-around mb-3">
-                    <button className="button " onClick={() => setRendered('projects')}>Projects</button>
+                    <Link to="/projects"><button className="button">Projects</button></Link>
                     <a href="https://github.com/AshisPatel" target="_blank" className="">
                         <button className="button">Github</button>
                     </a>
                     <a href={require("../assets/files/apr.pdf").default} target="_blank" className="">
                         <button className="button">Resume</button>
                     </a>
-                    <button className="button" onClick={() => setRendered('contact')}>Contact</button>
+                    <Link to="/contact"><button className="button">Contact</button></Link>
                 </div>
                 </div>
             </div>

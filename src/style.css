@@ -22,10 +22,6 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-a .button {
-  width: 100%;
-}
-
 .button:hover {
   background-color: #2C3940;
   color: #DDE4E4;

@@ -1,4 +1,8 @@
 import React from "react";
+import About from "./About";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import { Link } from "react-router-dom"
 
 function Header(props) {
 
@@ -12,9 +16,9 @@ function Header(props) {
 
             <nav className="mt-2">
                 <ul className="d-flex p-0">
-                    <button className="button me-3" onClick={() => setRendered('projects')}>Projects</button>
-                    <button className="button me-3" onClick={() => setRendered('about')}>About Me</button>
-                    <button className="button me-3" onClick={() => setRendered('contact')}>Contact</button>
+                    <Link to="/"><button className="button me-3" onClick={() => setRendered('about')}>About Me</button></Link>
+                    <Link to="/projects"><button className="button me-3" onClick={() => setRendered('projects')}>Projects</button></Link>
+                    <Link to="/contact"><button className="button me-3" onClick={() => setRendered('contact')}>Contact</button></Link>
                 </ul>
             </nav>
         </header>
