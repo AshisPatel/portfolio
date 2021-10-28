@@ -57,9 +57,13 @@ body {
 // styling
 // Header CSS
 header {
-    height: 10vh; 
+    min-height: 10vh; 
     background: $primary; 
     color: $secondary;
+    position: sticky;
+    top: 0; 
+    // width: 100%;
+    z-index: 10; 
 }
 
 nav {
