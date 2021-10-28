@@ -5,11 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import "../src/style.css"
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHeart, faCoffee, faMusic, faStickyNote, faDollarSign, faPizzaSlice, faCloud, faMagic} from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faCoffee, faMusic, faStickyNote, faDollarSign, faPizzaSlice, faCloud, faMagic, faEnvelopeOpenText, faMobileAlt, faHome, faComment } from '@fortawesome/free-solid-svg-icons';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-library.add(faHeart, faMusic, faCoffee, faStickyNote, faDollarSign, faPizzaSlice, faCloud, faMagic); 
+library.add(faHeart, faMusic, faCoffee, faStickyNote, faDollarSign, faPizzaSlice, faCloud, faMagic, faEnvelopeOpenText, faMobileAlt, faHome, faComment); 
 
 ReactDOM.render(
   <React.StrictMode>

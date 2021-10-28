@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function ListItem(props) {
 
-    const { fact } = props; 
+    const { info, icon } = props; 
 
     return (
         <li className="my-3">
-            <FontAwesomeIcon icon='magic' /> {fact}
+            {icon && <FontAwesomeIcon icon={icon} />} {info}
         </li>
     );
 
