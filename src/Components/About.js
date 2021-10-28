@@ -15,22 +15,28 @@ function About(props) {
                         I am a Full Stack Developer that is passionate about creating web applications that improve the lives of users! I have a background in consulting and teaching, where I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. I've made many happy clients in my career and I look forward to making many more in the field of web development!
 
                     </p>
-                </div>
-            </div>
-            <div className="row mt-2 justify-content-between">
-                <div className="col-4 about-link-box d-flex flex-column justify-content-around">
-                    <button className="button w-75 mx-auto" onClick={() => setRendered('projects')}>Projects</button>
-                    <a href="https://github.com/AshisPatel" target="_blank" className="w-75 mx-auto">
+
+                    <p>
+                        Feel free to check out my projects, github, resume, or reach out to me using the buttons below! 
+                    </p>
+                    <div className="about-link-box d-flex justify-content-around mb-3">
+                    <button className="button " onClick={() => setRendered('projects')}>Projects</button>
+                    <a href="https://github.com/AshisPatel" target="_blank" className="">
                         <button className="button">Github</button>
                     </a>
-                    <a href={require("../assets/files/apr.pdf").default} target="_blank" className="w-75 mx-auto">
+                    <a href={require("../assets/files/apr.pdf").default} target="_blank" className="">
                         <button className="button">Resume</button>
                     </a>
-                    <button className="button w-75 mx-auto" onClick={() => setRendered('contact')}>Contact</button>
+                    <button className="button" onClick={() => setRendered('contact')}>Contact</button>
                 </div>
+                </div>
+            </div>
+            <div className="row mt-2">
 
                 <div className="about-extra-info" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                    
+                    <h3 class="text-center">Hover over this box to see some fun facts about me!</h3>
+
+                    {isHovered && <div>Howdy</div>}
                 </div>
             </div>
         </section>

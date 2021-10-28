@@ -7,7 +7,7 @@ function ProjectCard({ project, index }) {
 
     const { name, technology, description, image, website, github } = project;
 
-    const position = index % 2 === 0 ? "" : "offset-md-7"
+    const position = index % 2 !== 0 ? "" : "offset-md-7"
 
     return (
         <article className="row">
