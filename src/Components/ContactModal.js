@@ -15,15 +15,26 @@ function ContactModal({ setDisplayModal }) {
         contactViaEmail: false,
     });
 
-    const [errMsg, setErrMsg] = useState('');
+    const [errMsg, setErrMsg] = useState("");
 
     const { name, email, phone, contactViaPhone, contactViaEmail, message, permission} = formState;
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
-        type === "checked" ?
-            setFormState({ [name]: checked }) :
-            setFormState({ [name]: value });
+
+        if (name === "email") {
+            !validateEmail(value) ? setErrMsg('The input email is invalid.') : setErrMsg('')
+        } else if (name === "phone-number") {
+            !validateNumber(value) ? setErrMsg('The input phone number is invalid.')  : setErrMsg('')
+        } else {
+            value.trim() === '' ? setErrMsg(`The ${name} input cannot be left blank.`)  : setErrMsg('')
+        }
+        if(!errMsg) {
+            type === "checked" ?
+            setFormState({...formState, [name]: checked }) :
+            setFormState({...formState, [name]: value });
+        }
+        
     }
 
     const validateInput = (e) => {
@@ -59,9 +70,9 @@ function ContactModal({ setDisplayModal }) {
                     autoComplete="off"
                     name="name"
                     type="text"
-                    value={name}
+                    // value={name}
                     onChange={handleChange}
-                    onBlur={validateInput}
+                    onBlur={handleChange}
                     placeholder="Your Awesome Name"
                     />
            
@@ -70,9 +81,9 @@ function ContactModal({ setDisplayModal }) {
                         autoComplete="off"
                         name="email"
                         type="email"
-                        value={email}
+                        // value={email}
                         onChange={handleChange}
-                        onBlur={validateInput}
+                        onBlur={handleChange}
                         placeholder="yourock@email.com"
                     />
                 <label for="phone-number"> Phone #:</label>
@@ -81,9 +92,9 @@ function ContactModal({ setDisplayModal }) {
                         autoComplete="off"
                         name="phone-number"
                         type="tel"
-                        value={phone}
+                        // value={phone}
                         onChange={handleChange}
-                        onBlur={validateInput}
+                        onBlur={handleChange}
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         placeholder="123-456-7890"
                     />
@@ -91,11 +102,11 @@ function ContactModal({ setDisplayModal }) {
                     name="message"
                     autoComplete="off"
                     placeholder="Enter a message here... (compliments are always welcome (^^)b)"
-                    value={message}
+                    // value={message}
                     rows="5"
                     className="mb-2"
                     onChange={handleChange}
-                    onBlur={validateInput}
+                    onBlur={handleChange}
                 />
                <label> Would you like me to contact you?
                     <label className="ms-2"> 
@@ -124,6 +135,7 @@ function ContactModal({ setDisplayModal }) {
                                 type="checkbox"
                                 name="emailMe"
                                 checked={contactViaEmail}
+                                onChange={handleChange}
                             /> Email Me
                         </label>
                         <label className="ms-2">
@@ -131,6 +143,7 @@ function ContactModal({ setDisplayModal }) {
                                 type="checkbox"
                                 name="callMe"
                                 checked={contactViaPhone}
+                                onChange={handleChange}
                             /> Call Me
                         </label>
                     </div>
