@@ -3,6 +3,7 @@ $secondary: #DDE4E4;
 $secondary-accent: #C6D2D2; 
 $white-accent: #DDE4E4;
 $accent:  #2C3940;
+$warning: #baf2ef; 
 $floating-box-shadow:
 //   0.045rem 0.045rem 1.8px rgba($primary, 0.15),
 //   0.234rem .234rem 5px rgba($primary, 0.25),
@@ -330,6 +331,11 @@ footer {
     to {
         top:20%; 
     }
+}
+
+.form-err-msg {
+    color: $warning;
+    font-weight: bold; 
 }
 
 

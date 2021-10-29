@@ -352,6 +352,11 @@ footer {
     top: 20%;
   }
 }
+.form-err-msg {
+  color: #baf2ef;
+  font-weight: bold;
+}
+
 .st0 {
   stroke: #DDE4E4;
   stroke-width: 5;

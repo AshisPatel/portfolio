@@ -21,7 +21,7 @@ function Contact() {
                 Feel free to shoot me a <button className="button fs-2" onClick={() => setDisplayModal(true)}> Comment <FontAwesomeIcon icon="comment"/></button>
             </p>
 
-            {displayModal && <ContactModal />}
+            {displayModal && <ContactModal setDisplayModal={setDisplayModal}/>}
 
         </section>
     );
