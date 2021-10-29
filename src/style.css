@@ -301,13 +301,25 @@ footer {
 }
 
 #contact-form {
-  background: #2C3940;
+  background: #212121;
   color: #DDE4E4;
   min-height: 40vh;
+  border-radius: 0.2rem;
   z-index: 10;
   position: absolute;
   -webkit-animation: fadeIn 0.25s linear forwards, slideIn 0.25s linear forwards;
           animation: fadeIn 0.25s linear forwards, slideIn 0.25s linear forwards;
+}
+#contact-form input, #contact-form textarea {
+  border-radius: 0.2rem;
+  color: #212121;
+  background-color: #DDE4E4;
+  border: none;
+}
+#contact-form input:focus, #contact-form textarea:focus {
+  background-color: rgba(44, 57, 64, 0.8);
+  color: #DDE4E4;
+  outline: none;
 }
 
 #contact-form-backdrop {
@@ -328,7 +340,7 @@ footer {
     top: -50%;
   }
   to {
-    top: 30%;
+    top: 20%;
   }
 }
 
@@ -337,7 +349,7 @@ footer {
     top: -50%;
   }
   to {
-    top: 30%;
+    top: 20%;
   }
 }
 .st0 {

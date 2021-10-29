@@ -291,12 +291,24 @@ footer {
 }
 
 #contact-form {
-    background: $accent;
+    background: $primary;
     color: $secondary;
     min-height: 40vh; 
+    border-radius: 0.2rem; 
     z-index: 10; 
     position: absolute; 
     animation: fadeIn 0.25s linear forwards, slideIn 0.25s linear forwards; 
+    & input, textarea {
+        border-radius: 0.2rem;
+        color: $primary; 
+        background-color: $secondary; 
+        border: none; 
+        &:focus {
+            background-color: rgba($accent, 0.8); 
+            color: $secondary; 
+            outline: none;
+        }
+    }
 }
 
 #contact-form-backdrop {
@@ -316,7 +328,7 @@ footer {
         top: -50%;
     }
     to {
-        top:30%; 
+        top:20%; 
     }
 }
 
