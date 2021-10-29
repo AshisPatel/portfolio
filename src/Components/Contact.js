@@ -2,6 +2,7 @@ import React from "react";
 import ListItem from "./ListItem";
 import contactData from "../assets/data/contactData";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ContactModal from "./ContactModal";
 
 function Contact() {
 
@@ -17,6 +18,9 @@ function Contact() {
             <p className="fs-2">
                 Feel free to shoot me a <button className="button fs-2"> Comment <FontAwesomeIcon icon="comment"/></button>
             </p>
+
+            <ContactModal />
+
         </section>
     );
 }
