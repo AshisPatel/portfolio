@@ -286,11 +286,40 @@ footer {
 
 // Contact modal CSS
 
+#contact-form-wrapper {
+    overflow: hidden; 
+}
+
 #contact-form {
     background: $accent;
     color: $secondary;
     min-height: 40vh; 
+    z-index: 10; 
+    position: absolute; 
+    animation: fadeIn 0.25s linear forwards, slideIn 0.25s linear forwards; 
 }
+
+#contact-form-backdrop {
+    background: rgba($primary, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:0;
+    z-index: 1;
+    animation: fadeIn 0.25s linear forwards; 
+}
+
+@keyframes slideIn {
+    from {
+        top: -50%;
+    }
+    to {
+        top:30%; 
+    }
+}
+
 
 
 // coffe-cup css

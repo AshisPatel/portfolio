@@ -22,9 +22,9 @@ function ContactModal(props) {
     }
 
     return (
-        <div>
-            <form id="contact-form" className="d-flex flex-column p-3 justify-content-around">
-                <label> Name:</label>
+        <div id="contact-form-wrapper"> 
+            <form id="contact-form" className="d-flex flex-column p-3 justify-content-around  w-50 mx-auto">
+                <label for="name" > Name:</label>
                     <input
                     className=""
                     name="name"
@@ -34,19 +34,17 @@ function ContactModal(props) {
                     placeholder="Your Awesome Name"
                     />
            
-                <label> Email: 
+                <label for="email"> Email: </label>
                     <input
-                        className="ms-2"
                         name="email"
                         type="email"
                         value={email}
                         onChange={handleChange}
                         placeholder="yourock@email.com"
                     />
-                </label>
-                <label> Phone #:
+                <label for="phone-number"> Phone #:</label>
                     <input
-                        className="ms-2"
+                        className="mb-2"
                         name="phone-number"
                         type="tel"
                         value={phone}
@@ -54,7 +52,6 @@ function ContactModal(props) {
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         placeholder="123-456-7890"
                     />
-                </label>
                 <textarea
                     name="message"
                     value={message}
@@ -100,6 +97,7 @@ function ContactModal(props) {
                 }
 
             </form>
+            <div id="contact-form-backdrop"></div>
         </div>
     )
 
