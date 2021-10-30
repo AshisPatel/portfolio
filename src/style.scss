@@ -16,7 +16,15 @@ $floating-box-shadow-red:
 0 .234rem 5px rgba(#6C8C9D, 0.25),
 0 0.56rem 12.1px rgba(#6C8C9D, 0.4),
 0 1.875rem 40px rgba(#6C8C9D, 0.3);
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
 // utility classes
+
+.negative-margin {
+    margin-top: -4rem !important; 
+}
 
 body {
     background: $secondary !important; 
@@ -176,6 +184,14 @@ footer {
 
 .slide-left {
     animation: slideLeft 2s forwards; 
+}
+
+.hidden {
+    visibility: hidden; 
+}
+
+.first-project {
+    transform:translateX(-100vw);
 }
 
 @keyframes slideLeft {
@@ -389,3 +405,4 @@ footer {
     width: 50px;
     height: 50px; 
 }
+
