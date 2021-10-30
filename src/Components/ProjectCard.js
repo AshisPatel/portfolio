@@ -47,7 +47,8 @@ function ProjectCard({ project, index }) {
 
     return (
         <article className="negative-margin row" ref={cardRef}>
-            <div className={`col-12 col-md-5 ${position} projectCard ${show ? ( index % 2 === 0 ? "slide-right" : "slide-left") : (index % 2 === 0 ? "slide-out-right" : "slide-out-left")} ${isHidden? "hidden" : ""}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+            <div 
+            className={`col-12 col-md-5 ${position} projectCard ${show ? ( index % 2 === 0 ? "slide-right" : "slide-left") : (index % 2 === 0 ? "slide-out-right" : "slide-out-left")} ${isHidden? "hidden" : ""}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 
                 {
                     isHovered ?
