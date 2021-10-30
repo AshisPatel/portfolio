@@ -90,45 +90,10 @@ nav {
 }
 
 
-
 footer {
     background-color: $primary;
     color: $secondary; 
     min-height: 10vh; 
-}
-
-
-.star {
-    fill: $primary;
-    stroke: $secondary;
-}
-
-.star-wrapper {
-    z-index: -1; 
-    position: absolute;
-    width: 300px;
-    height: 300px; 
-    animation: rotating 10s linear infinite; 
-}
-
-.outter-sbox {
-    z-index: -2; 
-    animation: shift 10s linear infinite; 
-}
-
-#sw-1 {
-    top: 0%;
-    left: 0%; 
-}
-
-#sw-2 {
-    top: 20%;
-    left: 20%; 
-}
-
-#sw-3 {
-    top: 50%;
-    left: 50%; 
 }
 
 @keyframes shift {
@@ -156,6 +121,11 @@ footer {
     width: 25%; 
     font-size: 4rem; 
     box-shadow: $floating-box-shadow; 
+}
+
+#current-project-tag {
+    color: $warning; 
+    font-style: italic; 
 }
 
 // project card styling

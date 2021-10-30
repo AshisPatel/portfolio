@@ -39,19 +39,6 @@ function ProjectCard({ project, index }) {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    // useEffect(() => {
-    //     setIsHidden(true); 
-    // }, []);
-
-    // check for first project 
-    // const isFirst = (index) => {
-
-    //     index === 0 ?
-
-    // }
-
-
-
     const [isHovered, setIsHovered] = useState(false);
 
     const { name, technology, description, image, website, github } = project;
@@ -66,7 +53,7 @@ function ProjectCard({ project, index }) {
                     isHovered ?
                         <div className="project-info p-3 d-flex flex-column">
                             <h3 className="load-in">{name}</h3>
-                            <h6 className="load-in fst-italic mb-3">{technology}</h6>
+                            <h6 className="load-in fst-italic mb-3">{technology.join(', ')}</h6>
                             <p className="load-in">{description}</p>
                             <div className="d-flex load-in justify-content-end mt-auto mb-2">
                                 <a href={github} className="icon-link" target="_blank" rel="noreferrer">
