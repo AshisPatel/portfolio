@@ -12144,8 +12144,23 @@ footer {
 }
 
 .slide-left {
-  -webkit-animation: slideLeft 2s forwards;
-          animation: slideLeft 2s forwards;
+  -webkit-animation: slideLeft 1s forwards;
+          animation: slideLeft 1s forwards;
+}
+
+.slide-right {
+  -webkit-animation: slideRight 1s forwards;
+          animation: slideRight 1s forwards;
+}
+
+.slide-out-left {
+  -webkit-animation: slideOutLeft 1s forwards;
+          animation: slideOutLeft 1s forwards;
+}
+
+.slide-out-right {
+  -webkit-animation: slideOutRight 1s forwards;
+          animation: slideOutRight 1s forwards;
 }
 
 .hidden {
@@ -12155,6 +12170,28 @@ footer {
 .first-project {
   -webkit-transform: translateX(-100vw);
           transform: translateX(-100vw);
+}
+
+@-webkit-keyframes slideRight {
+  from {
+    -webkit-transform: translateX(200vw);
+            transform: translateX(200vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    -webkit-transform: translateX(200vw);
+            transform: translateX(200vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 @-webkit-keyframes slideLeft {
@@ -12176,6 +12213,50 @@ footer {
   to {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes slideOutRight {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(200vw);
+            transform: translateX(200vw);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(200vw);
+            transform: translateX(200vw);
+  }
+}
+
+@-webkit-keyframes slideOutLeft {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
   }
 }
 

@@ -5,26 +5,43 @@ function ProjectCard({ project, index }) {
 
     const cardRef = useRef(null);
     const [show, setShow] = useState(false);
+    const [isHidden, setIsHidden] = useState(true); 
     // useLayoutEffect instead of useEffect, to ensure that refs will not be undefined
     useLayoutEffect(() => {
         // grabs the distance from the referenced element to the top of the viewport
         const topPosition = cardRef.current.getBoundingClientRect().top;
+        const bottomPosition = cardRef.current.getBoundingClientRect().bottom; 
 
 
         const onScroll = () => {
-            const scrollPosition = window.innerHeight + window.scrollY;
+            setIsHidden(false); 
+            const scrollPosition = window.scrollY + window.innerHeight;
             // Check to see if the distance from the top of the viewport is less than the total viewport height + the number of pixels that the document is currently scrolled vertically
-            if (topPosition < scrollPosition) {
+            // first conditional catches when the object gets scrolled past (mid point on the way down)
+            // second conditional checks when the object comes into view when scrolling down
+            // third conditional is primarily for the final project card in which the card needs to dissapear when scrolled out of view
+
+            if(topPosition < window.scrollY) {
+                setShow(false);
+                return; 
+            } else if(topPosition < scrollPosition) {
                 setShow(true);
+                return; 
+            } else if (topPosition > scrollPosition) {
+                setShow(false); 
             }
+
+            // if(topPosition < window.scrollY) {
+            //     setShow(false); 
+            // }
         }
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
     // useEffect(() => {
-    //     console.log(show); 
-    // }, [show]);
+    //     setIsHidden(true); 
+    // }, []);
 
     // check for first project 
     // const isFirst = (index) => {
@@ -32,6 +49,7 @@ function ProjectCard({ project, index }) {
     //     index === 0 ?
 
     // }
+
 
 
     const [isHovered, setIsHovered] = useState(false);
@@ -42,7 +60,7 @@ function ProjectCard({ project, index }) {
 
     return (
         <article className="negative-margin row" ref={cardRef}>
-            <div className={`col-12 col-md-5 ${position} projectCard ${show ? "slide-left" : "hidden"}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+            <div className={`col-12 col-md-5 ${position} projectCard ${show ? ( index % 2 === 0 ? "slide-right" : "slide-left") : (index % 2 === 0 ? "slide-out-right" : "slide-out-left")} ${isHidden? "hidden" : ""}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 
                 {
                     isHovered ?

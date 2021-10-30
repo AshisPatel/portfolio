@@ -183,7 +183,19 @@ footer {
 }
 
 .slide-left {
-    animation: slideLeft 2s forwards; 
+    animation: slideLeft 1s forwards; 
+}
+
+.slide-right {
+    animation: slideRight 1s forwards;
+}
+
+.slide-out-left {
+    animation: slideOutLeft 1s forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight 1s forwards; 
 }
 
 .hidden {
@@ -194,12 +206,39 @@ footer {
     transform:translateX(-100vw);
 }
 
+@keyframes slideRight {
+    from {
+        transform: translateX(200vw);
+    }
+    to {
+        transform: translateX(0); 
+    }
+}
+
 @keyframes slideLeft {
     from {
         transform: translateX(-100vw);
     }
     to {
         transform: translateX(0); 
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(200vw);
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100vw); 
     }
 }
 
