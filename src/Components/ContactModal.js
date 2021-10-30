@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import validateEmail from "../utils/validateEmail";
 import validateNumber from "../utils/validateNumber";
 function ContactModal({ setDisplayModal }) {
 
+    const formRef = useRef(null); 
   
     const [formState, setFormState] = useState({
         name: "",
@@ -18,6 +19,13 @@ function ContactModal({ setDisplayModal }) {
     const [errMsg, setErrMsg] = useState("");
 
     const { name, email, phone, contactViaPhone, contactViaEmail, message, permission } = formState;
+
+    useEffect(() => {
+        document.addEventListener("click", handleClickOutside, false); 
+        return () => {
+            document.removeEventListener("click", handleClickOutside, false); 
+        }
+    }, []);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -70,10 +78,15 @@ function ContactModal({ setDisplayModal }) {
         }
     }
 
+    const handleClickOutside = e => {
+        if(formRef.current && !formRef.current.contains(e.target)) {
+            setErrMsg('Please complete the form and submit your message, or click cancel.');
+        } 
+    };
 
     return (
-        <div id="contact-form-wrapper">
-            <form id="contact-form" className="d-flex flex-column p-3 justify-content-around  w-50 mx-auto" onSubmit={validateForm}>
+        <div id="contact-form-wrapper" >
+            <form id="contact-form" className={` d-flex flex-column p-3 justify-content-around  w-50 mx-auto`} onSubmit={validateForm} ref={formRef}>
                 <label for="name" > Name:</label>
                 <input
                     className="mb-2"

@@ -10,7 +10,7 @@ function Contact() {
 
     const {email, phone, address} = contactData; 
     return (
-        <section id="contact" className="d-flex flex-column w-50 mx-auto">
+        <section id="contact" className="d-flex flex-column w-50 mx-auto mt-5 p-4">
             <h2>Reach out to me via any of the information below!</h2>
             <ul className="no-style-list fs-2 ps-0">
                 <ListItem info={email} icon="envelope-open-text"/>
