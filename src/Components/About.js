@@ -23,10 +23,10 @@ function About(props) {
                     </p>
                     <div className="about-link-box d-flex justify-content-around mb-3">
                     <Link to="/projects"><button className="button">Projects</button></Link>
-                    <a href="https://github.com/AshisPatel" target="_blank" className="">
+                    <a href="https://github.com/AshisPatel" target="_blank" className="" rel="noreferrer">
                         <button className="button">Github</button>
                     </a>
-                    <a href={require("../assets/files/apr.pdf").default} target="_blank" className="">
+                    <a href={require("../assets/files/apr.pdf").default} target="_blank" className=""  rel="noreferrer">
                         <button className="button">Resume</button>
                     </a>
                     <Link to="/contact"><button className="button">Contact</button></Link>
@@ -36,7 +36,7 @@ function About(props) {
             <div className="row mt-2">
 
                 <div className="about-extra-info" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                    <h3 class="text-center">Hover over this box to see some fun facts about me!</h3>
+                    <h3 className="text-center">Hover over this box to see some fun facts about me!</h3>
 
                     {
                         isHovered && 
@@ -44,7 +44,7 @@ function About(props) {
                         <div>
                             <ul className="no-style-list">
                                 {
-                                    funFactList.map(fact => <ListItem info={fact} icon='magic'/>)
+                                    funFactList.map((fact, i) => <ListItem info={fact} icon='magic' key={i}/>)
                                 }
                             </ul>
                         </div>

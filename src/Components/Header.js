@@ -1,12 +1,7 @@
 import React from "react";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
 import { Link } from "react-router-dom"
 
 function Header(props) {
-
-    const { rendered, setRendered } = props; 
     return (
         <header className="d-flex justify-content-between pt-2">
             

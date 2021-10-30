@@ -4,8 +4,8 @@ import validateEmail from "../utils/validateEmail";
 import validateNumber from "../utils/validateNumber";
 function ContactModal({ setDisplayModal }) {
 
-    const formRef = useRef(null); 
-  
+    const formRef = useRef(null);
+
     const [formState, setFormState] = useState({
         name: "",
         email: "",
@@ -20,19 +20,34 @@ function ContactModal({ setDisplayModal }) {
 
     const { name, email, phone, contactViaPhone, contactViaEmail, message, permission } = formState;
 
+    // event listener is added in on render, and then removed when the componenet unmounts due to our return statement
     useEffect(() => {
-        document.addEventListener("click", handleClickOutside, false); 
+        document.addEventListener("click", handleClickOutside, false);
         return () => {
-            document.removeEventListener("click", handleClickOutside, false); 
+            document.removeEventListener("click", handleClickOutside, false);
         }
     }, []);
 
-    const handleChange = (e) => {
+    // mimics the second callback parameter on setState from classes. Perhaps use this to implement validation, as it takes into account the async nature of setState?
+    useEffect(() => {
+        console.log(formState);
+    }, [formState]);
+
+    // Accessing our current reference, making sure it exists and then seeing if the target of our click is a child of the reference element
+    const handleClickOutside = (e) => {
+        if (formRef.current && !formRef.current.contains(e.target)) {
+            setErrMsg('Please complete the form and submit your message, or click cancel.');
+        }
+    };
+
+    const handleChange = async (e) => {
         const { name, value, type, checked } = e.target;
 
         type === "checkbox" ?
-            setFormState({ ...formState, [name]: checked }) :
-            setFormState({ ...formState, [name]: value });
+            setFormState(prevFormState => ({ ...prevFormState, [name]: checked })) :
+            setFormState(prevFormState => ({ ...prevFormState, [name]: value }));
+
+        // console.log(formState); set state is async?
     }
 
     const validateInput = (e) => {
@@ -52,18 +67,18 @@ function ContactModal({ setDisplayModal }) {
         // Check to see if name and message are valid 
         // Surely there must be a way to do this with state??? State seems to keep the errMsg one step behind, I must just be misunderstanding something. 
         let emailIsValid = true;
-        let phoneIsValid = true; 
+        let phoneIsValid = true;
         if (name && message) {
             // Check to see if a valid email is added when the user wants to be contacted via email
             if (contactViaEmail) {
-                if(!validateEmail(email)) {
-                    emailIsValid = false; 
+                if (!validateEmail(email)) {
+                    emailIsValid = false;
                     setErrMsg('The input email is invalid.');
                 }
             }
             // Check to see if a valid phone-number is added when the user wants to be contacted via email 
             if (contactViaPhone) {
-                if(!validateNumber(phone)) {
+                if (!validateNumber(phone)) {
                     phoneIsValid = false;
                     setErrMsg('The input phone number is invalid.');
                 }
@@ -78,11 +93,7 @@ function ContactModal({ setDisplayModal }) {
         }
     }
 
-    const handleClickOutside = e => {
-        if(formRef.current && !formRef.current.contains(e.target)) {
-            setErrMsg('Please complete the form and submit your message, or click cancel.');
-        } 
-    };
+
 
     return (
         <div id="contact-form-wrapper" >
