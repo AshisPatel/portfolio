@@ -15,7 +15,7 @@ function Projects(props) {
 
     return (
         <div id="project-container">
-            <div class="row mb-5">
+            <div className="row mb-5">
                 <div className="offset-1 col-4 text-center px-3 pb-2 mt-5" id="project-section-title">My Projects</div>
             </div>
             

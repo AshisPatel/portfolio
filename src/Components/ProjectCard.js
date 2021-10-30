@@ -1,8 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Reveal from 'react-reveal/Reveal';
 
 function ProjectCard({ project, index }) {
+
+    const cardRef = useRef(null); 
+    const [show, setShow] = useState(false); 
+    // useLayoutEffect instead of useEffect, to ensure that refs will not be undefined
+    useLayoutEffect(() => {
+        // grabs the distance from the referenced element to the top of the viewport
+        const topPosition = cardRef.current.getBoundingClientRect().top; 
+        
+       
+        const onScroll = () => {
+            const scrollPosition = window.innerHeight + window.scrollY;
+            // Check to see if the distance from the top of the viewport is less than the total viewport height + the number of pixels that the document is currently scrolled vertically
+            if (topPosition < scrollPosition) {
+                setShow(true); 
+            }
+        }
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
+    // useEffect(() => {
+    //     console.log(show); 
+    // }, [show]);
+    
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -11,9 +35,9 @@ function ProjectCard({ project, index }) {
     const position = index % 2 !== 0 ? "" : "offset-md-7"
 
     return (
-        <article className="row">
-            <Reveal effect={position === "" ? "fadeInRight" : "fadeInLeft"}>
-                <div className={`col-12 col-md-5 ${position} projectCard mb-5`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+        <article className="row" ref={cardRef}>
+            {/* <Reveal effect={position === "" ? "fadeInRight" : "fadeInLeft"}> */}
+                <div className={`col-12 col-md-5 ${position} projectCard mb-5 ${show ? "slide-left" : ""}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 
                     {
                         isHovered ?
@@ -50,7 +74,7 @@ function ProjectCard({ project, index }) {
 
 
                 </div>
-            </Reveal>
+            {/* </Reveal> */}
         </article>
     );
 }
