@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
-import ListItem from "./ListItem";
 import projectData from "../assets/data/projectData";
 
 function Projects(props) {
@@ -19,7 +18,7 @@ function Projects(props) {
     }, [selectedTags]);
 
     const changeTags = (e) => {
-        const { name, checked } = e.target; 
+        const { name } = e.target; 
 
         const indexToRemove = selectedTags.indexOf(name); 
 
@@ -41,11 +40,11 @@ function Projects(props) {
                     <h3>You are currently viewing <span id="current-project-tag">{selectedTags.length === 0 ? "All" : selectedTags.join(', ')}</span> projects.</h3>
                     <h5>Choose another tag if you want, or start scrolling!</h5>
                     <h6>Project Tags:
-                        <ul className="no-style-list d-">
+                        <ul className="no-style-list ps-0 mt-1">
                             {
                                 tags.map(tag => {
                                     return (
-                                        <label>
+                                        <label className="mx-2">
                                             <input
                                                 type="checkbox"
                                                 name={tag}
@@ -67,7 +66,7 @@ function Projects(props) {
                 {
                     projects.length > 0 &&
                     projects.map((project, index) => {
-                        return <ProjectCard project={project} index={index} key={project.name} />
+                        return <ProjectCard project={project} index={index} projects={projects} key={project.name} />
                     }) 
                     
                 }

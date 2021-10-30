@@ -152,6 +152,11 @@ footer {
    
 }
 
+.first-projectCard {
+    animation: slideRight 1.5s forwards; 
+    visibility: visible !important; 
+}
+
 .slide-left {
     animation: slideLeft 1.5s forwards; 
 }

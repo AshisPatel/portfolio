@@ -1,7 +1,7 @@
 import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function ProjectCard({ project, index }) {
+function ProjectCard({ project, index, projects }) {
 
     const cardRef = useRef(null);
     const [show, setShow] = useState(false);
@@ -10,8 +10,6 @@ function ProjectCard({ project, index }) {
     useLayoutEffect(() => {
         // grabs the distance from the referenced element to the top of the viewport
         const topPosition = cardRef.current.getBoundingClientRect().top;
-        const bottomPosition = cardRef.current.getBoundingClientRect().bottom; 
-
 
         const onScroll = () => {
             setIsHidden(false); 
@@ -39,6 +37,13 @@ function ProjectCard({ project, index }) {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    useEffect(() => {
+        if(index === 0) {
+            setShow(true); 
+            setIsHidden(false); 
+        }
+    }, []);
+
     const [isHovered, setIsHovered] = useState(false);
 
     const { name, technology, description, image, website, github } = project;
@@ -48,13 +53,17 @@ function ProjectCard({ project, index }) {
     return (
         <article className="negative-margin row" ref={cardRef}>
             <div 
-            className={`col-12 col-md-5 ${position} projectCard ${show ? ( index % 2 === 0 ? "slide-right" : "slide-left") : (index % 2 === 0 ? "slide-out-right" : "slide-out-left")} ${isHidden? "hidden" : ""}`} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+            className={`col-12 col-md-5 ${position} projectCard 
+            ${show ? ( index % 2 === 0 ? "slide-right" : "slide-left") : (index % 2 === 0 ? "slide-out-right" : "slide-out-left")} 
+            ${isHidden? "hidden" : ""}
+            ${index === projects.length-1 && "mb-3"}`} 
+            onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
 
                 {
                     isHovered ?
                         <div className="project-info p-3 d-flex flex-column">
                             <h3 className="load-in">{name}</h3>
-                            <h6 className="load-in fst-italic mb-3">{technology.join(', ')}</h6>
+                            <h6 className="load-in fst-italic mb-4">{technology.join(', ')}</h6>
                             <p className="load-in">{description}</p>
                             <div className="d-flex load-in justify-content-end mt-auto mb-2">
                                 <a href={github} className="icon-link" target="_blank" rel="noreferrer">
