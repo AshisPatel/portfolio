@@ -12144,32 +12144,27 @@ footer {
 }
 
 .slide-left {
-  -webkit-animation: slideLeft 1s forwards;
-          animation: slideLeft 1s forwards;
+  -webkit-animation: slideLeft 1.5s forwards;
+          animation: slideLeft 1.5s forwards;
 }
 
 .slide-right {
-  -webkit-animation: slideRight 1s forwards;
-          animation: slideRight 1s forwards;
+  -webkit-animation: slideRight 1.5s forwards;
+          animation: slideRight 1.5s forwards;
 }
 
 .slide-out-left {
-  -webkit-animation: slideOutLeft 1s forwards;
-          animation: slideOutLeft 1s forwards;
+  -webkit-animation: slideOutLeft 1.5s forwards;
+          animation: slideOutLeft 1.5s forwards;
 }
 
 .slide-out-right {
-  -webkit-animation: slideOutRight 1s forwards;
-          animation: slideOutRight 1s forwards;
+  -webkit-animation: slideOutRight 1.5s forwards;
+          animation: slideOutRight 1.5s forwards;
 }
 
 .hidden {
   visibility: hidden;
-}
-
-.first-project {
-  -webkit-transform: translateX(-100vw);
-          transform: translateX(-100vw);
 }
 
 @-webkit-keyframes slideRight {

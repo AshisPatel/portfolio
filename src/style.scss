@@ -183,27 +183,23 @@ footer {
 }
 
 .slide-left {
-    animation: slideLeft 1s forwards; 
+    animation: slideLeft 1.5s forwards; 
 }
 
 .slide-right {
-    animation: slideRight 1s forwards;
+    animation: slideRight 1.5s forwards;
 }
 
 .slide-out-left {
-    animation: slideOutLeft 1s forwards;
+    animation: slideOutLeft 1.5s forwards;
 }
 
 .slide-out-right {
-    animation: slideOutRight 1s forwards; 
+    animation: slideOutRight 1.5s forwards; 
 }
 
 .hidden {
     visibility: hidden; 
-}
-
-.first-project {
-    transform:translateX(-100vw);
 }
 
 @keyframes slideRight {
