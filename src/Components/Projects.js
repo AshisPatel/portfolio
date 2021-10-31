@@ -31,7 +31,7 @@ function Projects(props) {
        setTimeout(() => {
         // insert a loader?   
         setRenderProjects(true); 
-       }, 400);
+       }, 1000);
         
         
     }, []);

@@ -101,11 +101,22 @@ footer {
 }
 
 #project-section-title {
+    transform: translateY(-100vh);
     background-color: $primary;
     color: $secondary; 
     border-radius: 0.2rem; 
     font-size: 3rem; 
     box-shadow: $floating-box-shadow; 
+    animation: slideDown 0.3s forwards, fadeIn 0.3s ease-out forwards; 
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 #current-project-tag {
@@ -118,7 +129,7 @@ $tag-indexes: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;
 @each $tag-index in $tag-indexes {
     .project-tag-#{$tag-index} {
         transform:translateX(200vw);
-        animation: slideRight 0.5s 0.1s*($tag-index) linear forwards; 
+        animation: slideRight 0.5s 0.3 + 0.1s*($tag-index) linear forwards; 
     }
 }
 
