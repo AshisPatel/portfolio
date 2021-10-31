@@ -100,24 +100,6 @@ footer {
     min-height: 10vh; 
 }
 
-@keyframes shift {
-    from {
-        transform: translateX(-20%);
-    }
-    to {
-        transform: translateX(120%);
-    }
-}
-
-@keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 #project-section-title {
     background-color: $primary;
     color: $secondary; 
@@ -129,6 +111,15 @@ footer {
 #current-project-tag {
     color: $warning; 
     font-style: italic; 
+}
+
+$tag-indexes: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;
+
+@each $tag-index in $tag-indexes {
+    .project-tag-#{$tag-index} {
+        transform:translateX(200vw);
+        animation: slideRight 0.5s 0.1s*($tag-index) linear forwards; 
+    }
 }
 
 .tag-checkbox {

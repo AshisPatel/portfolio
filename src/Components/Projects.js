@@ -46,9 +46,9 @@ function Projects(props) {
                         <h6>Project Tags:</h6>
                         <div className="mt-3 fs-6">
                             {
-                                tags.map(tag => {
+                                tags.map((tag, index) => {
                                     return (
-                                        <label className={`m-2 ${selectedTags.includes(tag) ? "tag-checkbox-checked" : "tag-checkbox"} px-1`}>
+                                        <label className={`project-tag-${index} m-2 ${selectedTags.includes(tag) ? "tag-checkbox-checked" : "tag-checkbox"} px-1`}>
                                             <input
                                                 type="checkbox"
                                                 name={tag}
