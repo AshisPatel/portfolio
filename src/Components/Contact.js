@@ -6,25 +6,30 @@ import ContactModal from "./ContactModal";
 
 function Contact() {
 
-    const [displayModal, setDisplayModal] = useState(false); 
+    const [displayModal, setDisplayModal] = useState(false);
 
-    const {email, phone, address} = contactData; 
+    const { email, phone, address } = contactData;
     return (
-        <section id="contact" className="d-flex flex-column w-50 mx-auto mt-5 p-4">
-            <h2>Reach out to me via any of the information below!</h2>
-            <ul className="no-style-list fs-2 ps-0">
-                <ListItem info={email} icon="envelope-open-text"/>
-                <ListItem info={phone} icon="mobile-alt"/>
-                <ListItem info={address} icon="home"/>
-            </ul>
-            <p className="fs-2">
-                Feel free to shoot me a <button className="button fs-2" onClick={() => setDisplayModal(true)}> Comment <FontAwesomeIcon icon="comment"/></button>
-            </p>
+        <div className="container">
+            <div className="row">
+                <section id="contact" className="d-flex text-center flex-column offset-md-3 col-md-6 col-10 offset-1 mx-auto my-5 p-4 mx-5">
+                    <h2>Reach out to me via any of the information below!</h2>
+                    <ul className="no-style-list fs-6 ps-0 text-start mx-auto" id="contact-list">
+                        <ListItem info={email} icon="envelope-open-text" />
+                        <ListItem info={phone} icon="mobile-alt" />
+                        <ListItem info={address} icon="home" />
+                    </ul>
+                    <p className="fs-2">
+                        Feel free to shoot me a <button className="button fs-2" onClick={() => setDisplayModal(true)}> Comment <FontAwesomeIcon icon="comment" /></button>
+                    </p>
 
-            {displayModal && <ContactModal setDisplayModal={setDisplayModal}/>}
+                    {displayModal && <ContactModal setDisplayModal={setDisplayModal} />}
 
-        </section>
+                </section>
+            </div>
+        </div>
+
     );
 }
 
-export default Contact; 
+export default Contact;

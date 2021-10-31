@@ -11967,6 +11967,15 @@ fieldset:disabled .btn {
   .negative-margin {
     margin-top: -4rem !important;
   }
+  #contact-list {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  #contact-list {
+    font-size: 2rem !important;
+  }
 }
 
 body {
