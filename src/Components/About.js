@@ -10,8 +10,8 @@ function About(props) {
     return (
         <section id="about" className="container mt-4">
             <div className="row">
-                <img src="https://via.placeholder.com/150x300.png" alt="Ashis striking a pose that embodies his grace and magnificence" className="col-3 ps-0 pe-2" height="300" />
-                <div className="col-9 about-info-box d-flex flex-column justify-content-around">
+                <img src="https://via.placeholder.com/150x300.png" alt="Ashis striking a pose that embodies his grace and magnificence" className="col-12 col-md-3 ps-4 ps-md-0 pe-4 pe-md-2 h-md-100 mb-md-0 mb-4" id="about-img"/>
+                <div className=" col-12 col-md-9 about-info-box d-flex flex-column justify-content-around">
                     <h1>Hello friend! My name is Ashis Patel.</h1>
                     <p>
                         I am a Full Stack Developer that is passionate about creating web applications that improve the lives of users! I have a background in consulting and teaching, where I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. I've made many happy clients in my career and I look forward to making many more in the field of web development!
@@ -35,7 +35,7 @@ function About(props) {
             </div>
             <div className="row mt-2">
 
-                <div className="about-extra-info" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                <div className="about-extra-info mb-2" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                     <h3 className="text-center">Hover over this box to see some fun facts about me!</h3>
 
                     {

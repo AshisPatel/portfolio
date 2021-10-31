@@ -12384,6 +12384,10 @@ footer {
   color: #212121;
 }
 
+#about-img {
+  max-height: 50vh !important;
+}
+
 .about-info-box {
   background-color: #212121;
   color: #DDE4E4;

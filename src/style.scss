@@ -323,6 +323,10 @@ footer {
   
 }
 
+#about-img {
+    max-height: 50vh !important; 
+}
+
 .about-info-box {
     background-color: $primary; 
     color: $secondary;
