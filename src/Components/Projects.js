@@ -59,6 +59,7 @@ function Projects(props) {
                 {
                     projects.length > 0 &&
                     projects.map((project, index) => {
+                        // key has to be index, or something that changes upon editing the tags thus forcing the project cards to remount
                         return <ProjectCard project={project} index={index} projects={projects} key={index} />
                     })
 

@@ -2,7 +2,6 @@ import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function ProjectCard({ project, index, projects }) {
-    console.log({project, index})
     const cardRef = useRef(null);
     const [show, setShow] = useState(false);
     const [isHidden, setIsHidden] = useState(true); 
@@ -43,7 +42,7 @@ function ProjectCard({ project, index, projects }) {
             setShow(false);
             setIsHidden(true);
         } 
-    }, [project, projects]);
+    }, [project]);
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -52,7 +51,7 @@ function ProjectCard({ project, index, projects }) {
     const position = index % 2 !== 0 ? "" : "offset-md-7"
 
     return (
-        <article className="negative-margin row" ref={cardRef}>
+        <article className="negative-margin mt-3 row" ref={cardRef}>
             {/* Something about the className is not updating appropraitely? Or look into this... might need to take out scroll-out effects.  */}
             <div 
             className={`col-12 col-md-5 ${position} projectCard 

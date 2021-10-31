@@ -10,7 +10,7 @@ function About(props) {
     return (
         <section id="about" className="container mt-4">
             <div className="row">
-                <img src="https://via.placeholder.com/150x300.png" alt="Ashis striking a pose that embodies his grace and magnificence" className="col-12 col-md-3 ps-4 ps-md-0 pe-4 pe-md-2 h-md-100 mb-md-0 mb-4" id="about-img"/>
+                <img src={require("../assets/images/me.JPG").default} alt="Ashis striking a pose that embodies his grace and magnificence" className="col-12 col-md-3 ps-4 ps-md-0 pe-4 pe-md-2 h-md-100 mb-md-0 mb-4" id="about-img"/>
                 <div className=" col-12 col-md-9 about-info-box d-flex flex-column justify-content-around">
                     <h1>Hello friend! My name is Ashis Patel.</h1>
                     <p>
