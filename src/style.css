@@ -12087,7 +12087,35 @@ footer {
   font-style: italic;
 }
 
+.tag-checkbox {
+  background: #DDE4E4;
+  color: #212121;
+  border-radius: 0.2rem;
+}
+
+.tag-checkbox:hover {
+  opacity: 0.8;
+}
+
 .tag-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.tag-checkbox-checked {
+  background: #baf2ef;
+  color: #212121;
+  border-radius: 0.2rem;
+}
+
+.tag-checkbox-checked:hover {
+  opacity: 0.8;
+}
+
+.tag-checkbox-checked input {
   position: absolute;
   opacity: 0;
   cursor: pointer;

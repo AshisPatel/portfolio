@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import projectData from "../assets/data/projectData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Projects(props) {
     // Allow the client to select a tag to see all projects associated with that tag
@@ -20,9 +21,7 @@ function Projects(props) {
     const changeTags = (e) => {
         const { name } = e.target;
 
-        const indexToRemove = selectedTags.indexOf(name);
-
-        if (indexToRemove === -1) {
+        if (!selectedTags.includes(name)) {
             setSelectedTags(prevTags => [...prevTags, name]);
         } else {
             setSelectedTags(prevTags => {
@@ -43,13 +42,13 @@ function Projects(props) {
                         {
                             tags.map(tag => {
                                 return (
-                                    <label className="mx-2 tag-checkbox">
+                                    <label className={`m-2 ${selectedTags.includes(tag) ? "tag-checkbox-checked" : "tag-checkbox"} px-1`}>
                                         <input
                                             type="checkbox"
                                             name={tag}
                                             checked={selectedTags.includes(tag)}
                                             onChange={changeTags}
-                                        />  {tag}
+                                        /> <FontAwesomeIcon icon="hashtag"/> {tag}
                                     </label>
                                 )
                             })

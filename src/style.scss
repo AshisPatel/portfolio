@@ -129,6 +129,28 @@ footer {
 }
 
 .tag-checkbox {
+    background: $secondary; 
+    color: $primary; 
+    border-radius: 0.2rem; 
+    &:hover {
+        opacity: 0.8; 
+    }
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0; 
+        width: 0; 
+    }
+}
+
+.tag-checkbox-checked {
+    background: $warning; 
+    color: $primary; 
+    border-radius: 0.2rem; 
+    &:hover {
+        opacity: 0.8; 
+    }
     & input {
         position: absolute;
         opacity: 0;
