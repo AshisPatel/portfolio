@@ -25,7 +25,7 @@ function Projects(props) {
             setSelectedTags(prevTags => [...prevTags, name]);
         } else {
             setSelectedTags(prevTags => {
-               return prevTags.filter(tag => tag !== name);
+                return prevTags.filter(tag => tag !== name);
             });
         }
 
@@ -33,30 +33,32 @@ function Projects(props) {
 
     return (
         <div id="project-container">
-            <div className="mb-5">
-                <div className="w-50 px-3 py-2 mt-5" id="project-section-title">
-                    <h3>You are currently viewing <span id="current-project-tag">{selectedTags.length === 0 ? "All" : selectedTags.join(', ')}</span> projects.</h3>
-                    <h5>Choose another tag if you want, or start scrolling!</h5>
-                    <h6>Project Tags:</h6>
-                    <div className="mt-3 fs-6">
-                        {
-                            tags.map(tag => {
-                                return (
-                                    <label className={`m-2 ${selectedTags.includes(tag) ? "tag-checkbox-checked" : "tag-checkbox"} px-1`}>
-                                        <input
-                                            type="checkbox"
-                                            name={tag}
-                                            checked={selectedTags.includes(tag)}
-                                            onChange={changeTags}
-                                        /> <FontAwesomeIcon icon="hashtag"/> {tag}
-                                    </label>
-                                )
-                            })
-                        }
+            <section className="container">
+                <div className="mb-5 row">
+                    <div className="col-12 col-lg-9 px-3 py-2 mt-2 mt-md-5 mb-2 mb-md-5" id="project-section-title">
+                        <h3>You are currently viewing <span id="current-project-tag">{selectedTags.length === 0 ? "All" : selectedTags.join(', ')}</span> projects.</h3>
+                        <h5>Choose another tag if you want, or start scrolling!</h5>
+                        <h6>Project Tags:</h6>
+                        <div className="mt-3 fs-6">
+                            {
+                                tags.map(tag => {
+                                    return (
+                                        <label className={`m-2 ${selectedTags.includes(tag) ? "tag-checkbox-checked" : "tag-checkbox"} px-1`}>
+                                            <input
+                                                type="checkbox"
+                                                name={tag}
+                                                checked={selectedTags.includes(tag)}
+                                                onChange={changeTags}
+                                            /> <FontAwesomeIcon icon="hashtag" /> {tag}
+                                        </label>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
+                    {projects.length === 0 && <div>There are no projects associated with these tags.</div>}
                 </div>
-                {projects.length === 0 && <div>There are no projects associated with these tags.</div>}
-            </div>
+            </section>
 
             <section className="container" >
 
