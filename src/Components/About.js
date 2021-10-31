@@ -8,7 +8,7 @@ function About(props) {
     const [ isHovered, setIsHovered ] = useState(false); 
 
     return (
-        <section id="about" className="container mt-3 mb-5">
+        <section id="about" className="container mt-4">
             <div className="row">
                 <img src="https://via.placeholder.com/150x300.png" alt="Ashis striking a pose that embodies his grace and magnificence" className="col-3 ps-0 pe-2" height="300" />
                 <div className="col-9 about-info-box d-flex flex-column justify-content-around">
