@@ -28,15 +28,12 @@ function ProjectCard({ project, index, projects }) {
             } else if (topPosition > scrollPosition) {
                 setShow(false); 
             }
-
-            // if(topPosition < window.scrollY) {
-            //     setShow(false); 
-            // }
         }
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    // This will ensure that the first item in the projects (or the very first projectCard) will slide in or be visible on load
     useEffect(() => {
         if(index === 0) {
             setShow(true); 

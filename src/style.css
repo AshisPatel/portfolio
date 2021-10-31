@@ -12087,6 +12087,14 @@ footer {
   font-style: italic;
 }
 
+.tag-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
 #project-container {
   position: relative;
   overflow: hidden;
