@@ -2,7 +2,7 @@ import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function ProjectCard({ project, index, projects }) {
-
+    console.log({project, index})
     const cardRef = useRef(null);
     const [show, setShow] = useState(false);
     const [isHidden, setIsHidden] = useState(true); 
@@ -34,12 +34,16 @@ function ProjectCard({ project, index, projects }) {
     }, []);
 
     // This will ensure that the first item in the projects (or the very first projectCard) will slide in or be visible on load
-    useEffect(() => {
+    useLayoutEffect(() => {
+       
         if(index === 0) {
             setShow(true); 
             setIsHidden(false); 
-        }
-    }, []);
+        } else {
+            setShow(false);
+            setIsHidden(true);
+        } 
+    }, [project, projects]);
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -49,12 +53,15 @@ function ProjectCard({ project, index, projects }) {
 
     return (
         <article className="negative-margin row" ref={cardRef}>
+            {/* Something about the className is not updating appropraitely? Or look into this... might need to take out scroll-out effects.  */}
             <div 
             className={`col-12 col-md-5 ${position} projectCard 
             ${show ? ( index % 2 === 0 ? "slide-right" : "slide-left") : (index % 2 === 0 ? "slide-out-right" : "slide-out-left")} 
             ${isHidden? "hidden" : ""}
             ${index === projects.length-1 && "mb-3"}`} 
-            onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+            onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}
+            data-index={index}
+            >
 
                 {
                     isHovered ?

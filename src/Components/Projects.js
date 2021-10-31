@@ -10,13 +10,7 @@ function Projects(props) {
     const tags = ['React', 'Handlebars', 'MongoDB', 'Mongoose', 'Sequelize', 'Express', 'Node', 'Apollo', 'IndexedDB', 'PWA', 'Bootstrap', 'Tailwind CSS', 'PaperCSS', 'SCSS', 'Javascript']
 
     // Checks to see which projects contain all the tags that are in the currentTag state array 
-    const projects = selectedTags.length === 0 ? projectData : projectData.filter(project => selectedTags.every(tag => project.technology.includes(tag)));
-
-    // useEffect(() => {
-    //     console.log(selectedTags);
-    //     console.log(...selectedTags);
-    //     console.log(projects);
-    // }, [selectedTags]);
+    let projects = selectedTags.length === 0 ? projectData : projectData.filter(project => selectedTags.every(tag => project.technology.includes(tag)));
 
     const changeTags = (e) => {
         const { name } = e.target;
@@ -65,7 +59,7 @@ function Projects(props) {
                 {
                     projects.length > 0 &&
                     projects.map((project, index) => {
-                        return <ProjectCard project={project} index={index} projects={projects} key={project.name} />
+                        return <ProjectCard project={project} index={index} projects={projects} key={index} />
                     })
 
                 }
