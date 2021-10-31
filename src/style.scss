@@ -26,37 +26,7 @@ $floating-box-shadow-red:
 // .negative-margin {
 //     margin-top: -4rem !important; 
 // }
-@include media-breakpoint-up(sm) {
-    .negative-margin {
-        margin-top: 1rem !important; 
-    }
-}
 
-@include media-breakpoint-up(md) {
-    .negative-margin {
-        margin-top: -4rem !important; 
-    } 
-
-    #contact-list {
-        font-size: 1.5rem !important; 
-    }
-
-    #contact-form {
-        left: 25% !important;
-        width: 50vw !important; 
-    }
-}
-
-@include media-breakpoint-up(lg) {
-    #contact-list {
-        font-size: 2rem !important; 
-    }
-
-    #contact-form {
-        left: 30% !important;
-        width: 40vw !important; 
-    }
-}
 
 body {
     background: $secondary !important; 
@@ -73,7 +43,6 @@ body {
     background-color: $secondary;
     color: $accent; 
     border: none; 
-    font-size: 1rem; 
     cursor: pointer; 
     text-align: center; 
     padding: 0.5rem; 
@@ -356,8 +325,12 @@ footer {
 
 #about-img {
     max-height: 50vh !important; 
+    border-radius: 0.2rem; 
 }
 
+.about-me-intro {
+    font-size: .0.6rem; 
+}
 .about-info-box {
     background-color: $primary; 
     color: $secondary;
@@ -365,18 +338,17 @@ footer {
     transition: background-color 0.25s ease-in-out; 
 }
 
-.about-link-box {
-    background-color: $primary; 
-    color: $secondary;
-    border-radius: 0.2rem;
-}
+// .about-link-box {
+//     background-color: $primary; 
+//     color: $secondary;
+//     border-radius: 0.2rem;
+// }
 
 .about-extra-info {
     background-color: $primary;
     color: $secondary;
     border-radius: 0.2rem;
     height: 10vh; 
-    width: 100%;
     transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out; 
     &:hover {
         height: 40vh; 
@@ -483,4 +455,52 @@ footer {
     display: inline-block; 
     width: 50px;
     height: 50px; 
+}
+
+// media-breakpoints
+
+@include media-breakpoint-up(sm) {
+    .negative-margin {
+        margin-top: 1rem !important; 
+    }
+
+    .button {
+        font-size: 0.75rem; 
+    }
+
+    .about-me-intro {
+        font-size: 0.6rem; 
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .negative-margin {
+        margin-top: -4rem !important; 
+    } 
+
+    #contact-list {
+        font-size: 1.5rem !important; 
+    }
+
+    #contact-form {
+        left: 25% !important;
+        width: 50vw !important; 
+    }
+    .button {
+        font-size: 1.25rem; 
+    }
+    .about-me-intro {
+        font-size: 1.25rem; 
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    #contact-list {
+        font-size: 2rem !important; 
+    }
+
+    #contact-form {
+        left: 30% !important;
+        width: 40vw !important; 
+    }
 }

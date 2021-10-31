@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import projectData from "../assets/data/projectData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Projects(props) {
     // Allow the client to select a tag to see all projects associated with that tag
     const [selectedTags, setSelectedTags] = useState([]);
+    const [renderProjects, setRenderProjects] = useState(false); 
 
     const tags = ['React', 'Handlebars', 'MongoDB', 'Mongoose', 'Sequelize', 'Express', 'Node', 'Apollo', 'IndexedDB', 'PWA', 'Bootstrap', 'Tailwind CSS', 'PaperCSS', 'SCSS', 'Javascript']
 
@@ -24,6 +25,16 @@ function Projects(props) {
         }
 
     }
+    // scroll to top of page on page mobile clients, or those with smaller screens. Then, setRenderProjects to true to display the cards, thus preventing any mishaps with the fade-in &
+    useLayoutEffect(() => {
+       window.scrollTo(0,0);
+       setTimeout(() => {
+        // insert a loader?   
+        setRenderProjects(true); 
+       }, 400);
+        
+        
+    }, []);
 
     return (
         <div id="project-container">
@@ -56,7 +67,7 @@ function Projects(props) {
 
             <section className="container" >
 
-                {
+                {renderProjects &&
                     projects.length > 0 &&
                     projects.map((project, index) => {
                         // key has to be index, or something that changes upon editing the tags thus forcing the project cards to remount

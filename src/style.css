@@ -11957,35 +11957,6 @@ fieldset:disabled .btn {
   }
 }
 
-@media (min-width: 576px) {
-  .negative-margin {
-    margin-top: 1rem !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .negative-margin {
-    margin-top: -4rem !important;
-  }
-  #contact-list {
-    font-size: 1.5rem !important;
-  }
-  #contact-form {
-    left: 25% !important;
-    width: 50vw !important;
-  }
-}
-
-@media (min-width: 992px) {
-  #contact-list {
-    font-size: 2rem !important;
-  }
-  #contact-form {
-    left: 30% !important;
-    width: 40vw !important;
-  }
-}
-
 body {
   background: #DDE4E4 !important;
 }
@@ -12001,7 +11972,6 @@ body {
   background-color: #DDE4E4;
   color: #2C3940;
   border: none;
-  font-size: 1rem;
   cursor: pointer;
   text-align: center;
   padding: 0.5rem;
@@ -12410,6 +12380,11 @@ footer {
 
 #about-img {
   max-height: 50vh !important;
+  border-radius: 0.2rem;
+}
+
+.about-me-intro {
+  font-size: 0 0.6rem;
 }
 
 .about-info-box {
@@ -12420,18 +12395,11 @@ footer {
   transition: background-color 0.25s ease-in-out;
 }
 
-.about-link-box {
-  background-color: #212121;
-  color: #DDE4E4;
-  border-radius: 0.2rem;
-}
-
 .about-extra-info {
   background-color: #212121;
   color: #DDE4E4;
   border-radius: 0.2rem;
   height: 10vh;
-  width: 100%;
   -webkit-transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
   transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
@@ -12551,5 +12519,46 @@ footer {
   display: inline-block;
   width: 50px;
   height: 50px;
+}
+
+@media (min-width: 576px) {
+  .negative-margin {
+    margin-top: 1rem !important;
+  }
+  .button {
+    font-size: 0.75rem;
+  }
+  .about-me-intro {
+    font-size: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .negative-margin {
+    margin-top: -4rem !important;
+  }
+  #contact-list {
+    font-size: 1.5rem !important;
+  }
+  #contact-form {
+    left: 25% !important;
+    width: 50vw !important;
+  }
+  .button {
+    font-size: 1.25rem;
+  }
+  .about-me-intro {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #contact-list {
+    font-size: 2rem !important;
+  }
+  #contact-form {
+    left: 30% !important;
+    width: 40vw !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
