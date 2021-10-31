@@ -97,7 +97,7 @@ function ContactModal({ setDisplayModal }) {
 
     return (
         <div id="contact-form-wrapper" >
-            <form id="contact-form" className={` d-flex flex-column p-3 justify-content-around  w-50 mx-auto`} onSubmit={validateForm} ref={formRef}>
+            <form id="contact-form" className={` d-flex flex-column p-3 justify-content-around text-start`} onSubmit={validateForm} ref={formRef}>
                 <label for="name" > Name:</label>
                 <input
                     className="mb-2"
@@ -195,7 +195,7 @@ function ContactModal({ setDisplayModal }) {
                 }
                 {
                     errMsg &&
-                    <p className="form-err-msg my-2 fs-3">
+                    <p className="form-err-msg my-2 fs-6">
                         {errMsg}
                     </p>
                 }

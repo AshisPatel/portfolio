@@ -40,11 +40,21 @@ $floating-box-shadow-red:
     #contact-list {
         font-size: 1.5rem !important; 
     }
+
+    #contact-form {
+        left: 25% !important;
+        width: 50vw !important; 
+    }
 }
 
 @include media-breakpoint-up(lg) {
     #contact-list {
         font-size: 2rem !important; 
+    }
+
+    #contact-form {
+        left: 30% !important;
+        width: 40vw !important; 
     }
 }
 
@@ -393,11 +403,13 @@ footer {
 }
 
 #contact-form {
-    background: $primary;
+    background: $accent;
     color: $secondary;
     min-height: 40vh; 
     border-radius: 0.2rem; 
+    width: 80vw; 
     z-index: 10; 
+    left: 10%; 
     position: absolute; 
     animation: fadeIn 0.25s linear forwards, slideIn 0.25s linear forwards; 
     & input, textarea {
@@ -406,7 +418,7 @@ footer {
         background-color: $secondary; 
         border: none; 
         &:focus {
-            background-color: rgba($accent, 0.8); 
+            background-color: rgba($primary, 0.3); 
             color: $secondary; 
             outline: none;
         }
