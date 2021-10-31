@@ -11957,6 +11957,10 @@ fieldset:disabled .btn {
   }
 }
 
+main {
+  overflow: hidden;
+}
+
 body {
   background: #DDE4E4 !important;
 }
@@ -12149,6 +12153,21 @@ footer {
   visibility: visible !important;
 }
 
+.slide-up {
+  -webkit-animation: slideUp 0.75s forwards;
+          animation: slideUp 0.75s forwards;
+}
+
+.slide-left-quick {
+  -webkit-animation: slideLeft 0.75s forwards;
+          animation: slideLeft 0.75s forwards;
+}
+
+.slide-right-quick {
+  -webkit-animation: slideRight 0.75s forwards;
+          animation: slideRight 0.75s forwards;
+}
+
 .slide-left {
   -webkit-animation: slideLeft 1.5s forwards;
           animation: slideLeft 1.5s forwards;
@@ -12171,6 +12190,28 @@ footer {
 
 .hidden {
   visibility: hidden;
+}
+
+@-webkit-keyframes slideUp {
+  from {
+    -webkit-transform: translateY(200vh);
+            transform: translateY(200vh);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    -webkit-transform: translateY(200vh);
+            transform: translateY(200vh);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @-webkit-keyframes slideRight {
@@ -12381,27 +12422,47 @@ footer {
 #about-img {
   max-height: 50vh !important;
   border-radius: 0.2rem;
+  -webkit-animation: slideLeft 0.9s forwards, fadeIn 0.9s ease-out forwards;
+          animation: slideLeft 0.9s forwards, fadeIn 0.9s ease-out forwards;
+}
+
+#welcome-statement {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.5s 0.9s linear forwards;
+          animation: fadeIn 0.5s 0.9s linear forwards;
 }
 
 .about-me-intro {
+  opacity: 0;
   font-size: 0 0.6rem;
+  -webkit-animation: fadeIn 0.5s 1.65s linear forwards;
+          animation: fadeIn 0.5s 1.65s linear forwards;
 }
 
 .about-info-box {
   background-color: #212121;
   color: #DDE4E4;
   border-radius: 0.2rem;
-  -webkit-transition: background-color 0.25s ease-in-out;
-  transition: background-color 0.25s ease-in-out;
+  -webkit-animation: slideRight 0.9s forwards, fadeIn 0.9s ease-out forwards;
+          animation: slideRight 0.9s forwards, fadeIn 0.9s ease-out forwards;
+}
+
+.about-link-box {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.5s 2.9s linear forwards;
+          animation: fadeIn 0.5s 2.9s linear forwards;
 }
 
 .about-extra-info {
+  opacity: 0;
   background-color: #212121;
   color: #DDE4E4;
   border-radius: 0.2rem;
   height: 10vh;
   -webkit-transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
   transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  -webkit-animation: slideUp 0.9s 3s forwards, fadeIn 0.9s 3s ease-out forwards;
+          animation: slideUp 0.9s 3s forwards, fadeIn 0.9s 3s ease-out forwards;
 }
 
 .about-extra-info:hover {

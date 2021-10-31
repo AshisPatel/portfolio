@@ -27,6 +27,9 @@ $floating-box-shadow-red:
 //     margin-top: -4rem !important; 
 // }
 
+main {
+    overflow:hidden; 
+}
 
 body {
     background: $secondary !important; 
@@ -189,6 +192,18 @@ footer {
     visibility: visible !important; 
 }
 
+.slide-up {
+    animation: slideUp 0.75s forwards; 
+}
+
+.slide-left-quick {
+    animation: slideLeft 0.75s forwards;
+}
+
+.slide-right-quick {
+    animation: slideRight 0.75s forwards; 
+}
+
 .slide-left {
     animation: slideLeft 1.5s forwards; 
 }
@@ -207,6 +222,15 @@ footer {
 
 .hidden {
     visibility: hidden; 
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(200vh);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideRight {
@@ -319,37 +343,47 @@ footer {
 
 #about {
     background-color: $secondary;
-    color: $primary; 
-  
+    color: $primary;
 }
-
+$aboutLoadTime: 0.9s;
 #about-img {
     max-height: 50vh !important; 
     border-radius: 0.2rem; 
+    animation: slideLeft $aboutLoadTime forwards, fadeIn $aboutLoadTime ease-out forwards; 
 }
 
+#welcome-statement {
+    opacity: 0; 
+    animation: fadeIn 0.5s $aboutLoadTime linear forwards; 
+}
+
+
+
 .about-me-intro {
+    opacity: 0; 
     font-size: .0.6rem; 
+    animation: fadeIn 0.5s $aboutLoadTime + .75s linear forwards; 
 }
 .about-info-box {
     background-color: $primary; 
     color: $secondary;
     border-radius: 0.2rem;
-    transition: background-color 0.25s ease-in-out; 
+    animation: slideRight $aboutLoadTime forwards, fadeIn $aboutLoadTime ease-out forwards; 
 }
 
-// .about-link-box {
-//     background-color: $primary; 
-//     color: $secondary;
-//     border-radius: 0.2rem;
-// }
+.about-link-box {
+    opacity: 0; 
+   animation: fadeIn 0.5s $aboutLoadTime + 2s linear forwards; 
+}
 
 .about-extra-info {
+    opacity: 0; 
     background-color: $primary;
     color: $secondary;
     border-radius: 0.2rem;
     height: 10vh; 
     transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out; 
+    animation: slideUp $aboutLoadTime 3s forwards, fadeIn $aboutLoadTime 3s ease-out forwards; 
     &:hover {
         height: 40vh; 
         background-color: $accent;
