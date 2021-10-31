@@ -11,7 +11,7 @@ function Contact() {
     const { email, phone, address } = contactData;
     return (
         <>
-            <div className="container">
+            <div className="container contact-section">
                 <div className="row">
                     <section id="contact" className="d-flex text-center flex-column offset-md-3 col-md-6 col-10 offset-1 mx-auto my-5 p-4 mx-5">
                         <h2>Reach out to me via any of the information below!</h2>

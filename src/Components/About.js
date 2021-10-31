@@ -10,7 +10,7 @@ function About(props) {
 
     return (
         <section id="about" className="container mt-4">
-            <div className="row">
+            <div className="row about-wrapper">
                 <img src={require("../assets/images/me.JPG").default} alt="Ashis striking a pose that embodies his grace and magnificence" className="col-12 col-md-3 ps-4 ps-md-0 pe-4 pe-md-2 h-md-100 mb-md-0 mb-4" id="about-img" />
                 <div className=" col-10 offset-1 offset-md-0 col-md-9 about-info-box d-flex flex-column justify-content-around">
                     <div className="container">
@@ -32,17 +32,17 @@ function About(props) {
                             <p className="fs-5">
                                 Feel free to check out my projects, github, resume, or reach out to me using the buttons below!
                             </p>
-                            <Link to="/projects" className="col-12 col-md-6"><button className="button w-100 mb-2">Projects <FontAwesomeIcon icon="code-branch" /></button></Link>
+                            <Link to="/projects" className="col-12 col-md-6"><button className="button w-100 mb-2"><FontAwesomeIcon icon="code-branch" /> Projects</button></Link>
 
                             <a href="https://github.com/AshisPatel" target="_blank" className="col-12 col-md-6" rel="noreferrer">
-                                <button className="button w-100 mb-2">Github <FontAwesomeIcon icon={['fab', 'github']} /></button>
+                                <button className="button w-100 mb-2"><FontAwesomeIcon icon={['fab', 'github']} /> Github</button>
                             </a>
 
                             <a href={require("../assets/files/apr.pdf").default} target="_blank" className="col-12 col-md-6" rel="noreferrer">
-                                <button className="button w-100 mb-2">Resume <FontAwesomeIcon icon="file" /></button>
+                                <button className="button w-100 mb-2"><FontAwesomeIcon icon="file" /> Resume </button>
                             </a>
 
-                            <Link to="/contact" className="col-12 col-md-6"><button className="button w-100 mb-2">Contact <FontAwesomeIcon icon="address-card" /></button></Link>
+                            <Link to="/contact" className="col-12 col-md-6"><button className="button w-100 mb-2"><FontAwesomeIcon icon="address-card" /> Contact</button></Link>
                         </div>
                     </div>
 

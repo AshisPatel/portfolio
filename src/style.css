@@ -12526,6 +12526,10 @@ footer {
           animation: fadeIn 0.5s 0.9s linear forwards;
 }
 
+.about-wrapper {
+  margin-top: 9vh;
+}
+
 .about-me-intro {
   opacity: 0;
   font-size: 0 0.6rem;
@@ -12572,6 +12576,68 @@ footer {
   background: #212121;
   color: #DDE4E4;
   border-radius: 0.2rem;
+}
+
+.contact-section {
+  margin-top: 10vh;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-animation: slideAndShake 0.5s linear forwards;
+          animation: slideAndShake 0.5s linear forwards;
+}
+
+@-webkit-keyframes slideAndShake {
+  0% {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  20% {
+    -webkit-transform: translateX(20vw);
+            transform: translateX(20vw);
+  }
+  40% {
+    -webkit-transform: translateX(-20vw);
+            transform: translateX(-20vw);
+  }
+  60% {
+    -webkit-transform: translateX(5vw);
+            transform: translateX(5vw);
+  }
+  80% {
+    -webkit-transform: translateX(-5vw);
+            transform: translateX(-5vw);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideAndShake {
+  0% {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
+  }
+  20% {
+    -webkit-transform: translateX(20vw);
+            transform: translateX(20vw);
+  }
+  40% {
+    -webkit-transform: translateX(-20vw);
+            transform: translateX(-20vw);
+  }
+  60% {
+    -webkit-transform: translateX(5vw);
+            transform: translateX(5vw);
+  }
+  80% {
+    -webkit-transform: translateX(-5vw);
+            transform: translateX(-5vw);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 #contact-form-wrapper {
