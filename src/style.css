@@ -11371,6 +11371,20 @@ nav ul {
   background: #DDE4E4 !important;
 }
 
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  width: 10rem;
+  left: -10.2rem;
+  top: -0.5rem;
+  z-index: 10;
+  background: #2C3940;
+  border-radius: 0.2rem;
+}
+
 #content {
   min-height: 80vh;
 }
@@ -12045,7 +12059,7 @@ footer {
   }
 
   .contact-section {
-    margin-top: 8vh;
+    margin-top: 5vh;
   }
 }
 @media (min-width: 992px) {
@@ -12059,7 +12073,7 @@ footer {
   }
 
   .contact-section {
-    margin-top: 9vh;
+    margin-top: 3vh;
   }
 }
 @media (min-width: 1200px) {

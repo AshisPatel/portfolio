@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useWindowDimensions from "../hooks/useWindowDimensions";
@@ -6,31 +6,52 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 function Header(props) {
 
     const { height, width } = useWindowDimensions();
-    console.log(window.location.pathname);
+
     const [location, setLocation] = useState(window.location.pathname);
+    const [display, setDisplay] = useState(true);
 
     const handleClick = (e) => {
-       const pathName = e.target.getAttribute('href');
-       setLocation(pathName);
+        width <= 767 && setDisplay(false);
+        const pathName = e.target.getAttribute('href');
+        setLocation(pathName);
     }
 
+    useEffect(() => {
+        width > 767 ? setDisplay(true) : setDisplay(false);
+    }, [width])
+
+    const revealDropdown = () => {
+        setDisplay(prevDisplay => !prevDisplay);
+    }
+
+    const ulClass = width > 767 ? "d-flex px-auto justify-content-between" : "d-flex flex-column ps-0 mb-0";
+
     return (
-        <header className="d-md-flex justify-content-between pt-2">
+        <header className="d-flex justify-content-between pt-2 px-4">
 
             <h2 id="home" className="ps-md-2 text-center text-md-left">
                 Ashis Patel
             </h2>
+            <div className="dropdown-container">
+                {width <= 767 &&
+                    <button className="button dropdown-btn" onClick={() => revealDropdown()}><FontAwesomeIcon icon={display ? "times" : "bars"} /></button>
+                }
+                {display &&
+                    <nav className={`mt-2 ${width <= 767 && "dropdown p-2"}`}>
 
-            <nav className="mt-2">
-                <ul className="d-flex px-auto justify-content-between">
-                    <Link to="/" className={`nav-link ${location === '/' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="grin-beam" /> About Me</Link>
-                    <Link to="/projects" className={`nav-link ${location === '/projects' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="code-branch" /> Projects</Link>
-                    <Link to="/contact" className={`nav-link ${location === '/contact' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="address-card" /> Contact</Link>
-                    <a href={require("../assets/files/apr.pdf").default} target="_blank" rel="noreferrer" className="nav-link me-2">
-                        <FontAwesomeIcon icon="file" /> Resume
-                    </a>
-                </ul>
-            </nav>
+
+                        <ul className={ulClass}>
+                            <Link to="/" className={`nav-link mx-1 ${location === '/' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="grin-beam" /> About Me</Link>
+                            <Link to="/projects" className={`nav-link mx-1 ${location === '/projects' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="code-branch" /> Projects</Link>
+                            <Link to="/contact" className={`nav-link mx-1 ${location === '/contact' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="address-card" /> Contact</Link>
+                            <a href={require("../assets/files/apr.pdf").default} target="_blank" rel="noreferrer" className="nav-link ms-1 me-2">
+                                <FontAwesomeIcon icon="file" /> Resume
+                            </a>
+                        </ul>
+
+                    </nav>
+                }
+            </div>
         </header>
     );
 }

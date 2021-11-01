@@ -126,6 +126,20 @@ nav {
     background: $secondary !important; 
 }
 
+.dropdown-container{
+    position: relative; 
+}
+
+.dropdown {
+    position: absolute;
+    width: 10rem; 
+    left: -10.2rem; 
+    top: -.5rem;  
+    z-index: 10;
+    background: $accent; 
+    border-radius: 0.2rem; 
+}
+
 // General CSS
 
 #content {
@@ -608,7 +622,7 @@ $aboutLoadTime: 0.9s;
         font-size: 1.25rem; 
     }
     .contact-section {
-        margin-top: 8vh;
+        margin-top: 5vh;
     }
 
     
@@ -624,7 +638,7 @@ $aboutLoadTime: 0.9s;
         width: 40vw !important; 
     }
     .contact-section {
-        margin-top: 9vh;
+        margin-top: 3vh;
     }
  
 }
