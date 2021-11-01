@@ -11348,6 +11348,22 @@ header {
   z-index: 10;
 }
 
+#logo-wrapper {
+  width: 10vw;
+}
+
+#first-name {
+  text-align: left;
+  color: #DDE4E4;
+}
+
+#last-name {
+  text-align: right;
+  color: #baf2ef;
+  margin-top: -1rem;
+  z-index: 10;
+}
+
 nav ul {
   list-style: none;
 }

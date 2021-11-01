@@ -1,4 +1,5 @@
 $primary: #212121; 
+$primary-accent: #3D3D3D;
 $secondary: #DDE4E4;
 $secondary-accent: #C6D2D2; 
 $white-accent: #DDE4E4;
@@ -98,6 +99,25 @@ header {
     top: 0; 
     z-index: 10; 
 }
+
+#logo-wrapper {
+    width: 10vw; 
+}
+
+// name-logo styling
+#first-name {
+    text-align: left; 
+    color: $secondary; 
+}
+
+#last-name {
+    text-align: right; 
+    color: $warning; 
+    margin-top: -1rem;
+    z-index: 10;  
+}
+
+// nav bar styling
 
 nav {
     & ul {

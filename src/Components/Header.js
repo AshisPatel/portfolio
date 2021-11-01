@@ -32,7 +32,10 @@ function Header(props) {
         <header className="d-flex justify-content-between pt-2 px-4">
 
             <h2 id="home" className="ps-md-2 text-center text-md-left">
-                Ashis Patel
+                <div class="d-flex flex-column" id="logo-wrapper">
+                    <span id="first-name">Ashis</span>
+                    <span id="last-name">Patel</span>
+                </div>
             </h2>
             <div className="dropdown-container">
                 {width <= 767 &&
