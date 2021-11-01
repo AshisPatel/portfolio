@@ -88,7 +88,7 @@ body {
     }
 }
 
-// styling
+
 // Header CSS
 header {
     min-height: 10vh; 
@@ -96,7 +96,6 @@ header {
     color: $secondary;
     position: sticky;
     top: 0; 
-    // width: 100%;
     z-index: 10; 
 }
 
@@ -106,23 +105,36 @@ nav {
     }
 }
 
-.navBtn {
-    text-decoration: none; 
-    font-size: 1rem; 
-    border: none;
-    background: $secondary; 
+.nav-link {
+    // outline: none !important; 
+    border-radius: 0.2rem; 
+    color: $secondary; 
+    transition: background-color 0.1s linear; 
+    &:hover {
+        color: $secondary; 
+        background-color: rgba($secondary, 0.2);
+    }
+
+    &:focus {
+        color: $secondary; 
+        background-color: rgba($secondary, 0.2); 
+    }
 }
+
+// General CSS
 
 #content {
     min-height: 80vh; 
 }
-
 
 footer {
     background-color: $primary;
     color: $secondary; 
     min-height: 10vh; 
 }
+
+
+// project styling
 
 #project-section-title {
     transform: translateY(-100vh);
