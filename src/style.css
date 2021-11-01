@@ -11996,6 +11996,32 @@ body {
   color: #DDE4E4;
 }
 
+.form-button {
+  text-decoration: none;
+  outline: 1px solid #2C3940;
+  background-color: #DDE4E4;
+  color: #2C3940;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.form-button:hover {
+  background-color: #212121;
+  color: #DDE4E4;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.form-button:focus {
+  background-color: #212121;
+  color: #DDE4E4;
+}
+
 header {
   min-height: 10vh;
   background: #212121;

@@ -200,8 +200,8 @@ function ContactModal({ setDisplayModal }) {
                     </p>
                 }
 
-                <button className="button mt-2"> Send Message <FontAwesomeIcon icon="paper-plane" /> </button>
-                <button className="button mt-2" type="click" onClick={() => setDisplayModal(false)}> Close </button>
+                <button className="form-button mt-2"> Send Message <FontAwesomeIcon icon="paper-plane" /> </button>
+                <button className="form-button mt-2" type="click" onClick={() => setDisplayModal(false)}> Close </button>
             </form>
             <div id="contact-form-backdrop"></div>
         </div>

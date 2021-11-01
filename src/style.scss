@@ -64,6 +64,30 @@ body {
     }
 }
 
+.form-button {
+    text-decoration: none; 
+    outline: 1px solid $accent; 
+    background-color: $secondary;
+    color: $accent; 
+    border: none; 
+    cursor: pointer; 
+    text-align: center; 
+    padding: 0.5rem; 
+    border-radius: 0.2rem; 
+    transition: 0.2s ease-in-out; 
+
+    &:hover {
+        background-color: $primary; 
+        color: $secondary; 
+        transform: scale(0.95);
+    }
+
+    &:focus {
+        background-color: $primary; 
+        color: $secondary; 
+    }
+}
+
 // styling
 // Header CSS
 header {
