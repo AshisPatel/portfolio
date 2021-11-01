@@ -55,7 +55,7 @@ body {
     &:hover {
         background-color: $accent; 
         color: $secondary; 
-        transform: scale(0.95);
+        transform: scale(0.98);
     }
 
     &:focus {
@@ -79,7 +79,7 @@ body {
     &:hover {
         background-color: $primary; 
         color: $secondary; 
-        transform: scale(0.95);
+        transform: scale(0.98);
     }
 
     &:focus {
@@ -138,6 +138,29 @@ nav {
     z-index: 10;
     background: $accent; 
     border-radius: 0.2rem; 
+}
+
+.dropdown-button {
+    text-decoration: none; 
+    outline: none;
+    background-color: $primary;
+    color: $secondary; 
+    border: none; 
+    cursor: pointer; 
+    text-align: center; 
+    padding: 0.5rem; 
+    border-radius: 0.2rem; 
+    transition: 0.2s ease-in-out; 
+
+    &:hover {
+        background-color: $secondary; 
+        color: $primary; 
+    }
+
+    &:focus {
+        background-color: $secondary; 
+        color: $primary; 
+    }
 }
 
 // General CSS

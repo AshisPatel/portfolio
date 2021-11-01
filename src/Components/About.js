@@ -7,6 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function About(props) {
 
     const [isHovered, setIsHovered] = useState(false);
+    const {setLocation} = props; 
+
+    const handleClick = (e) => {
+        const pathName = e.target.getAttribute('data-link');
+        console.log(pathName);
+        setLocation(pathName);
+    }
 
     return (
         <section id="about" className="container mt-4">
@@ -32,7 +39,7 @@ function About(props) {
                             <p className="fs-5">
                                 Feel free to check out my projects, github, resume, or reach out to me using the buttons below!
                             </p>
-                            <Link to="/projects" className="col-12 col-md-6"><button className="button w-100 mb-2"><FontAwesomeIcon icon="code-branch" /> Projects</button></Link>
+                            <Link to="/projects" className="col-12 col-md-6" onClick={handleClick}><button className="button w-100 mb-2" data-link="/projects"><FontAwesomeIcon icon="code-branch" /> Projects</button></Link>
 
                             <a href="https://github.com/AshisPatel" target="_blank" className="col-12 col-md-6" rel="noreferrer">
                                 <button className="button w-100 mb-2"><FontAwesomeIcon icon={['fab', 'github']} /> Github</button>
@@ -42,7 +49,7 @@ function About(props) {
                                 <button className="button w-100 mb-2"><FontAwesomeIcon icon="file" /> Resume </button>
                             </a>
 
-                            <Link to="/contact" className="col-12 col-md-6"><button className="button w-100 mb-2"><FontAwesomeIcon icon="address-card" /> Contact</button></Link>
+                            <Link to="/contact" className="col-12 col-md-6" onClick={handleClick}><button className="button w-100 mb-2" data-link="/contact"><FontAwesomeIcon icon="address-card" /> Contact</button></Link>
                         </div>
                     </div>
 
