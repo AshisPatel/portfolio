@@ -121,6 +121,11 @@ nav {
     }
 }
 
+.selected-nav-link {
+    color: $primary !important;
+    background: $secondary !important; 
+}
+
 // General CSS
 
 #content {

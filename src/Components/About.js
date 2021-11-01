@@ -18,7 +18,7 @@ function About(props) {
                             <h1 id="welcome-statement">Hello friend! My name is Ashis Patel.</h1>
                         </div>
 
-                        <div clasSName="row">
+                        <div className="row">
                             <p className="about-me-intro">
                                 I am a Full Stack Developer that is passionate about creating web applications that improve the lives of users! I recieved my Bachelor's Degree in Chemical Engineering from Texas A&M University in 2018 and recently recieved a Full Stack Certificate from the University of Texas. I have a background in consulting and teaching, where I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. I've made many happy clients in my career and I look forward to making many more in the field of web development!
 

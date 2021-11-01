@@ -11366,6 +11366,11 @@ nav ul {
   background-color: rgba(221, 228, 228, 0.2);
 }
 
+.selected-nav-link {
+  color: #212121 !important;
+  background: #DDE4E4 !important;
+}
+
 #content {
   min-height: 80vh;
 }
