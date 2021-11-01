@@ -384,7 +384,7 @@ $aboutLoadTime: 0.9s;
 }
 
 .about-wrapper {
-    margin-top: 9vh; 
+    margin-top: 1vh; 
 }
 
 .about-me-intro {
@@ -431,7 +431,7 @@ $aboutLoadTime: 0.9s;
 }
 
 .contact-section {
-    margin-top: 10vh;
+    margin-top: 1rem; 
     transform: translateX(-100vw);
     animation: slideAndShake 0.5s linear forwards; 
 }
@@ -565,6 +565,10 @@ $aboutLoadTime: 0.9s;
     .about-me-intro {
         font-size: 0.6rem; 
     }
+
+    .contact-section {
+        margin-top: 1vh; 
+    }
 }
 
 @include media-breakpoint-up(md) {
@@ -586,6 +590,11 @@ $aboutLoadTime: 0.9s;
     .about-me-intro {
         font-size: 1.25rem; 
     }
+    .contact-section {
+        margin-top: 8vh;
+    }
+
+    
 }
 
 @include media-breakpoint-up(lg) {
@@ -596,5 +605,15 @@ $aboutLoadTime: 0.9s;
     #contact-form {
         left: 30% !important;
         width: 40vw !important; 
+    }
+    .contact-section {
+        margin-top: 9vh;
+    }
+ 
+}
+
+@include media-breakpoint-up(xl) {
+    .about-wrapper {
+        margin-top: 8vh; 
     }
 }

@@ -12553,7 +12553,7 @@ footer {
 }
 
 .about-wrapper {
-  margin-top: 9vh;
+  margin-top: 1vh;
 }
 
 .about-me-intro {
@@ -12605,7 +12605,7 @@ footer {
 }
 
 .contact-section {
-  margin-top: 10vh;
+  margin-top: 1rem;
   -webkit-transform: translateX(-100vw);
           transform: translateX(-100vw);
   -webkit-animation: slideAndShake 0.5s linear forwards;
@@ -12778,6 +12778,9 @@ footer {
   .about-me-intro {
     font-size: 0.6rem;
   }
+  .contact-section {
+    margin-top: 1vh;
+  }
 }
 
 @media (min-width: 768px) {
@@ -12797,6 +12800,9 @@ footer {
   .about-me-intro {
     font-size: 1.25rem;
   }
+  .contact-section {
+    margin-top: 8vh;
+  }
 }
 
 @media (min-width: 992px) {
@@ -12806,6 +12812,15 @@ footer {
   #contact-form {
     left: 30% !important;
     width: 40vw !important;
+  }
+  .contact-section {
+    margin-top: 9vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-wrapper {
+    margin-top: 8vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
