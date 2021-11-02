@@ -101,20 +101,77 @@ header {
 }
 
 #logo-wrapper {
-    width: 10vw; 
+    width: 10vw;
+    position: relative; 
+    margin-left: 1.5rem;
 }
 
 // name-logo styling
-#first-name {
-    text-align: left; 
+#first-initial { 
     color: $secondary; 
+    position: absolute; 
+    left: 1rem; 
+}
+
+#first-name {
+    opacity: 0; 
+    color: $secondary; 
+    animation: fadeIn 0.25s 0.25s linear forwards;   
+}
+
+#slash {
+    color : $secondary; 
+    margin-top: 1rem; 
+    font-size: 2rem; 
+    position: absolute; 
+    left: 4rem;
+
+}
+
+#last-initial {
+    margin-top: 2rem; 
+    color: $warning; 
+    position: absolute; 
+    left: 5rem;
+  
 }
 
 #last-name {
-    text-align: right; 
-    color: $warning; 
-    margin-top: -1rem;
-    z-index: 10;  
+   opacity: 0; 
+   animation: fadeIn 0.25s 0.25s linear forwards; 
+}
+
+#end-bracket {
+    color : $warning; 
+    margin-top: 2rem; 
+    left: 6.2rem;
+    position: absolute; 
+}
+
+.move-right {
+    animation: moveRight 0.25s linear forwards; 
+}
+
+.move-left {
+    animation: moveLeft 0.25s linear forwards; 
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(0)
+    }
+    to {
+        transform: translateX(-3.5rem); 
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(3.5rem);
+    }
 }
 
 // nav bar styling
