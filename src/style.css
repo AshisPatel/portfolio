@@ -11957,12 +11957,8 @@ fieldset:disabled .btn {
   }
 }
 
-main {
-  overflow: hidden;
-}
-
 body {
-  background: linear-gradient(-45deg, #2C3940, #3D3D3D);
+  background: linear-gradient(-45deg, #638192, #536C79, #3D3D3D, #292929);
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
           animation: gradient 15s ease infinite;
@@ -12226,6 +12222,7 @@ nav ul {
 
 #content {
   min-height: 80vh;
+  overflow: hidden;
 }
 
 footer {
@@ -12430,10 +12427,9 @@ footer {
 .projectCard {
   padding: 0 0 !important;
   min-height: 50vh;
-  background-color: #DDE4E4;
-  border: 2px solid #212121;
+  background-color: #212121;
   border-radius: 0.2rem;
-  color: #212121;
+  color: #DDE4E4;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   -webkit-transition: -webkit-box-shadow 0.5s ease-in;
@@ -12716,7 +12712,7 @@ footer {
 }
 
 #about {
-  background-color: #DDE4E4;
+  background-color: transparent;
   color: #212121;
 }
 
