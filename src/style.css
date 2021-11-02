@@ -12712,9 +12712,16 @@ footer {
 
 .about-me-intro {
   opacity: 0;
-  font-size: 0 0.6rem;
+  font-size: 0.6rem;
   -webkit-animation: fadeIn 0.5s 1.65s linear forwards;
           animation: fadeIn 0.5s 1.65s linear forwards;
+}
+
+.more-intro {
+  opacity: 0;
+  font-size: 0.6rem;
+  -webkit-animation: fadeIn 0.5s 2.4s linear forwards;
+          animation: fadeIn 0.5s 2.4s linear forwards;
 }
 
 .about-info-box {
@@ -12727,8 +12734,8 @@ footer {
 
 .about-link-box {
   opacity: 0;
-  -webkit-animation: fadeIn 0.5s 2.9s linear forwards;
-          animation: fadeIn 0.5s 2.9s linear forwards;
+  -webkit-animation: fadeIn 0.5s 3.15s linear forwards;
+          animation: fadeIn 0.5s 3.15s linear forwards;
 }
 
 .about-extra-info {
@@ -12952,6 +12959,9 @@ footer {
     font-size: 1.25rem;
   }
   .about-me-intro {
+    font-size: 1.25rem;
+  }
+  .more-intro {
     font-size: 1.25rem;
   }
   .contact-section {

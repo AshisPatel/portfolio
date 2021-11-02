@@ -520,8 +520,14 @@ $aboutLoadTime: 0.9s;
 
 .about-me-intro {
     opacity: 0; 
-    font-size: .0.6rem; 
+    font-size: 0.6rem; 
     animation: fadeIn 0.5s $aboutLoadTime + .75s linear forwards; 
+}
+
+.more-intro {
+    opacity: 0; 
+    font-size: 0.6rem; 
+    animation: fadeIn 0.5s $aboutLoadTime + 1.5s linear forwards; 
 }
 .about-info-box {
     background-color: $primary; 
@@ -532,7 +538,7 @@ $aboutLoadTime: 0.9s;
 
 .about-link-box {
     opacity: 0; 
-   animation: fadeIn 0.5s $aboutLoadTime + 2s linear forwards; 
+   animation: fadeIn 0.5s $aboutLoadTime + 2.25s linear forwards; 
 }
 
 .about-extra-info {
@@ -721,11 +727,12 @@ $aboutLoadTime: 0.9s;
     .about-me-intro {
         font-size: 1.25rem; 
     }
+    .more-intro {
+        font-size: 1.25rem; 
+    }
     .contact-section {
         margin-top: 5vh;
     }
-
-    
 }
 
 @include media-breakpoint-up(lg) {

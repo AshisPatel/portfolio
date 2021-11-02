@@ -19,17 +19,23 @@ function About(props) {
         <section id="about" className="container mt-4">
             <div className="row about-wrapper">
                 <img src={require("../assets/images/me.JPG").default} alt="Ashis striking a pose that embodies his grace and magnificence" className="col-12 col-md-3 ps-4 ps-md-0 pe-4 pe-md-2 h-md-100 mb-md-0 mb-4" id="about-img" />
-                <div className=" col-10 offset-1 offset-md-0 col-md-9 about-info-box d-flex flex-column justify-content-around">
+                <div className=" col-10 offset-1 offset-md-0 col-md-9 about-info-box d-flex flex-column justify-content-around pt-2">
                     <div className="container">
                         <div className="row">
-                            <h1 id="welcome-statement">Hello friend! My name is Ashis Patel.</h1>
+                            <h2 id="welcome-statement">Hello friend, I'm Ashis Patel!</h2>
                         </div>
 
                         <div className="row">
                             <p className="about-me-intro">
-                                I am a Full Stack Developer that is passionate about creating web applications that improve the lives of users! I recieved my Bachelor's Degree in Chemical Engineering from Texas A&M University in 2018 and recently recieved a Full Stack Certificate from the University of Texas. I have a background in consulting and teaching, where I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. I've made many happy clients in my career and I look forward to making many more in the field of web development!
-
+                                A Full Stack Developer who is passionate about creating web applications that improve the lives of users. 
+                                I recieved my Bachelor's Degree in Chemical Engineering from Texas A&M University in 2018 and recently recieved a Full Stack Certificate from the University of Texas. 
                             </p>
+                            <hr/>
+                            <p className="more-intro">
+                                Through my years as a consultant, I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. 
+                                I've made many happy clients in my career and I look forward to making many more in the field of web development!  
+                            </p>
+                            <hr/>
                         </div>
                     </div>
 
@@ -64,7 +70,7 @@ function About(props) {
                         isHovered &&
 
                         <div>
-                            <ul className="no-style-list">
+                            <ul className="no-style-list load-in">
                                 {
                                     funFactList.map((fact, i) => <ListItem info={fact} icon='magic' key={i} />)
                                 }
