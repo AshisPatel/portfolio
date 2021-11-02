@@ -227,7 +227,7 @@ nav {
     position: absolute;
     width: 10rem; 
     left: -10.2rem; 
-    top: -.5rem;  
+    top: -1rem;  
     z-index: 10;
     background: $accent; 
     border-radius: 0.2rem; 
@@ -519,7 +519,9 @@ $tag-indexes: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;
     background-color: transparent;
     color: $primary;
 }
+
 $aboutLoadTime: 0.9s;
+
 #about-img {
     max-height: 50vh !important; 
     border-radius: 0.2rem; 
@@ -537,13 +539,11 @@ $aboutLoadTime: 0.9s;
 
 .about-me-intro {
     opacity: 0; 
-    font-size: 0.6rem; 
     animation: fadeIn 0.5s $aboutLoadTime + .75s linear forwards; 
 }
 
 .more-intro {
     opacity: 0; 
-    font-size: 0.6rem; 
     animation: fadeIn 0.5s $aboutLoadTime + 1.5s linear forwards; 
 }
 .about-info-box {
@@ -716,10 +716,6 @@ $aboutLoadTime: 0.9s;
         font-size: 0.75rem; 
     }
 
-    .about-me-intro {
-        font-size: 0.6rem; 
-    }
-
     .contact-section {
         margin-top: 1vh; 
     }
@@ -739,12 +735,6 @@ $aboutLoadTime: 0.9s;
         width: 50vw !important; 
     }
     .button {
-        font-size: 1.25rem; 
-    }
-    .about-me-intro {
-        font-size: 1.25rem; 
-    }
-    .more-intro {
         font-size: 1.25rem; 
     }
     .contact-section {

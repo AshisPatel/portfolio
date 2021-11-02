@@ -12190,7 +12190,7 @@ nav ul {
   position: absolute;
   width: 10rem;
   left: -10.2rem;
-  top: -.5rem;
+  top: -1rem;
   z-index: 10;
   background: #2C3940;
   border-radius: 0.2rem;
@@ -12735,14 +12735,12 @@ footer {
 
 .about-me-intro {
   opacity: 0;
-  font-size: 0.6rem;
   -webkit-animation: fadeIn 0.5s 1.65s linear forwards;
           animation: fadeIn 0.5s 1.65s linear forwards;
 }
 
 .more-intro {
   opacity: 0;
-  font-size: 0.6rem;
   -webkit-animation: fadeIn 0.5s 2.4s linear forwards;
           animation: fadeIn 0.5s 2.4s linear forwards;
 }
@@ -12959,9 +12957,6 @@ footer {
   .button {
     font-size: 0.75rem;
   }
-  .about-me-intro {
-    font-size: 0.6rem;
-  }
   .contact-section {
     margin-top: 1vh;
   }
@@ -12979,12 +12974,6 @@ footer {
     width: 50vw !important;
   }
   .button {
-    font-size: 1.25rem;
-  }
-  .about-me-intro {
-    font-size: 1.25rem;
-  }
-  .more-intro {
     font-size: 1.25rem;
   }
   .contact-section {
