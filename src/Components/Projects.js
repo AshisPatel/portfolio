@@ -52,9 +52,10 @@ function Projects(props) {
                         <h3>You are currently viewing <span id="current-project-tag">{selectedTags.length === 0 ? "All" : selectedTags.join(', ')}</span> projects.</h3>
                         <h5>Choose some tags if you want, or start scrolling!</h5>
                         <h5 className="mt-3 ms-1">
-                            <button className="button" onClick={handleClick}>
+                            <button className="button me-3" onClick={handleClick}>
                                 {dropDownBtnText} <FontAwesomeIcon icon={dropDownBtnIcon}/>
                             </button>
+                            <button className="button" onClick={() => setSelectedTags([])}><FontAwesomeIcon icon="undo"/> Reset Tags</button>
                         </h5>
                         {display && <div className="mt-3 fs-6">
                             {
