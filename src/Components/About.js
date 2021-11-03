@@ -45,7 +45,7 @@ function About(props) {
                             <p className="fs-5 text-center text-md-start">
                                 Feel free to check out my projects, github, resume, or reach out to me using the buttons below!
                             </p>
-                            <Link to="/projects" className="col-12 col-md-6" onClick={handleClick}><button className="button w-100 mb-2" data-link="/projects"><FontAwesomeIcon icon="code-branch" /> Projects</button></Link>
+                            <Link to="/portfolio/projects" className="col-12 col-md-6" onClick={handleClick}><button className="button w-100 mb-2" data-link="/portfolio/projects"><FontAwesomeIcon icon="code-branch" /> Projects</button></Link>
 
                             <a href="https://github.com/AshisPatel" target="_blank" className="col-12 col-md-6" rel="noreferrer">
                                 <button className="button w-100 mb-2"><FontAwesomeIcon icon={['fab', 'github']} /> Github</button>
@@ -55,7 +55,7 @@ function About(props) {
                                 <button className="button w-100 mb-2"><FontAwesomeIcon icon="file" /> Resume </button>
                             </a>
 
-                            <Link to="/contact" className="col-12 col-md-6" onClick={handleClick}><button className="button w-100 mb-2" data-link="/contact"><FontAwesomeIcon icon="address-card" /> Contact</button></Link>
+                            <Link to="/portfolio/contact" className="col-12 col-md-6" onClick={handleClick}><button className="button w-100 mb-2" data-link="/portfolio/contact"><FontAwesomeIcon icon="address-card" /> Contact</button></Link>
                         </div>
                     </div>
 
