@@ -61,9 +61,9 @@ function Header(props) {
 
 
                         <ul className={ulClass}>
-                            <Link to="/portfolio" className={`nav-link ${navLinkPadding} ${location === '/' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="grin-beam" /> About Me</Link>
-                            <Link to="/portfolio/projects" className={`nav-link ${navLinkPadding} ${location === '/projects' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="code-branch" /> Projects</Link>
-                            <Link to="/portfolio/contact" className={`nav-link ${navLinkPadding} ${location === '/contact' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="address-card" /> Contact</Link>
+                            <Link to="/portfolio" className={`nav-link ${navLinkPadding} ${location === '/portfolio' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="grin-beam" /> About Me</Link>
+                            <Link to="/portfolio/projects" className={`nav-link ${navLinkPadding} ${location === '/portfolio/projects' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="code-branch" /> Projects</Link>
+                            <Link to="/portfolio/contact" className={`nav-link ${navLinkPadding} ${location === '/portfolio/contact' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="address-card" /> Contact</Link>
                             <a href={require("../assets/files/apr.pdf").default} target="_blank" rel="noreferrer" className={`nav-link ${navLinkPadding}`}>
                                 <FontAwesomeIcon icon="file" /> Resume
                             </a>
