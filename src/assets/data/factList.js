@@ -21,6 +21,14 @@ const factList = [
         fact: "My favorite lift is the sumo deadlift",
         icon : "dumbbell"
     },
+    {
+        fact: "I love MMOs and RPGs, I activtely play GuildWars 2, but my favorite game is Zelda: Breath of the Wild",
+        icon: "gamepad"
+    },
+    {
+        fact: "Tabletop games are phenomanl, and rolling dice is addictive (Critical Role S3 anyone?)",
+        icon: "dice-d20"
+    }
 ];
 
 

@@ -12063,6 +12063,18 @@ footer {
           animation: slideInListItem 0.1s 1.25s linear forwards;
 }
 
+.ff-item-5 {
+  transform: translateX(100vw);
+  -webkit-animation: slideInListItem 0.1s 1.5s linear forwards;
+          animation: slideInListItem 0.1s 1.5s linear forwards;
+}
+
+.ff-item-6 {
+  transform: translateX(100vw);
+  -webkit-animation: slideInListItem 0.1s 1.75s linear forwards;
+          animation: slideInListItem 0.1s 1.75s linear forwards;
+}
+
 @-webkit-keyframes slideInListItem {
   from {
     transform: translateX(-100vw);
