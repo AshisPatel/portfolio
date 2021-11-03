@@ -12803,6 +12803,7 @@ footer {
 
 #welcome-statement {
   opacity: 0;
+  font-size: 1.25rem !important;
   -webkit-animation: fadeIn 0.5s 0.9s linear forwards;
           animation: fadeIn 0.5s 0.9s linear forwards;
 }
@@ -13109,9 +13110,6 @@ footer {
   .contact-section {
     margin-top: 1vh;
   }
-  #welcome-statement {
-    font-size: 1.5rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -13132,7 +13130,7 @@ footer {
     margin-top: 5vh;
   }
   #welcome-statement {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
 }
 
