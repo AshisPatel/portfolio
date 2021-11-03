@@ -12861,6 +12861,10 @@ footer {
   background-color: #2C3940;
 }
 
+#fun-fact-header {
+  font-size: 1rem !important;
+}
+
 .no-style-list {
   list-style-type: none;
 }
@@ -13142,6 +13146,9 @@ footer {
   }
   #first-initial {
     left: 1rem !important;
+  }
+  #fun-fact-header {
+    font-size: 1.5rem !important;
   }
 }
 

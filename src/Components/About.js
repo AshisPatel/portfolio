@@ -68,7 +68,7 @@ function About(props) {
             <div className="row mt-2">
 
                 <div className="about-extra-info mb-2 col-10 offset-1 col-md-12 offset-md-0" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                    <h3 className="text-center"><FontAwesomeIcon icon="magic" /> Fun Facts About Me On Hover! <FontAwesomeIcon icon="magic" /></h3>
+                    <h3 className="text-center mt-2" id="fun-fact-header"><FontAwesomeIcon icon="magic" /> Fun Facts About Me On Hover! <FontAwesomeIcon icon="magic" /></h3>
 
                     {
                         isHovered &&
