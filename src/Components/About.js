@@ -70,9 +70,9 @@ function About(props) {
                         isHovered &&
 
                         <div>
-                            <ul className="no-style-list load-in">
+                            <ul className="no-style-list">
                                 {
-                                    funFactList.map((fact, i) => <ListItem info={fact} icon='magic' key={i} />)
+                                    funFactList.map((fact, i) => <ListItem extraClass={`ff-item-${i}`} info={fact} icon='magic' key={i} />)
                                 }
                             </ul>
                         </div>

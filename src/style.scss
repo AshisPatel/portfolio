@@ -599,6 +599,22 @@ $aboutLoadTime: 0.9s;
     list-style-type:none; 
 }
 
+@for $i from 0 through 2 {
+    .ff-item-#{$i} {
+        transform: translateY(200vh);
+        animation: slideUpListItem 0.5s 0.5s + $i*0.25s linear forwards;
+    }
+}
+
+
+@keyframes slideUpListItem {
+    from {
+        transform: translateY(200vh);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
 // Contact form CSS
 
 #contact {

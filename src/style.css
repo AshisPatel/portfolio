@@ -12811,6 +12811,49 @@ footer {
   list-style-type: none;
 }
 
+.ff-item-0 {
+  -webkit-transform: translateY(200vh);
+          transform: translateY(200vh);
+  -webkit-animation: slideUpListItem 0.5s 0.5s linear forwards;
+          animation: slideUpListItem 0.5s 0.5s linear forwards;
+}
+
+.ff-item-1 {
+  -webkit-transform: translateY(200vh);
+          transform: translateY(200vh);
+  -webkit-animation: slideUpListItem 0.5s 0.75s linear forwards;
+          animation: slideUpListItem 0.5s 0.75s linear forwards;
+}
+
+.ff-item-2 {
+  -webkit-transform: translateY(200vh);
+          transform: translateY(200vh);
+  -webkit-animation: slideUpListItem 0.5s 1s linear forwards;
+          animation: slideUpListItem 0.5s 1s linear forwards;
+}
+
+@-webkit-keyframes slideUpListItem {
+  from {
+    -webkit-transform: translateY(200vh);
+            transform: translateY(200vh);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideUpListItem {
+  from {
+    -webkit-transform: translateY(200vh);
+            transform: translateY(200vh);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 #contact {
   background: #212121;
   color: #DDE4E4;

@@ -6,11 +6,11 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 function Header(props) {
 
     const { height, width } = useWindowDimensions();
-    const {location, setLocation} = props; 
+    const { location, setLocation } = props;
     const [display, setDisplay] = useState(true);
-    const [isHovered, setIsHovered] = useState(false); 
+    const [isHovered, setIsHovered] = useState(false);
 
-    const transitionWidth = 768; 
+    const transitionWidth = 768;
 
     const handleClick = (e) => {
         width <= transitionWidth && setDisplay(false);
@@ -38,18 +38,20 @@ function Header(props) {
     return (
         <header className="d-flex justify-content-between pt-2 px-4">
 
-            <h2 id="home" className="ps-md-2 text-center text-md-left">
-                <div className="d-flex" id="logo-wrapper" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                    <span id="first-initial" className={isHovered ? "move-left" : undefined }>{firstLetter}
-                        {isHovered && <span id="first-name">{firstName}</span>}
-                    </span>
-                    <span id="slash">/</span>
-                    <span id="last-initial">{lastLetter}
-                        {isHovered && <span id="last-name">{lastName}</span>}
-                    </span>
-                    <span id="end-bracket" className={isHovered ? "move-right" : undefined }>{endBracket}</span>
-                </div>
-            </h2>
+            <Link to="/" onClick={handleClick}>
+                <h2 id="home" className="ps-md-2 text-center text-md-left">
+                    <div className="d-flex" id="logo-wrapper" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                        <span id="first-initial" className={isHovered ? "move-left" : undefined}>{firstLetter}
+                            {isHovered && <span id="first-name">{firstName}</span>}
+                        </span>
+                        <span id="slash">/</span>
+                        <span id="last-initial">{lastLetter}
+                            {isHovered && <span id="last-name">{lastName}</span>}
+                        </span>
+                        <span id="end-bracket" className={isHovered ? "move-right" : undefined}>{endBracket}</span>
+                    </div>
+                </h2>
+            </Link>
             <div className="dropdown-container">
                 {width <= transitionWidth &&
                     <button className="dropdown-button" onClick={() => revealDropdown()}><FontAwesomeIcon icon={display ? "times" : "bars"} /></button>
