@@ -27,7 +27,7 @@ function Header(props) {
         setDisplay(prevDisplay => !prevDisplay);
     }
 
-    const ulClass = width > transitionWidth ? "d-flex px-auto justify-content-between" : "d-flex flex-column ps-0 mb-0";
+    const ulClass = width > transitionWidth ? "d-flex px-auto justify-content-between" : "d-flex flex-column ps-0 mb-0 dropdown-list";
     const navLinkPadding = width > transitionWidth ? "mx-1" : "mx-1 my-1"
 
     const firstLetter = "<A";

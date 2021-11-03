@@ -11502,8 +11502,27 @@ nav ul {
   z-index: 10;
   background: #3D3D3D;
   border-radius: 0.2rem;
+  -webkit-animation: ddSlide 0.1s linear forwards;
+          animation: ddSlide 0.1s linear forwards;
 }
 
+@-webkit-keyframes ddSlide {
+  from {
+    left: -20rem;
+  }
+  to {
+    left: -10.2rem;
+  }
+}
+
+@keyframes ddSlide {
+  from {
+    left: -20rem;
+  }
+  to {
+    left: -10.2rem;
+  }
+}
 .dropdown-button {
   text-decoration: none;
   outline: none;
