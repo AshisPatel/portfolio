@@ -18,7 +18,7 @@ const factList = [
         icon: "coffee"
     },
     {
-        fact: "The gym is simply for leveling up IRL",
+        fact: "A wise man once told me, 'I work out so that I can hold every dog like its a puppy'",
         icon : "dumbbell"
     },
     {
