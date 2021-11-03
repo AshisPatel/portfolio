@@ -5,14 +5,11 @@ $secondary-accent: #C6D2D2;
 $white-accent: #DDE4E4;
 $accent:  #2C3940;
 $warning: #baf2ef; 
-$floating-box-shadow:
-//   0.045rem 0.045rem 1.8px rgba($primary, 0.15),
-//   0.234rem .234rem 5px rgba($primary, 0.25),
-//   0.56rem 0.56rem 10px rgba($primary, 0.4);
-0 2px 2px 0 rgba(0, 0, 0, 0.14), 
-0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-0 1px 5px 0 rgba(0, 0, 0, 0.12);
-$floating-box-shadow-red:
+$floating-box-shadow: 0 0 5px rgba($primary, 8), 2px 2px 5px rgba($primary,.9);
+// 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+// 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
+// 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+$blue-shadow-effect:
 0 0.045rem 1.8px rgba(#6C8C9D, 0.15),
 0 .234rem 5px rgba(#6C8C9D, 0.25),
 0 0.56rem 12.1px rgba(#6C8C9D, 0.4),
@@ -116,6 +113,7 @@ header {
     position: sticky;
     top: 0; 
     z-index: 10; 
+    box-shadow: 0 10px 6px -6px rgba($primary, 0.8);
 }
 
 #logo-wrapper {
@@ -128,7 +126,7 @@ header {
 #first-initial { 
     color: $secondary; 
     position: absolute; 
-    left: 1rem; 
+    left: 2rem; 
 }
 
 #first-name {
@@ -495,13 +493,13 @@ $tag-indexes: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18;
     0% {
         height: 0%;
         background-color: #6C8C9D; 
-        box-shadow: $floating-box-shadow-red; 
+        box-shadow: $blue-shadow-effect; 
     }
 
     50% {
         height: 50%;
         background-color: #6C8C9D; 
-        box-shadow: $floating-box-shadow-red; 
+        box-shadow: $blue-shadow-effect; 
     }
 
     100% {
@@ -586,6 +584,7 @@ $aboutLoadTime: 0.9s;
     background-color: $primary; 
     color: $secondary;
     border-radius: 0.2rem;
+    box-shadow: $floating-box-shadow;
     animation: slideRight $aboutLoadTime forwards, fadeIn $aboutLoadTime ease-out forwards; 
 }
 
@@ -597,6 +596,7 @@ $aboutLoadTime: 0.9s;
 .about-extra-info {
     opacity: 0; 
     background-color: $primary;
+    box-shadow: $floating-box-shadow;
     color: $secondary;
     border-radius: 0.2rem;
     min-height: 10vh; 
@@ -634,6 +634,7 @@ $aboutLoadTime: 0.9s;
     background: $primary;
     color: $secondary;
     border-radius: 0.2rem; 
+    box-shadow: $floating-box-shadow;
 }
 
 .contact-section {
@@ -795,6 +796,9 @@ $aboutLoadTime: 0.9s;
     }
     #welcome-statement{
         font-size: 2.5rem !important; 
+    }
+    #first-initial {
+        left: 1rem !important; 
     }
 
 }

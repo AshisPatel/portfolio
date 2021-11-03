@@ -12060,6 +12060,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  -webkit-box-shadow: 0 10px 6px -6px rgba(33, 33, 33, 0.8);
+          box-shadow: 0 10px 6px -6px rgba(33, 33, 33, 0.8);
 }
 
 #logo-wrapper {
@@ -12071,7 +12073,7 @@ header {
 #first-initial {
   color: #DDE4E4;
   position: absolute;
-  left: 1rem;
+  left: 2rem;
 }
 
 #first-name {
@@ -12265,8 +12267,8 @@ footer {
   color: #DDE4E4;
   border-radius: 0.2rem;
   font-size: 3rem;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 0 5px #212121, 2px 2px 5px rgba(33, 33, 33, 0.9);
+          box-shadow: 0 0 5px #212121, 2px 2px 5px rgba(33, 33, 33, 0.9);
   -webkit-animation: slideDown 0.3s forwards, fadeIn 0.3s ease-out forwards;
           animation: slideDown 0.3s forwards, fadeIn 0.3s ease-out forwards;
 }
@@ -12509,8 +12511,8 @@ footer {
   background-color: #212121;
   border-radius: 0.2rem;
   color: #DDE4E4;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 0 5px #212121, 2px 2px 5px rgba(33, 33, 33, 0.9);
+          box-shadow: 0 0 5px #212121, 2px 2px 5px rgba(33, 33, 33, 0.9);
   -webkit-transition: -webkit-box-shadow 0.5s ease-in;
   transition: -webkit-box-shadow 0.5s ease-in;
   transition: box-shadow 0.5s ease-in;
@@ -12828,6 +12830,8 @@ footer {
   background-color: #212121;
   color: #DDE4E4;
   border-radius: 0.2rem;
+  -webkit-box-shadow: 0 0 5px #212121, 2px 2px 5px rgba(33, 33, 33, 0.9);
+          box-shadow: 0 0 5px #212121, 2px 2px 5px rgba(33, 33, 33, 0.9);
   -webkit-animation: slideRight 0.9s forwards, fadeIn 0.9s ease-out forwards;
           animation: slideRight 0.9s forwards, fadeIn 0.9s ease-out forwards;
 }
@@ -12841,6 +12845,8 @@ footer {
 .about-extra-info {
   opacity: 0;
   background-color: #212121;
+  -webkit-box-shadow: 0 0 5px #212121, 2px 2px 5px rgba(33, 33, 33, 0.9);
+          box-shadow: 0 0 5px #212121, 2px 2px 5px rgba(33, 33, 33, 0.9);
   color: #DDE4E4;
   border-radius: 0.2rem;
   min-height: 10vh;
@@ -12934,6 +12940,8 @@ footer {
   background: #212121;
   color: #DDE4E4;
   border-radius: 0.2rem;
+  -webkit-box-shadow: 0 0 5px #212121, 2px 2px 5px rgba(33, 33, 33, 0.9);
+          box-shadow: 0 0 5px #212121, 2px 2px 5px rgba(33, 33, 33, 0.9);
 }
 
 .contact-section {
@@ -13131,6 +13139,9 @@ footer {
   }
   #welcome-statement {
     font-size: 2.5rem !important;
+  }
+  #first-initial {
+    left: 1rem !important;
   }
 }
 
