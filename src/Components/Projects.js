@@ -52,7 +52,7 @@ function Projects(props) {
                         <h3>You are currently viewing <span id="current-project-tag">{selectedTags.length === 0 ? "All" : selectedTags.join(', ')}</span> projects.</h3>
                         <h5>Choose some tags if you want, or start scrolling!</h5>
                         <h5 className="mt-3 ms-1">
-                            <button className="button me-3" onClick={handleClick}>
+                            <button className="button me-2 me-md-3" onClick={handleClick}>
                                 {dropDownBtnText} <FontAwesomeIcon icon={dropDownBtnIcon}/>
                             </button>
                             <button className="button" onClick={() => setSelectedTags([])}><FontAwesomeIcon icon="undo"/> Reset Tags</button>
@@ -75,7 +75,12 @@ function Projects(props) {
                         </div>}
                     </div>
                     {projects.length === 0 && <div className="project-conditional col-10 offset-1 col-md-6 offset-md-3 fs-1 mx-auto p-5 text-center my-5"> No projects just <FontAwesomeIcon icon="cat"/> <FontAwesomeIcon icon="cat"/> <FontAwesomeIcon icon="cat"/></div>}
+                    {!renderProjects && 
+                        <div className="d-flex mx-auto my-5 loader"></div>
+                    }
+                 
                 </div>
+              
             </section>
 
             <section className="container" >

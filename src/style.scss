@@ -297,6 +297,23 @@ footer {
     border-radius: 0.2rem; 
 }
 
+.loader {
+    background-color: transparent; 
+    border: 2rem solid rgba($warning, 0.2); 
+    border-right: 2rem solid $warning; 
+    width: 20rem;
+    height: 20rem; 
+    border-radius: 50%;
+    animation: spin 3s linear infinite; 
+}
+ 
+
+@keyframes spin {
+    100% {
+        transform: rotateZ(720deg);
+    }
+}
+
 #current-project-tag {
     color: $warning; 
     font-style: italic; 

@@ -12272,6 +12272,31 @@ footer {
   border-radius: 0.2rem;
 }
 
+.loader {
+  background-color: transparent;
+  border: 2rem solid rgba(186, 242, 239, 0.2);
+  border-right: 2rem solid #baf2ef;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotateZ(720deg);
+            transform: rotateZ(720deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotateZ(720deg);
+            transform: rotateZ(720deg);
+  }
+}
+
 #current-project-tag {
   color: #baf2ef;
   font-style: italic;
