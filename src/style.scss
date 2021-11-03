@@ -771,6 +771,10 @@ $aboutLoadTime: 0.9s;
         margin-top: 1vh; 
     }
 
+    #welcome-statement{
+        font-size: 1.5rem; 
+    }
+
 }
 
 @include media-breakpoint-up(md) {
@@ -791,6 +795,9 @@ $aboutLoadTime: 0.9s;
     }
     .contact-section {
         margin-top: 5vh;
+    }
+    #welcome-statement{
+        font-size: 2.5rem; 
     }
 
 }

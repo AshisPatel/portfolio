@@ -24,7 +24,7 @@ function About(props) {
                         <div className="row">
                             <h2 className="text-center" >
                                 <span id="welcome-statement" className="me-md-5 my-md-0">Hello friend, I'm Ashis Patel!</span>
-                                <img src={require("../assets/images/me.jpg").default} alt="Ashis striking a pose that embodies his grace and magnificence" className="my-md-2 my-5" id="about-img"/>
+                                <img src={require("../assets/images/me.JPG").default} alt="Ashis striking a pose that embodies his grace and magnificence" className="my-md-2 my-5" id="about-img"/>
                             </h2>
                             
                         </div>
