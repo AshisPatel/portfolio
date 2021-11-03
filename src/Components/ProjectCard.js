@@ -54,7 +54,7 @@ function ProjectCard({ project, index, projects }) {
         <article className="negative-margin mt-3 row" ref={cardRef}>
             {/* Something about the className is not updating appropraitely? Or look into this... might need to take out scroll-out effects.  */}
             <div 
-            className={`col-12 col-md-5 ${position} projectCard 
+            className={`col-10 offset-1 col-md-5 ${position} projectCard 
             ${show ? ( index % 2 === 0 ? "slide-right" : "slide-left") : (index % 2 === 0 ? "slide-out-right" : "slide-out-left")} 
             ${isHidden? "hidden" : ""}
             ${index === projects.length-1 && "mb-3"}`} 

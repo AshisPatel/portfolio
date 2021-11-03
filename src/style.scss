@@ -291,6 +291,12 @@ footer {
     }
 }
 
+.project-conditional {
+    color: $secondary;
+    background-color: $primary;
+    border-radius: 0.2rem; 
+}
+
 #current-project-tag {
     color: $warning; 
     font-style: italic; 
@@ -301,7 +307,7 @@ $tag-indexes: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;
 @each $tag-index in $tag-indexes {
     .project-tag-#{$tag-index} {
         transform:translateX(200vw);
-        animation: slideRight 0.5s 0.3 + 0.1s*($tag-index) linear forwards; 
+        animation: slideRight 0.5s 0.1s*($tag-index) linear forwards; 
     }
 }
 
@@ -719,6 +725,7 @@ $aboutLoadTime: 0.9s;
     .contact-section {
         margin-top: 1vh; 
     }
+
 }
 
 @include media-breakpoint-up(md) {
@@ -740,6 +747,7 @@ $aboutLoadTime: 0.9s;
     .contact-section {
         margin-top: 5vh;
     }
+
 }
 
 @include media-breakpoint-up(lg) {
