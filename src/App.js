@@ -8,7 +8,7 @@ import Footer from "./Components/Footer";
 
 function App() {
 
-  const [location, setLocation] = useState(window.location.pathname);
+  const [location, setLocation] = useState(window.location.hash);
 
   return (
     <main className="d-flex flex-column">
