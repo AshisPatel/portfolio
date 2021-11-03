@@ -72,7 +72,7 @@ function About(props) {
                         <div>
                             <ul className="no-style-list">
                                 {
-                                    funFactList.map((fact, i) => <ListItem extraClass={`ff-item-${i}`} info={fact} icon='magic' key={i} />)
+                                    funFactList.map((fact, i) => <ListItem extraClass={`ff-item-${i}`} info={fact.fact} icon={fact.icon} key={i} />)
                                 }
                             </ul>
                         </div>

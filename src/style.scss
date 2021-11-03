@@ -599,7 +599,7 @@ $aboutLoadTime: 0.9s;
     list-style-type:none; 
 }
 
-@for $i from 0 through 2 {
+@for $i from 0 through 4 {
     .ff-item-#{$i} {
         transform: translateX(100vw);
         animation: slideInListItem 0.1s 0.25s + $i*0.25s linear forwards;
