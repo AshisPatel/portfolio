@@ -10,23 +10,23 @@ const factList = [
         icon: "video"
     },
     {
-        fact: "My favorite book series is The Stormlight Archive (fantasy and fiction recommendations are always welcome)",
+        fact: "My favorite book series is The Stormlight Archive (fantasy / fiction recommendations are always welcome)",
         icon: "book"
     },
     {
-        fact: "BIG COFFEE GUY, favorite coffe is Ethiopian coffee that is naturally processed, brewed as either pour over or a flat white with a splash of simple syrup",
+        fact: "BIG COFFEE GUY, favorite is naturally processed coffees from Ethiopia, brewed as either pour over or a flat white with a splash of simple syrup",
         icon: "coffee"
     },
     {
-        fact: "My favorite lift is the sumo deadlift",
+        fact: "The gym is simply for leveling up IRL",
         icon : "dumbbell"
     },
     {
-        fact: "I love MMOs and RPGs, I activtely play GuildWars 2, but my favorite game is Zelda: Breath of the Wild",
+        fact: "MMOs & RPGs are my jam and my favorite game is Zelda: BoTW (Pokemon has a special place in my heart though)",
         icon: "gamepad"
     },
     {
-        fact: "Tabletop games are phenomanl, and rolling dice is addictive (Critical Role S3 anyone?)",
+        fact: "Dice rolling enthusiast and owner of at least one wizard hats (Critical Role S3 anyone?)",
         icon: "dice-d20"
     }
 ];
