@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -11281,6 +11284,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+main {
+  font-family: "Cairo", sans-serif;
+}
+
 body {
   background: linear-gradient(-45deg, #638192, #536C79, #3D3D3D, #292929);
   background-size: 400% 400%;
@@ -11493,7 +11500,7 @@ nav ul {
   left: -10.2rem;
   top: -1rem;
   z-index: 10;
-  background: #2C3940;
+  background: #3D3D3D;
   border-radius: 0.2rem;
 }
 
@@ -11684,6 +11691,24 @@ footer {
   transform: translateX(200vw);
   -webkit-animation: slideRight 0.5s 1.5s linear forwards;
           animation: slideRight 0.5s 1.5s linear forwards;
+}
+
+.project-tag-16 {
+  transform: translateX(200vw);
+  -webkit-animation: slideRight 0.5s 1.6s linear forwards;
+          animation: slideRight 0.5s 1.6s linear forwards;
+}
+
+.project-tag-17 {
+  transform: translateX(200vw);
+  -webkit-animation: slideRight 0.5s 1.7s linear forwards;
+          animation: slideRight 0.5s 1.7s linear forwards;
+}
+
+.project-tag-18 {
+  transform: translateX(200vw);
+  -webkit-animation: slideRight 0.5s 1.8s linear forwards;
+          animation: slideRight 0.5s 1.8s linear forwards;
 }
 
 .tag-checkbox {
@@ -11972,10 +11997,9 @@ footer {
 }
 
 #about-img {
-  max-height: 50vh !important;
-  border-radius: 0.2rem;
-  -webkit-animation: slideLeft 0.9s forwards, fadeIn 0.9s ease-out forwards;
-          animation: slideLeft 0.9s forwards, fadeIn 0.9s ease-out forwards;
+  border-radius: 100%;
+  -webkit-animation: slideDown 0.9s forwards, fadeIn 0.9s ease-out forwards;
+          animation: slideDown 0.9s forwards, fadeIn 0.9s ease-out forwards;
 }
 
 #welcome-statement {

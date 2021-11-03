@@ -17,12 +17,16 @@ function About(props) {
 
     return (
         <section id="about" className="container mt-4">
+          
             <div className="row about-wrapper">
-                <img src={require("../assets/images/me.JPG").default} alt="Ashis striking a pose that embodies his grace and magnificence" className="col-12 col-md-3 ps-4 ps-md-0 pe-4 pe-md-2 h-md-100 mb-md-0 mb-4" id="about-img" />
-                <div className=" col-10 offset-1 offset-md-0 col-md-9 about-info-box d-flex flex-column justify-content-around pt-2">
+                <div className=" col-10 offset-1 offset-md-0 col-md-12 about-info-box d-flex flex-column justify-content-around pt-2">
                     <div className="container">
                         <div className="row">
-                            <h2 id="welcome-statement" className="text-center text-md-start" >Hello friend, I'm Ashis Patel!</h2>
+                            <h2 className="text-center" >
+                                <span id="welcome-statement" className="me-md-5 my-md-0">Hello friend, I'm Ashis Patel!</span>
+                                <img src={require("../assets/images/me.jpg").default} alt="Ashis striking a pose that embodies his grace and magnificence" className="my-md-2 my-5" id="about-img"/>
+                            </h2>
+                            
                         </div>
 
                         <div className="row">
@@ -64,7 +68,7 @@ function About(props) {
             <div className="row mt-2">
 
                 <div className="about-extra-info mb-2 col-10 offset-1 col-md-12 offset-md-0" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-                    <h3 className="text-center">Fun Facts About Me On Hover!</h3>
+                    <h3 className="text-center"><FontAwesomeIcon icon="magic" /> Fun Facts About Me On Hover! <FontAwesomeIcon icon="magic" /></h3>
 
                     {
                         isHovered &&

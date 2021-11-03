@@ -19,7 +19,9 @@ $floating-box-shadow-red:
 0 1.875rem 40px rgba(#6C8C9D, 0.3);
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // utility classes
@@ -29,7 +31,7 @@ $floating-box-shadow-red:
 // }
 
 main {
-   
+   font-family: 'Cairo', sans-serif;
 }
 
 body {
@@ -229,7 +231,7 @@ nav {
     left: -10.2rem; 
     top: -1rem;  
     z-index: 10;
-    background: $accent; 
+    background: $primary-accent; 
     border-radius: 0.2rem; 
 }
 
@@ -319,7 +321,7 @@ footer {
     font-style: italic; 
 }
 
-$tag-indexes: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;
+$tag-indexes: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18;
 
 @each $tag-index in $tag-indexes {
     .project-tag-#{$tag-index} {
@@ -546,9 +548,8 @@ $tag-indexes: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;
 $aboutLoadTime: 0.9s;
 
 #about-img {
-    max-height: 50vh !important; 
-    border-radius: 0.2rem; 
-    animation: slideLeft $aboutLoadTime forwards, fadeIn $aboutLoadTime ease-out forwards; 
+    border-radius: 100%; 
+    animation: slideDown $aboutLoadTime forwards, fadeIn $aboutLoadTime ease-out forwards; 
 }
 
 #welcome-statement {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useLayoutEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import projectData from "../assets/data/projectData";
+import tagData from "../assets/data/tagData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Projects(props) {
@@ -9,7 +10,7 @@ function Projects(props) {
     const [renderProjects, setRenderProjects] = useState(false); 
     const [display, setDisplay] = useState(false);
 
-    const tags = ['React', 'Handlebars', 'MongoDB', 'Mongoose', 'Sequelize', 'Express', 'Node', 'Apollo', 'IndexedDB', 'PWA', 'Bootstrap', 'Tailwind CSS', 'PaperCSS', 'SCSS', 'Javascript']
+    const tags = tagData; 
 
     // Checks to see which projects contain all the tags that are in the currentTag state array 
     let projects = selectedTags.length === 0 ? projectData : projectData.filter(project => selectedTags.every(tag => project.technology.includes(tag)));

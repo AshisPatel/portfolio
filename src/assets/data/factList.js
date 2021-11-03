@@ -26,7 +26,7 @@ const factList = [
         icon: "gamepad"
     },
     {
-        fact: "Dice rolling enthusiast and owner of at least one wizard hats (Critical Role S3 anyone?)",
+        fact: "Dice rolling enthusiast and owner of at least one wizard hat (Critical Role S3 anyone?)",
         icon: "dice-d20"
     }
 ];
