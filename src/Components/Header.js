@@ -38,7 +38,7 @@ function Header(props) {
     return (
         <header className="d-flex justify-content-between pt-2 px-4">
 
-            <Link to="/" onClick={handleClick}>
+            <Link to="/portfolio" onClick={handleClick}>
                 <h2 id="home" className="ps-md-2 text-center text-md-left">
                     <div className="d-flex" id="logo-wrapper" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                         <span id="first-initial" className={isHovered ? "move-left" : undefined}>{firstLetter}
