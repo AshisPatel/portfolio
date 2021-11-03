@@ -38,7 +38,7 @@ function Header(props) {
     return (
         <header className="d-flex justify-content-between pt-2 px-4">
 
-            <Link to="/portfolio" onClick={handleClick}>
+            <Link to="/" onClick={handleClick}>
                 <h2 id="home" className="ps-md-2 text-center text-md-left">
                     <div className="d-flex" id="logo-wrapper" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                         <span id="first-initial" className={isHovered ? "move-left" : undefined}>{firstLetter}
@@ -61,9 +61,9 @@ function Header(props) {
 
 
                         <ul className={ulClass}>
-                            <Link to="/portfolio" className={`nav-link ${navLinkPadding} ${location === '/portfolio' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="grin-beam" /> About Me</Link>
-                            <Link to="/portfolio/projects" className={`nav-link ${navLinkPadding} ${location === '/portfolio/projects' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="code-branch" /> Projects</Link>
-                            <Link to="/portfolio/contact" className={`nav-link ${navLinkPadding} ${location === '/portfolio/contact' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="address-card" /> Contact</Link>
+                            <Link to="/" className={`nav-link ${navLinkPadding} ${location === '/' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="grin-beam" /> About Me</Link>
+                            <Link to="/projects" className={`nav-link ${navLinkPadding} ${location === '/projects' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="code-branch" /> Projects</Link>
+                            <Link to="/contact" className={`nav-link ${navLinkPadding} ${location === '/contact' && "selected-nav-link"}`} onClick={handleClick}><FontAwesomeIcon icon="address-card" /> Contact</Link>
                             <a href={require("../assets/files/apr.pdf").default} target="_blank" rel="noreferrer" className={`nav-link ${navLinkPadding}`}>
                                 <FontAwesomeIcon icon="file" /> Resume
                             </a>

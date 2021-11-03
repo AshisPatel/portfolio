@@ -15,15 +15,15 @@ function App() {
       <Header location={location} setLocation={setLocation} />
       <section id="content">
         <Switch>
-          <Route exact path="/portfolio">
+          <Route exact path="/">
             <About setLocation={setLocation} />
           </Route>
 
-          <Route path="/portfolio/projects">
+          <Route path="/projects">
             <Projects />
           </Route>
 
-          <Route path="/portfolio/contact">
+          <Route path="/contact">
             <Contact />
           </Route>
         </Switch>
