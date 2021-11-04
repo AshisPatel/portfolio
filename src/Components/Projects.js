@@ -49,7 +49,7 @@ function Projects(props) {
         <div id="project-container">
             <section className="container">
                 <div className="mb-5 row">
-                    <div className="col-10 offset-1 col-md-12 offset-md-0 px-3 py-2 mt-2 mt-md-5 mb-2 mb-md-5" id="project-section-title">
+                    <div className="col-10 offset-1 col-md-12 offset-md-0 px-3 py-2 mt-5 mt-md-5 mb-2 mb-md-5" id="project-section-title">
                         <h3>You are currently viewing <span id="current-project-tag">{selectedTags.length === 0 ? "All" : selectedTags.join(', ')}</span> projects.</h3>
                         <h5>Choose some tags if you want, or start scrolling!</h5>
                         <h5 className="mt-3 ms-1">
