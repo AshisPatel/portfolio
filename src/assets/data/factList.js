@@ -18,7 +18,7 @@ const factList = [
         icon: "coffee"
     },
     {
-        fact: "A wise man once told me, 'I work out so that I can hold every dog like its a puppy'",
+        fact: "A wise man once told me, 'I work out so that I can hold every dog like it's a puppy'",
         icon : "dumbbell"
     },
     {

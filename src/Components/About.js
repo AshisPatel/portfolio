@@ -32,7 +32,7 @@ function About(props) {
                         <div className="row">
                             <p className="about-me-intro fs-5 text-center text-md-start">
                                 A Full Stack Developer who is passionate about creating web applications that improve the lives of users. 
-                                I recieved my Bachelor's Degree in Chemical Engineering from Texas A&M University in 2018 and recently recieved a Full Stack Certificate from the University of Texas. 
+                                I received my Bachelor's Degree in Chemical Engineering from Texas A&M University in 2018 and recently received a Full Stack Certificate from the University of Texas. 
                             </p>
                             <hr/>
                             <p className="more-intro fs-5 text-center text-md-start">
