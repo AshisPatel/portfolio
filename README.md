@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+<h1>Portfolio - React App</h1>
+  <image src='https://img.shields.io/badge/license-MIT-green.svg' />
+  <h2>Description</h2>
+  
+  This is the repository for my personal portfolio that I created using React. Feel free to check it out using the link provided in the Website section of this readme. Now, more about the actual code! This application is a single page application (SPA), however it has the feel of a multi-page application thanks to React Router (specifically the HashRouter provider for github pages). On top of that, there is some utilization of bootstrap classes for general spatial orientation of the view and the rest is custom CSS. Thanks to the ability to inject JavaScript into our JSX, the entire portfolio uses a large amount of conditional rendering to change what is displayed on the webpage. There is also some dynamic size adjustments using the windows viewport (check out the nav buttons to burger button transition on smaller than medium screens). When viewing the projects tab, all projects are loaded by default (scroll down to reveal more projects!). Hover over any of the project cards to reveal more information about that specific project, as well as access a link to the project repository and website. However, you can show the tags and select a single tag, or combination of tags to see if there are any relevant projects. As a final note, the form in the contact tab will allow you to provide a phone number or email should you toggle on the 'contact me' option. Otherwise, this form only requires some sort of name and message. While there is form input validation required to submit the form, the data currently does not go anywhere. Within the next few weeks there webpage should be moved to a live server where the form submission will be handled by Node Mailer. 
+  
+  <h2>Website</h2>
+  
+  [https://ashispatel.github.io/portfolio/](https://ashispatel.github.io/portfolio/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h2 id="license">License</h2>
 
-## Available Scripts
+  MIT - Find out more about this project's license(s) at: [https://choosealicense.com/licenses/](https://choosealicense.com/licenses/)
 
-In the project directory, you can run:
+  <h2 id="questions">Questions</h2>
+  
+  <p> 
+  Made by: AshisPatel<br />
+  Github Profile: https://github.com/AshisPatel<br />
+  </p>Email: ashis.n.patel@gmail.com<br />Please send me an email with any comments, concerns, or questions regarding this project.
 
-### `npm start`
+  <h2>End Note - A Thank You to the Reader</h2>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  Hello there friend! I hope that you're having a pleasant day, afternoon, evening, or strange midnight hours! Thanks for taking the time to visit my repo and check out my portfolio (if you haven't, go give it a whirl, at least scroll up and down the projects section for me). I have left a gift for you in the form of a fun fact and gif that makes me laugh at the end of this section! Hopefully they brighten your day, or at the least give you something to share with a friend. Now for a small rant. I learned a tad bit too late that there are LOOPS IN SCSS! The tools that people make are so *incredible*, maybe one day I'll make something neat too. On top of that, React is genius! I know we could technically interact with HTML via JavaScript files before, but being able to directly interject it into the HTML? Now that's something else. These past few weeks have just been continuous moments of awe for me. With this technology under my belt, I hope to have a few apps in the works here, so come back and visit my repo in the future and maybe you'll see something of use to you! Till next time friend, have a good one! (^^)b
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
