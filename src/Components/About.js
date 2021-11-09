@@ -16,7 +16,7 @@ function About(props) {
     }
 
     return (
-        <section id="about" className="container mt-4">
+        <section id="about" className="container">
           
             <div className="row about-wrapper">
                 <div className=" col-10 offset-1 offset-md-0 col-md-12 about-info-box d-flex flex-column justify-content-around pt-2">
