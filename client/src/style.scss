@@ -601,10 +601,10 @@ $aboutLoadTime: 0.9s;
     color: $secondary;
     border-radius: 0.2rem;
     min-height: 10vh; 
-    transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out; 
+    transition: min-height 0.5s ease-in-out, background-color 0.5s ease-in-out; 
     animation: slideUp $aboutLoadTime 3s forwards, fadeIn $aboutLoadTime 3s ease-out forwards; 
     &:hover {
-        min-height: 40vh; 
+        height: 40vh; 
         background-color: $accent;
     }
 }
