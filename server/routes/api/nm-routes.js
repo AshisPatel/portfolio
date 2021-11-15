@@ -4,6 +4,6 @@ const {
     sendMail
 } = require('../../controller/nm-controller');
 
-router.route('/nm').post(sendMail);
+router.route('/').post(sendMail);
 
 module.exports = router; 
