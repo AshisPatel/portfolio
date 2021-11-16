@@ -7,6 +7,8 @@ function ContactModal({ setDisplayModal }) {
 
     const formRef = useRef(null);
 
+    const [sending, setSending] = useState(false);
+
     const [formState, setFormState] = useState({
         name: "",
         email: "",
@@ -85,6 +87,7 @@ function ContactModal({ setDisplayModal }) {
                 }
             }
             if (!contactViaEmail && !contactViaPhone) {
+                setSending(true);
                 setErrMsg('');
                 const formData = {
                     name: name,
@@ -104,12 +107,14 @@ function ContactModal({ setDisplayModal }) {
                     console.log(err);
                 }
                 setDisplayModal(false);
+                setSending(false);
                 // exit out to prevent a double-send
                 return; 
             }
             
             if(emailIsValid && phoneIsValid){
                 setErrMsg('');
+                setSending(true);
                 const formData = {
                     name: name,
                     message: message,
@@ -128,6 +133,7 @@ function ContactModal({ setDisplayModal }) {
                     console.log(err);
                 }
                 setDisplayModal(false);
+                setSending(false);
             }
 
         } else {
@@ -242,7 +248,13 @@ function ContactModal({ setDisplayModal }) {
                     </p>
                 }
 
-                <button className="form-button mt-2"> Send Message <FontAwesomeIcon icon="paper-plane" /> </button>
+                <button className="form-button mt-2" disabled={sending}> 
+                {sending ? 
+                <>Sending...</>
+                :
+                <> Send Message <FontAwesomeIcon icon="paper-plane" /> </>
+                }
+                </button>
                 <button className="form-button mt-2" type="click" onClick={() => setDisplayModal(false)}> Close </button>
             </form>
             <div id="contact-form-backdrop"></div>
