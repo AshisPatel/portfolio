@@ -1,15 +1,15 @@
 const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
-
+require("dotenv").config();
 
 
 module.exports = {
-    async sendMail(req, res) {
+    async sendMail({ body }, res) {
         try {
-            const CLIENT_ID = '323288272715-aplomjt1m3n72s2bldgk80d4ddt6qhg1.apps.googleusercontent.com';
-            const CLIENT_SECRET = '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';
-            const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
-            const REFRESH_TOKEN = '1//04UmjRR6HvKY1CgYIARAAGAQSNwF-L9IrwevpWJf5USAgB65gS-aKeaeliHReFUJV6BrEpTXVcGy13ypGBB2ZuJ75TQwachOr_gg';
+            const CLIENT_ID = process.env.CLIENT_ID;
+            const CLIENT_SECRET = process.env.CLIENT_SECRET;
+            const REDIRECT_URI = process.env.REDIRECT_URI;
+            const REFRESH_TOKEN = process.env.REFRESH_TOKEN;
 
             const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
             oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
@@ -26,12 +26,21 @@ module.exports = {
                 }
             });
 
+            const mailBody = 
+            `
+            <h1>${body.name}</h1>
+            <p>${body.message}</p>
+            <p>Contact: ${body.allowed}</p>
+            <p>Phone Number: ${body.phone}</p>
+            <p>Email: ${body.email}</p>
+            `
+
             const mailOptions = {
                 from: 'Portfolio Email <apresumebot@gmail.com',
                 to: 'ashis.n.patel@gmail.com',
-                subject: 'Hello from the GMAIL test api!',
+                subject: 'Portfolio Inquiry',
                 text: "Hello friend! It works. :)",
-                html: "<h1>Hello friend! It works. :)</h1>"
+                html: mailBody
             }
             
             const result = await transport.sendMail(mailOptions);

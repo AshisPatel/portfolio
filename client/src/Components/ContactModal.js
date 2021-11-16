@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import validateEmail from "../utils/validateEmail";
 import validateNumber from "../utils/validateNumber";
+import { sendMail } from "../utils/API";
 function ContactModal({ setDisplayModal }) {
 
     const formRef = useRef(null);
@@ -61,7 +62,7 @@ function ContactModal({ setDisplayModal }) {
         }
     }
 
-    const validateForm = (e) => {
+    const validateForm = async (e) => {
         e.preventDefault();
         // Check to see if all of the required parameters are specified
         // Check to see if name and message are valid 
@@ -85,9 +86,50 @@ function ContactModal({ setDisplayModal }) {
             }
             if (!contactViaEmail && !contactViaPhone) {
                 setErrMsg('');
+                const formData = {
+                    name: name,
+                    message: message,
+                    allowed: permission === "yes" ? true : false,
+                    phone: phone,
+                    email: email
+                };
+                try {
+                    const response = await sendMail(formData);
+                    if(!response.ok) {
+                        throw new Error('Something went wrong');
+                    }
+                    const data = await response.json();
+                    console.log(data);
+                } catch (err) {
+                    console.log(err);
+                }
+                setDisplayModal(false);
+                // exit out to prevent a double-send
+                return; 
+            }
+            
+            if(emailIsValid && phoneIsValid){
+                setErrMsg('');
+                const formData = {
+                    name: name,
+                    message: message,
+                    allowed: permission === "yes" ? true : false,
+                    phone: phone,
+                    email: email
+                };
+                try {
+                    const response = await sendMail(formData);
+                    if(!response.ok) {
+                        throw new Error('Something went wrong');
+                    }
+                    const data = await response.json();
+                    console.log(data);
+                } catch (err) {
+                    console.log(err);
+                }
                 setDisplayModal(false);
             }
-            (emailIsValid && phoneIsValid) && setDisplayModal(false);
+
         } else {
             setErrMsg('Your name and the message field cannot be left empty.');
         }
