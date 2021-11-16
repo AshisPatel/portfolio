@@ -32,9 +32,9 @@ function ContactModal({ setDisplayModal }) {
     }, []);
 
     // mimics the second callback parameter on setState from classes. Perhaps use this to implement validation, as it takes into account the async nature of setState?
-    useEffect(() => {
-        console.log(formState);
-    }, [formState]);
+    // useEffect(() => {
+    //     console.log(formState);
+    // }, [formState]);
 
     // Accessing our current reference, making sure it exists and then seeing if the target of our click is a child of the reference element
     const handleClickOutside = (e) => {
@@ -102,7 +102,7 @@ function ContactModal({ setDisplayModal }) {
                         throw new Error('Something went wrong');
                     }
                     const data = await response.json();
-                    console.log(data);
+                    // console.log(data);
                 } catch (err) {
                     console.log(err);
                 }
@@ -128,7 +128,7 @@ function ContactModal({ setDisplayModal }) {
                         throw new Error('Something went wrong');
                     }
                     const data = await response.json();
-                    console.log(data);
+                    // console.log(data);
                 } catch (err) {
                     console.log(err);
                 }
