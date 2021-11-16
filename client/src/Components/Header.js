@@ -16,7 +16,13 @@ function Header(props) {
     const handleClick = (e) => {
         width <= transitionWidth && setDisplay(false);
         const pathName = e.target.getAttribute('href');
+        // sometimes when logo is clicked, while the user is still redirected to the homepage, the href returns as 'null', thus we manually reset the location
+        if (!pathName) {
+            setLocation('/');
+            return; 
+        }
         setLocation(pathName);
+        console.log(pathName);
     }
 
     useEffect(() => {
@@ -39,7 +45,7 @@ function Header(props) {
     return (
         <header className="d-flex justify-content-between pt-2 px-4">
 
-            <Link to="/" onClick={handleClick}>
+            <Link to="/" onClick={handleClick} id="logo-link">
                 <h2 id="home" className="ps-md-2 text-center text-md-left">
                     <div className="d-flex" id="logo-wrapper" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                         <span id="first-initial" className={isHovered ? "move-left" : undefined}>{firstLetter}
