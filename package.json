@@ -19,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/AshisPatel/portfolio/issues"
   },
-  "homepage": "https://github.com/AshisPatel/portfolio#readme",
   "devDependencies": {
     "concurrently": "^6.4.0"
   }
