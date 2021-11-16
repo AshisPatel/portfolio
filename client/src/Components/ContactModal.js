@@ -2,9 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import validateEmail from "../utils/validateEmail";
 import validateNumber from "../utils/validateNumber";
+import { sendMail } from "../utils/API";
 function ContactModal({ setDisplayModal }) {
 
     const formRef = useRef(null);
+
+    const [sending, setSending] = useState(false);
 
     const [formState, setFormState] = useState({
         name: "",
@@ -61,7 +64,7 @@ function ContactModal({ setDisplayModal }) {
         }
     }
 
-    const validateForm = (e) => {
+    const validateForm = async (e) => {
         e.preventDefault();
         // Check to see if all of the required parameters are specified
         // Check to see if name and message are valid 
@@ -84,10 +87,55 @@ function ContactModal({ setDisplayModal }) {
                 }
             }
             if (!contactViaEmail && !contactViaPhone) {
+                setSending(true);
                 setErrMsg('');
+                const formData = {
+                    name: name,
+                    message: message,
+                    allowed: permission === "yes" ? true : false,
+                    phone: phone,
+                    email: email
+                };
+                try {
+                    const response = await sendMail(formData);
+                    if(!response.ok) {
+                        throw new Error('Something went wrong');
+                    }
+                    const data = await response.json();
+                    console.log(data);
+                } catch (err) {
+                    console.log(err);
+                }
                 setDisplayModal(false);
+                setSending(false);
+                // exit out to prevent a double-send
+                return; 
             }
-            (emailIsValid && phoneIsValid) && setDisplayModal(false);
+            
+            if(emailIsValid && phoneIsValid){
+                setErrMsg('');
+                setSending(true);
+                const formData = {
+                    name: name,
+                    message: message,
+                    allowed: permission === "yes" ? true : false,
+                    phone: phone,
+                    email: email
+                };
+                try {
+                    const response = await sendMail(formData);
+                    if(!response.ok) {
+                        throw new Error('Something went wrong');
+                    }
+                    const data = await response.json();
+                    console.log(data);
+                } catch (err) {
+                    console.log(err);
+                }
+                setDisplayModal(false);
+                setSending(false);
+            }
+
         } else {
             setErrMsg('Your name and the message field cannot be left empty.');
         }
@@ -200,7 +248,13 @@ function ContactModal({ setDisplayModal }) {
                     </p>
                 }
 
-                <button className="form-button mt-2"> Send Message <FontAwesomeIcon icon="paper-plane" /> </button>
+                <button className="form-button mt-2" disabled={sending}> 
+                {sending ? 
+                <>Sending...</>
+                :
+                <> Send Message <FontAwesomeIcon icon="paper-plane" /> </>
+                }
+                </button>
                 <button className="form-button mt-2" type="click" onClick={() => setDisplayModal(false)}> Close </button>
             </form>
             <div id="contact-form-backdrop"></div>

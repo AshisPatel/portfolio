@@ -12068,12 +12068,17 @@ footer {
   color: #DDE4E4;
   border-radius: 0.2rem;
   min-height: 10vh;
+<<<<<<< HEAD:src/style.css
   transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+=======
+  -webkit-transition: min-height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  transition: min-height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+>>>>>>> feature/expressNM:client/src/style.css
   -webkit-animation: slideUp 0.9s 3s forwards, fadeIn 0.9s 3s ease-out forwards;
           animation: slideUp 0.9s 3s forwards, fadeIn 0.9s 3s ease-out forwards;
 }
 .about-extra-info:hover {
-  min-height: 40vh;
+  height: 40vh;
   background-color: #2C3940;
 }
 
