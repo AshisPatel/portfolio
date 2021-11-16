@@ -9,7 +9,7 @@ const projectData = [
     },
     {
         name: "Destressing Homepage",
-        technology: ["Javascript", "AJAX","REST API","HTML5", "CSS", "Tailwind CSS"],
+        technology: ["Javascript", "AJAX","REST API","HTML5", "CSS", "Tailwind CSS", "FontAwesome"],
         description: "The Destressing Home Page is a responsive webpage that is intended to be visited by a user who needs to take a small break and unwind. Upon arrival to the webpage, the user is greeted with a dynamic time-based welcome message and color theme. The website allows you to view gifs, artwork, quotes, and jokes. The content for the gifs, artwork, and quotes is normally delivered at random but the user can choose to search for specific tags if they would like. Additionally, the user can create ambient sound mixes (and save presets to localStorage) to listen to while they have the page open",
         image: "music",
         website: "https://ashispatel.github.io/Project-1-DS-Homepage/",
