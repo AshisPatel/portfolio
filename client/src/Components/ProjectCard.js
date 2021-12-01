@@ -1,5 +1,6 @@
 import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ExcellaIcon from './ExcellaIcon';
 
 function ProjectCard({ project, index, projects }) {
     const cardRef = useRef(null);
@@ -93,7 +94,7 @@ function ProjectCard({ project, index, projects }) {
                             </div>
 
                             <div className="d-flex flex-row justify-content-center">
-                                <FontAwesomeIcon icon={image} size="8x" />
+                                {image === 'excella' ? <div className="excella-icon"><ExcellaIcon /></div> : <FontAwesomeIcon icon={image} size="8x" />}
                             </div>
                         </div>
 

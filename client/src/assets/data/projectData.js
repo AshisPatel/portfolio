@@ -1,5 +1,13 @@
 const projectData = [
     {
+        name: "Excella",
+        technology: ["React", "Redux", "GraphQL", "Apollo", "Express", "Node", "MongoDB", "Mongoose", "SCSS", "Javascript", "AJAX"],
+        description: "Excella is a producitivty suite that includes a Job CRM, Eisenhower Matrix, Pomodoro Timer, and more soon. These features are meant to help you achieve you stay productive and achieve your goals!",
+        image: "excella",
+        website: "https://excella.herokuapp.com/",
+        github: "https://github.com/AshisPatel/excella"
+    },
+    {
         name: "Gripe Support",
         technology: ["Javascript","AJAX", "REST API", "Sequelize", "Handlebars", "Express", "Node", "PaperCSS"],
         description: "Gripe support was designed as a space where one could gripe or support other user's anonymously. Visitors can create an account that will allow them to make posts (categorized as a gripe or an encouragement). Additionally, user's can 'hug' and comment on posts.",
