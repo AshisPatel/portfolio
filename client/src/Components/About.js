@@ -32,13 +32,19 @@ function About(props) {
                         <div className="row">
                             <p className="about-me-intro fs-5 text-center text-md-start">
                                 A Full Stack Developer who is passionate about creating web applications that improve the lives of users. 
-                                I received my Bachelor's Degree in Chemical Engineering from Texas A&M University in 2018 and recently received a Full Stack Certificate from the University of Texas. 
+                                I received my Bachelor's Degree in Chemical Engineering from Texas A&M University in 2018 and recently received a Full Stack Certificate from the University of Texas.
+                                Through my years as a consultant, I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. 
+                                I've made many happy clients in my career and I look forward to making many more in the field of web development!   
                             </p>
                             <hr/>
-                            <p className="more-intro fs-5 text-center text-md-start">
-                                Through my years as a consultant, I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. 
-                                I've made many happy clients in my career and I look forward to making many more in the field of web development!  
-                            </p>
+                            <div className="more-intro fs-5 text-center text-md-start">
+                               <h3>Technical Skills</h3>
+                               <ul className="list-style-none">
+                                <li><FontAwesomeIcon icon="keyboard"/><span className="emphasize">Languages</span>: Javascript ES6+, CSS3, HTML5, SCSS, SQL, NoSQL</li>
+                                <li><FontAwesomeIcon icon="keyboard"/><span className="emphasize">Applications</span>: Github, MongoDB, MySQL, IndexedDB</li>
+                                <li><FontAwesomeIcon icon="keyboard"/><span className="emphasize">Tools</span>: React, Redux/Context, Node, Express, Mongoose, Sequelize, Handlebars, Git, Heroku </li>
+                               </ul>
+                            </div>
                             <hr/>
                         </div>
                     </div>
@@ -47,19 +53,19 @@ function About(props) {
 
                         <div className="row mb-3 about-link-box">
                             <p className="fs-5 text-center text-md-start">
-                                Feel free to check out my projects, github, resume, or reach out to me using the buttons below!
+                                Feel free to check out my projects, resume, Github, or Linkedin using the buttons below!
                             </p>
                             <Link to="/projects" className="col-12 col-md-6" onClick={handleClick}><button className="button w-100 mb-2" data-link="/projects"><FontAwesomeIcon icon="code-branch" /> Projects</button></Link>
-
-                            <a href="https://github.com/AshisPatel" target="_blank" className="col-12 col-md-6" rel="noreferrer">
-                                <button className="button w-100 mb-2"><FontAwesomeIcon icon={['fab', 'github']} /> Github</button>
-                            </a>
 
                             <a href={require("../assets/files/apr.pdf").default} target="_blank" className="col-12 col-md-6" rel="noreferrer">
                                 <button className="button w-100 mb-2"><FontAwesomeIcon icon="file" /> Resume </button>
                             </a>
 
-                            <Link to="/contact" className="col-12 col-md-6" onClick={handleClick}><button className="button w-100 mb-2" data-link="/contact"><FontAwesomeIcon icon="address-card" /> Contact</button></Link>
+                            <a href="https://github.com/AshisPatel" target="_blank" className="col-12 col-md-6" rel="noreferrer">
+                                <button className="button w-100 mb-2"><FontAwesomeIcon icon={['fab', 'github']} /> Github</button>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/ashisp/" target="_blank" rel="noreferrer" className="col-12 col-md-6"><button className="button w-100 mb-2" data-link="/contact"><FontAwesomeIcon icon={['fab', 'linkedin']} /> Linkedin</button></a>
                         </div>
                     </div>
 

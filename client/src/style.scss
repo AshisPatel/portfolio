@@ -39,6 +39,18 @@ body {
    
 }
 
+.list-style-none {
+    list-style: none; 
+    & svg {
+        margin-left: -1rem; 
+    }
+}
+
+.emphasize {
+    font-weight: bold;
+    margin-left: 1rem; 
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
