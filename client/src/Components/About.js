@@ -53,7 +53,7 @@ function About(props) {
 
                         <div className="row mb-3 about-link-box">
                             <p className="fs-5 text-center text-md-start">
-                                Feel free to check out my projects, resume, Github, or Linkedin using the buttons below!
+                                Feel free to check out my projects, resume, Github, or LinkedIn using the buttons below!
                             </p>
                             <Link to="/projects" className="col-12 col-md-6" onClick={handleClick}><button className="button w-100 mb-2" data-link="/projects"><FontAwesomeIcon icon="code-branch" /> Projects</button></Link>
 
@@ -65,7 +65,7 @@ function About(props) {
                                 <button className="button w-100 mb-2"><FontAwesomeIcon icon={['fab', 'github']} /> Github</button>
                             </a>
 
-                            <a href="https://www.linkedin.com/in/ashisp/" target="_blank" rel="noreferrer" className="col-12 col-md-6"><button className="button w-100 mb-2" data-link="/contact"><FontAwesomeIcon icon={['fab', 'linkedin']} /> Linkedin</button></a>
+                            <a href="https://www.linkedin.com/in/ashisp/" target="_blank" rel="noreferrer" className="col-12 col-md-6"><button className="button w-100 mb-2" data-link="/contact"><FontAwesomeIcon icon={['fab', 'linkedin']} /> LinkedIn</button></a>
                         </div>
                     </div>
 
