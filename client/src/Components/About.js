@@ -32,7 +32,7 @@ function About(props) {
                         <div className="row">
                             <p className="about-me-intro fs-5 text-center text-md-start">
                                 A Full Stack Developer who is passionate about creating web applications that improve the lives of users. 
-                                I received my Bachelor's Degree in Chemical Engineering from Texas A&M University in 2018 and recently received a Full Stack Certificate from the University of Texas.
+                                I received my Bachelor's Degree in Chemical Engineering from Texas A&M University in 2018 and a Professional Studies Certificate in Full Stack Web Development from the University of Texas in December 2021.
                                 Through my years as a consultant, I have solved hundreds of engineering problems, taught dozens of classes and even developed my own training course. 
                                 I've made many happy clients in my career and I look forward to making many more in the field of web development!   
                             </p>
